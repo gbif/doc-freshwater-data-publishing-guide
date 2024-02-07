@@ -1,23 +1,17 @@
 // add cover image to img directory and update filename below
 ifdef::backend-html5[]
-image::img/web/photo.jpg[]
+image::img/web/Cryptobranchus-alleganiensis-iNat-abrais-web.jpg[]
 endif::backend-html5[]
 
 == Colophon
 
 === Suggested citation
 
-Author U, Autore D & Auteur T. The special guide to something. Third edition. GBIF Secretariat: Copenhagen. 
-// Uncomment once a DOI is assigned
-//https://doi.org/10.EXAMPLE/EXAMPLE
+Lento J & Schmidt-Kloiber A (2024) Freshwater Data Publishing Guide. GBIF Secretariat: Copenhagen. https://doi.org/10.35035/doc-sw3k-w725
 
 === Authors
 
-Un Author, Due Autore & https://www.orcid.org/#[Troisième Auteur]
-
-=== Contributors
-
-James Joyce and Samuel Beckett of Trinity College, Dublin, contributed to this version of the document.
+https://orcid.org/0000-0002-8098-4825[Jennifer Lento^] & https://orcid.org/0000-0001-8839-5913[Astrid Schmidt-Kloiber^]
 
 === Licence
 
@@ -25,20 +19,12 @@ The document _The special guide to something_ is licensed under https://creative
 
 === Persistent URI
 
-#TODO: Assign a DOI before publication#
-// Uncomment once a DOI is assigned
-//https://doi.org/10.EXAMPLE/EXAMPLE
+https://doi.org/10.35035/doc-sw3k-w725
 
 === Document control
 
-Third edition, April 2020
-
-// include reference to provenance if possible/relevant
-https://doi.org/10.EXAMPLE/2ND-EXAMPLE[Second edition], March 2015, by Due Autore and https://orcid.org/0000-0000-0000-0000[Troisième Auteur].
-
-Originally based on an earlier publication, _Towards establishing the special guide to something_.
+v.0.9.0 for community review, February 2020
 
 === Cover image
 
-// Caption. Credit, source, licence.
-Western honey bee (_Apis mellifera_), Hardy County, Florida, United States. Photo 2018 thebugroomno2 via https://www.gbif.org/occurrence/1945467387[iNaturalist research-grade observations], licensed under http://creativecommons.org/licenses/by-nc/4.0/[CC BY-NC 4.0].
+Eastern hellbender (_Cryptobranchus alleganiensis_), Pennsylvania, United States. Photo 2016  Anthony Brais via https://www.gbif.org/occurrence/2543069391[iNaturalist Research-grade Observations^], licensed under http://creativecommons.org/licenses/by-nc/4.0/[CC BY-NC 4.0].
