@@ -197,10 +197,10 @@ The resource metadata that are required by GBIF describe details about a dataset
 When datasets are downloaded individually from GBIF, the XML metadata file is included and metadata fields from this table are automatically added to the occurrence file. When data are selected for download from within a polygon (thereby choosing data from multiple studies over a given geographic area), less of the metadata is provided in the occurrence table, but the permanent link to the data selection (provided by GBIF with the data download) allows the user to explore metadata for each individual project.
 
 [[table-03]]
-.Terms, definitions, examples, and comments for the metadata terms required by GBIF to describe datasets. More information on the specific fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata 
-[%autowidth]
+.Terms, definitions, examples and comments for the metadata fields required by GBIF to describe datasets (https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata[more information^] on specific fields)
+[cols="18,25,25,13,~"]
 |===
-|Term |Freshwater term definition |Freshwater example(s); pink fields indicate that you should choose either of these entries |Freshwater status |Freshwater comment
+| Term |Freshwater term definition |Freshwater example(s) |Freshwater status |Freshwater comment
 
 | term:dwc[title]
 |a descriptive title of the dataset
@@ -220,13 +220,13 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 |required
 |
 
-| term:dwc[data language]
+| term:dwc[dataLanguage]
 |language in which the data are provided
 |`English`, `German`
 |required
 |
 
-| term:dwc[publishing organization]
+| term:dwc[publishingOrganization]
 | Name of the organisation that will be listed as the data publisher at gbif.org; the publishing organisation is the institution which holds or owns the dataset and is in charge of its contents and maintenance
 |UMR EDB
 |required
@@ -241,61 +241,87 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 |required
 |
 
-| term:dwc[update frequency]
+| term:dwc[updateFrequency]
 |the frequency with which changes are made to the dataset after its first publication
-|"daily", "weekly", "monthly", "biannually", "annually", "as needed", "continually", "irregular",  "not planned", "unknown", "other maintenance period"
+|"daily" +
+"weekly" +
+"monthly" +
+"biannually" +
+"annually" +
+"as needed" +
+"continually" +
+"irregular" +
+"not planned" +
+"unknown" +
+"other maintenance period"
 |required
 |
 
-|term:dwc[data license]
+|term:dwc[dataLicense]
 |license under which the dataset can be used; GBIF encourages publishers to adopt the least restrictive possible from the three machine readable options; datsets with other licences cannot be registered with GBIF
-|"Public Domain (CC0 1.0)", "Creative Commons Attribution (CC-BY 4.0)", "Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)"
+|"Public Domain (CC0 1.0)" +
+"Creative Commons Attribution (CC-BY 4.0)" +
+"Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)"
 |required
 |More information can be found here: https://www.gbif.org/terms
 
-|term:dwc[resource contact](s)
+|term:dwc[resourceContact](s)
 |people and organisations that should be contacted to get more information about the dataset
-|first name: "Max"; last name: "Fisher"; position: "professor"; organization: "Amazon Research Center"
+|first name: "Max" +
+last name: "Fisher" +
+position: "professor" +
+organization: "Amazon Research Center"
 |required
 |Please provide first name, last name, position and organization in seperate fields
 
-|term:dwc[resource creator](s)
+|term:dwc[resourceCreator](s)
 |people and organizations who created the dataset
-|first name: "Moritz"; last name: "King"; position: "senior scientist"; organization: "Amazon Research Center"
+|first name: "Moritz" +
+last name: "King" +
+position: "senior scientist" +
+organization: "Amazon Research Center"
 |required
 |List creators in priority order. The list will be used to auto-generate the citation of the dataset. Please provide first name, last name, position and organization in separate fields.
 
-|term:dwc[metadata provider](s)
+|term:dwc[metadataProvider](s)
 |people and organizations responsible for producing the metadata of the dataset
-|first name: "Max"; last name "Fisher"; position: "professor"; organization: "Amazon Research Center"
+|first name: "Max" +
+last name "Fisher" +
+position: "professor" +
+organization: "Amazon Research Center"
 |required
 |Please provide first name, last name, position and organization in separate fields.
 
-|term:dwc[geographic coverage]
+|term:dwc[geographicCoverage]
 |location (bounding box) of the dataset
-|bounding box: "West -72.949; East -49.746; South -9.449; North 2.636"; description: "Amazon Basin"
+|bounding box: "West -72.949; East -49.746; South -9.449; North 2.636" +
+description: "Amazon Basin"
 |required
 |Please provide the coordinates for the bounding box in four separate fields. Additonally a description is needed.
 
-|term:dwc[project data]
+|term:dwc[projectData]
 |metadata about the project under which the dataset was produced
 |"Amazonas Fish Project"
 |required
 |Please provide at least the title of the project. Add separte fields for identifier, description, funding, study area description or design description, if wanted. More information on the additional fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/manage-resources#metadata
 
-|term:dwc[sampling methods]
+|term:dwc[samplingMethods]
 |metadata about the sampling methods used for data collection, including study extent, sampling description and step description
-|study extent: "sampling of 24 rivers in the area during the years 2020 to 2022"; sampling description: "samples were taken according to the Amazonas Standard Fish Protocol"; step description: "fishes were identified to species level according to Ama & Zon 2023; analyses were undertaken with the R package "zn pack"."
+|study extent: "Sampling of 24 rivers in the area during the years 2020 to 2022" +
+sampling description: "Samples were taken according to the Amazonas Standard Fish Protocol" +
+step description: "Fishes were identified to species level according to Ama & Zon 2023; analyses were undertaken with the R package 'zn pack'."
 |strongly recommended
 |Mandatory in situations where data comes from a sampling event. Please use separate fields for study extent, sampling description and step description. More information on the additional fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/manage-resources#metadata
 
-|(resource) term:dwc[citation]
+| term:dwc[citation]
 |suggestion for how your dataset should be cited
 |"Fisher, M. & King, M., 2023: Amazon Fish Project 2020-2022. Project Deliverable."
 |strongly recommended
 |When data from a single project are downloaded from GBIF, reference will be provided in a file with the data download. When data from multiple projects are selected via polygon, a DOI will be generated for the full data selection and provided to the user (dataset-specific references available at the DOI). 
 
 |===
+
+NOTE: pink fields indicate that you should choose either of these entries > controlled values/vocabulary
 
 ==== Metadata required for freshwater data
 
