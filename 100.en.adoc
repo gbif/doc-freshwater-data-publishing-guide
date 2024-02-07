@@ -1,4 +1,300 @@
-[[short-id-for-section]]
-== Section/chapter title 
+[[data-considerations]]
+== Specific freshwater data considerations
 
-It was a dark and stormy night, the rain fell in torrents — except at occasional intervals, when it was checked by a violent gust of wind which swept up the streets (for it is in London that our scene lies), rattling along the house-tops, and fiercely agitating the scanty flame of the lamps that struggled against the darkness. Through one of the obscurest quarters of London, and among haunts little loved by the gentlemen of the police, a man evidently of the lowest orders was wending his solitary way. He stopped twice or thrice at different shops and houses of a description correspondent with the appearance of the _quartier_ in which they were situated, — and tended inquiry for some article or another which did not seem easily to be met with. All the answers he received were couched in the negative; and as he turned from each door he muttered to himself, in no very elegant phraseology, his disappointment and discontent. At length, at one house, the landlord, a sturdy butcher, after rendering the same reply the inquirer had hitherto received, added, — “But if _this_ vill do as vell, Dummie, it is quite at your sarvice!” Pausing reflectively for a moment, Dummie responded that he thought the thing proffered _might_ do as well; and thrusting it into his ample pocket, he strode away with as rapid a motion as the wind and the rain would allow. He soon came to a nest of low and dingy buildings, at the entrance to which, in half-effaced characters, was written “Thames Court.” Halting at the most conspicuous of these buildings, an inn or alehouse, through the half-closed windows of which blazed out in ruddy comfort the beams of the hospitable hearth, he knocked hastily at the door. He was admitted by a lady of a certain age, and endowed with a comely rotundity of face and person.
+=== Characteristic features of freshwater data
+
+Freshwater ecosystems are unique because they are contained within terrestrial landscapes and are influenced by activities within the terrestrial environments that they drain (the catchment). Standing waters (lakes, ponds, wetlands) are often connected by running waters (rivers, streams), but dispersal of organisms within these hydrologic networks is limited by the organism’s mobility and dispersal traits (Comte and Olden 2018; Sarremejane et al. 2020), as well as by the influence of the terrain, flow conditions, and incidence of flooding/drought (Gido et al. 2016; Carvajal-Quintero et al. 2019). The dispersal limitations imposed by the degree of connectedness between freshwater systems help to define spatial patterns of biodiversity. 
+
+Biodiversity of freshwater organisms is also affected by local water quality conditions and upstream influences. Rivers, for example, are longitudinal systems that are highly dependent on conditions and changes occurring upstream. Biodiversity in these systems and throughout the hydrologic network is influenced by the entire upstream catchment, with impacts to terrestrial and freshwater ecosystems leading to biological responses downstream (Ward 1998). 
+
+As a result of their unique habitat, freshwater organisms have certain characteristics that set them apart from organisms in other realms, and these characteristics must be either reflected in the descriptive metadata that accompany observation data or in the occurrence datasets themselves. Details regarding the observed organism’s life cycle stage, the water body type they live in, or the way they are sampled are important for understanding the degree of comparability among different datasets. This guidance document highlights the ways in which such information should be included in datasets to support a harmonized approach to data publishing. In many cases, the information that should be provided differs depending on the organism group (e.g., fish, benthic macroinvertebrates, phytoplankton) as detailed below. Here, we introduce the characteristics of freshwater data that should be considered when preparing the data to be published on GBIF and/or elsewhere.
+
+==== Habitat use by freshwater organisms
+
+There are several spatial scales at which habitat information should be reported with observation data to improve data utility and usability. Here, we define these based on definitions in the IUCN Global Ecosystem Typology, which is a hierarchical classification system that groups the world’s ecosystems by realm, biome, and ecosystem functional groups. At the largest scale, realms differentiate between terrestrial, freshwater, marine, subterranean, and atmospheric components of the biosphere, as well as transitional zones between realms. Biomes are ecologically-similar sub-components of realms with broadly similar features. Within biomes, the typology classifies ecosystems by joining those with similar ecological conditions into ecosystem functional groups. Different classification levels in the hierarchy of this typology (as described below) offer relevant information to better understand observations of freshwater data.  
+
+One of the challenges of freshwater data is the prevalence of organisms that make use of multiple realms. For example, a large number of freshwater macroinvertebrates are insects, many of which live in freshwater only during particular life stages (e.g., as immature larvae or nymphs) and live in the terrestrial realm as adults. Some fish species are anadromous or catadromous, which means that part of their life is spent in freshwater and part is spent in marine habitats. Many bird species make use of freshwater for feeding, while breeding and nesting in terrestrial habitats. Some plant species are capable of growing in freshwater systems but also in high-moisture terrestrial habitats. In these and other cases, it is not sufficient to simply know that the species was observed. It is highly relevant to know whether observations of the species were made in and around freshwater or in another realm, as this provides important information about life stage, spatial distribution, and habitat use. 
+
+Information about the biome in which an observation was made is also important for understanding the data and for grouping comparable data. The IUCN Global Ecosystem Typology separates the freshwater realm into three biomes: (1) rivers and streams, (2) lakes, and (3) artificial wetlands, with groundwater, brackish water, palustrine wetlands, and coastal systems grouped within transitional realms. This classification, which describes the type of water body in which the organism was observed, can provide important ecological information to support observations. Within biomes, ecosystem functional groups, which describe ecological conditions (e.g., permanent, seasonal or episodic/ephemeral; freeze-thaw; upland or lowland; large or small), provide further information that is relevant to understanding how comparable ecosystems (and therefore observations) might be. Classification of sampled ecosystems within these groups is necessary to understand the data and facilitate broad-scale assessments of biodiversity. 
+
+At a smaller spatial scale, beyond the scope of the IUCN Global Ecosystem Typology, the habitat zones sampled within a water body contribute to biodiversity differences between datasets. Within freshwater bodies, there are natural differences in taxonomic composition among habitat zones that highlight the importance of indicating this information in the supporting metadata. In lakes, these differences are evident among lake zones, which define habitats based on depth and characteristics related to light penetration,oxygen levels, substrates and temperature. For example, the taxonomic composition of macroinvertebrate and algae samples collected from the littoral (shallow shoreline) zone in lakes differs greatly from that of samples collected in the profundal (deep) zone and these samples are generally not comparable. Similarly, natural differences in taxonomic composition may be expected in plankton and fish samples collected from littoral and pelagic (open water) zones of lakes. River mesohabitats differentiate between types of flow, with riffles being fast-flowing shallow rocky areas, runs representing deeper fast-flowing areas, and pools indicating areas of slow-flowing or standing water, all of which might be expected to house different taxa and biomass. Furthermore, benthic samples collected along the margins of a larger river may differ naturally in composition from deeper samples collected from the center of the channel due to differences in substrate and flow conditions. Information about the sampled lake zone or river mesohabitat is therefore necessary to assess comparability of datasets. At the finest scale, information on sampled microhabitats within lakes or rivers (e.g., samples collected from a particular substrate type such as sandy or rocky), when available, can provide a further indication of expected biodiversity patterns. It can also be informative to differentiate between samples collected across multiple microhabitats from those that were specific to a particular microhabitat type. 
+
+==== Organism life cycle stage and sample timing
+
+For some freshwater species, the life cycle stage of the observed organism is important for understanding community and population dynamics, as well as providing information about life history timing (phenology). For example, the life cycle stage of insect species provides an indication of whether the observation was of a freshwater or terrestrial habitat for those species that have freshwater juvenile life stages and terrestrial adult life stages. For insects that have multiple freshwater life stages (e.g., beetles that live in freshwater as larvae, pupae, and adults), this information contributes to a greater understanding of population dynamics by indicating the relative proportion of adults and juveniles at the time of sampling. The relative proportion of larvae and pupae for insects with complete metamorphosis, along with the timing of sampling, also provides information about the timing of adult emergence, which is important to track in relation to changes in water temperature. 
+
+Life stage details provide similarly valuable information about population dynamics for other organism groups, such as zooplankton and fish. Within zooplankton assemblages, it may be useful to know how many juvenile copepodites and adult copepods are present, and labeling of individuals as nauplii (the first larval life stage for copepods) might be necessary if individuals are too young for species-level identification. For fish, tagging of individuals as young-of-the-year (fish age 0, born within the last year) is important for tracking population dynamics, particularly of threatened or at-risk species. Life stage information is also helpful to understand the timing of important life history events, such as fish migration, spawning, and hatching.
+
+The timing of sampling is highly relevant to understanding life stage information for observed taxa. Full details about the date of sampling (including day, month, and year) are critical for tracking changes in the timing of life history events. Furthermore, information about the season of sampling (recognizing differences between the northern and southern hemisphere) provides context for sampling and allows data to be grouped by similar seasonal conditions.
+
+==== Sampling methods
+
+Sampling methods play a major role in determining how comparable different freshwater data are and whether freshwater data from different sources can be combined in a meaningful meta-analysis of biodiversity measures and community composition (Lento et al. 2019; Jarvis et al. 2023). For example, different freshwater fish sampling gear types are only effective on a portion of the fish assemblage, and some net mesh sizes fail to capture small-bodied fish species. Combining fish data with diverse sampling methods may thus introduce methodological bias into the meta-analysis. 
+
+Similarly, the type of sampling equipment used to collect benthic macroinvertebrates has an impact on the collected data. For example, grab samplers (e.g., Ekman and Ponar grabs) and dredges would not be expected to collect comparable samples to fixed area sampling equipment such as Surber and Hess samplers or deployed equipment such as Hester-Dendy samplers. Furthermore, fixed-area samplers may not collect as much diversity as multi-habitat samplers such as kick nets. Mesh size of samplers also plays a role in determining comparability of benthic macroinvertebrate samples, as smaller net mesh sizes capture smaller animals which might increase the number of species at a given site.  
+
+For small-bodied planktonic organisms, the net mesh size or the filter pore size is critical for understanding the degree of comparability of different samples. For example, zooplankton nets vary in mesh size, with the larger sizes excluding rotifers and other small-bodied zooplankton and thus underestimating diversity and potentially excluding an entire phylum (Mack et al. 2012; Pansera et al. 2014). Phytoplankton samples are often taken by collecting and filtering a water sample, but the filter pore size will impact whether picoplankton and nanoplankton (among the smallest size classes of phytoplankton) are retained. 
+
+Differences in the amount of effort spent sampling, as measured by time, area, or number replicates, ultimately impacts the abundance of collected taxa as well as the probability of collecting more taxa. The greater the effort, the higher the diversity of collected samples (up to a point where additional effort does not increase the number of taxa collected; Gotelli and Colwell 2001). However, it is important to recognize that some compromise is necessary when combining datasets for analysis. While differences in sampling equipment and mesh size can have dramatic effects on the comparability of different datasets, differences in effort may be accounted for in analysis and interpretation. 
+
+=== Data categorization and terminology
+
+==== GBIF data classes
+
+GBIF defines and supports four classes of datasets: resources metadata (metadata-only datasets), checklist data, occurrence data, and sampling-event data (for detailed definitions and metadata requirements, see Dataset classes and How to choose a dataset class on GBIF?). Differences between dataset classes are defined in terms of the amount of information provided by the data holder. In brief:
+
+* Resources metadata is the most simple class, providing information about datasets that are not digitized or that are housed elsewhere and cannot be uploaded to GBIF. They do not provide taxon observation data, but they indicate the existence of such information, and may provide some details about the datasets as well as information on how to access such datasets (if at all possible). 
+* Checklist data provide summary taxa lists without dates or locations for individual observations. They include lists of taxa that are found within a region or country, regional lists of threatened species, and similar summaries.
+* Occurrence data are recorded observations of the occurrence of a taxon, including the taxon name and information about where and when the taxon was observed. Occurrence data may be provided with or without counts for each taxon. Location and date information may be coarse for these data (e.g., providing only country and year), though recommended best practice is to be as specific as possible (i.e., always providing coordinates). 
+* Sampling-event data represent the most detailed dataset class, and have to consist of two files: one occurrence data file (taxon presence or counts) with detailed information on location and date, as well as a separate file with information about sampling methods that were used. 
+
+Each dataset class allows for different usage of the data. The simpler classes allow for more basic descriptions of the geographic range of available records, observed geographic ranges of taxa, or summaries of expected taxa within a region. In contrast, the most detailed classes (i.e., the sampling-event data) allow for the assessment of community composition and biodiversity measures. 
+
+==== Freshwater data categories
+
+To support the effective use of GBIF data, either in simple summaries or more in-depth assessments, there are additional ways in which freshwater datasets should be categorized beyond the four defined GBIF classes. While the GBIF classes largely reflect the amount of available data or metadata, it is important to categorize occurrence and sampling-event data based on the type of observation that was made.Based on the type of observation, freshwater data can be:
+
+* Opportunistic observation data: unplanned observations that are not part of a systematic sampling event, but that occur as circumstances allow. Specific effort is not made to observe or collect particular species or an assemblage of species, and no sampling protocol is used. Example: data originating from bird watching or records from iNaturalist or similar apps.
+* Targeted sampling data: planned sampling events that are focused on capturing a particular species or a subset of an assemblage of species. Observations of other (non-target) species in the assemblage are not recorded. Example: fish sampling event that is focused only on collecting Atlantic salmon, or zooplankton sampling event that is focused on cladoceran zooplankton only.
+* Assemblage sampling data: planned sampling events in which the goal is to sample the full assemblage. Observations are recorded for all species in the assemblage that are collected. Example: benthic macroinvertebrate sampling of the entire assemblage at a site, or fish assemblage sampling at a site, as part of a biomonitoring program.
+
+The importance of categorizing freshwater data based on the type of observation relates to how the data can be used in further analyses. If data represent opportunistic observations, they can only be used to indicate species presence. Opportunistic observations cannot be used to indicate where a species is not found (e.g. to draw conclusions about its conservation status), nor can they be used to describe abundance of a species because no systematic effort was made to detect the species or quantify its abundance. Caution is therefore advised when combining opportunistic observation data with data from targeted or assemblage sampling, as the conclusions that can be drawn from opportunistic observations are more limited than what might be possible with data that resulted from organized sampling efforts.
+
+Caution is also necessary when combining data from organized sampling efforts. Targeted sampling data and assemblage sampling data cannot be compared in terms of diversity or community composition because targeted sampling does not represent an attempt to record all observed taxa and thus does not describe the assemblage as a whole. While the absence of a particular taxon from assemblage sampling data suggests that the taxon was not found in a particular location during the sampling event, its absence from targeted sampling data may simply reflect the fact that it was not the species of interest during sampling and was therefore not recorded.
+
+Freshwater data should also be categorized based on the type of data contribution, which we define as:
+
+* Professional data: data that were collected by researchers, scientists, or taxonomic experts, that result from samples processed by a professional laboratory, or that have undergone quality assurance/quality control, thus indicating high confidence in the accuracy of the data.  
+* Community-based research data: data that were collected through organized public participation in sampling events or public-led sampling events, designed and/or operated through collaboration with professionals. Expert training by professionals instills confidence in the accuracy of the data, but the potential for error is higher than for professional data.
+* Citizen science data: data collected through observations by members of the public without formal training/expertise or professional support (see Citizen Science for an overview). This includes individual observations recorded through platforms that share their data with GBIF, such as iNaturalist or observation.org.
+
+The type of data contribution has implications for the types of quality checks that may be necessary for data retrieved from GBIF. For example, citizen science data may require different quality checks than professional data provided by taxonomic experts or observations from lab-processed samples (Jarvis et al. 2023), particularly for taxonomic groups that must be identified with a microscope. The distinction between community-based research data and citizen science data in our definitions is based on the degree to which there has been training and/or collaboration with professionals, increasing the probability of accurate sampling results. Under these definitions, citizen science data are those collected without training or support from professionals and are therefore most likely to require quality checks before further data use. 
+
+==== Organism groups
+
+Users who search for data on GBIF may be interested in the general biodiversity of all organisms in a region, but many have an interest in the diversity of a particular organism group. Organism groups are collections of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage. For example, phytoplankton is an organism group that refers to microscopic and planktonic (passive floaters/drifters and weak swimmers that are carried by current) autotrophic (self-feeding) organisms, including algae and bacteria. Benthic macroinvertebrates is an organism group that refers to organisms that can be seen with the naked eye (not microscopic), that have no backbone and that live on the bottom of lakes, rivers, and wetlands, including organisms such as worms, snails, clams, and aquatic life stages of insects. Generally, organism groups often comprise more than one order/class/phylum (benthic macroinvertebrates consist of, e.g., Trichoptera, Plecoptera, Gastropoda, etc.). The groupings offer a way to refer to particular components of the freshwater community that are generally studied together.
+
+Adding the organism group to which an observation belongs is a way to make data easier to find and select within GBIF. For example, someone who is interested in phytoplankton diversity would find it useful to be able to select data by the organism group name (phytoplankton) rather than having to search separately for the taxonomic classes that are part of this assemblage. Furthermore, someone who is interested in identifying the spatial distribution of benthic macroinvertebrate sampling data globally would have more success in finding data if each of the taxa of interest (reaching from class to orders) were amended with the organism group name. Table 1 outlines the organism groups that we recommend to include into freshwater data in GBIF. 
+
+[[table-01]]
+. Freshwater organism groups, their status as aquatic and/or semi-aquatic, and a description of each group with examples of taxa that are part of the group. 
+[%autowidth]
+|===
+|Organism Group	|Aquatic Status |Description
+
+|Fungi	
+|Aquatic
+|Freshwater fungi
+
+|Microbes
+|Aquatic
+|Freshwater microbial species, such as bacteria, fungi, protozoa, viruses, and other microorganisms
+
+|Benthic algae
+|Aquatic
+|Microscopic plants (algae) and autotrophs collected from bottom habitats, such as diatoms, green algae, red algae, golden algae, cyanobacteria, and others
+
+|Phytoplankton
+|Aquatic
+|Microscopic plants (algae) and autotrophs collected from the water column, such as diatoms, green algae, red algae, golden algae, cyanobacteria, and others
+
+|Macrophytes
+|Aquatic, semi-aquatic
+|Aquatic and semi-aquatic macroscopic plants and mosses, such as emergent, submergent, or floating types, found in or near freshwater
+
+|Zooplankton
+|Aquatic
+|Microscopic planktonic invertebrates, generally collected from the water column, such as cladocerans, copepods, or rotifers
+
+|Benthic macroinvertebrates
+|Aquatic, semi-aquatic
+|Macroscopic invertebrates collected from benthic habitats, such as segmented and unsegmented worms, molluscs, and freshwater insects; may also include crustaceans
+
+|Decapods (may be grouped with benthic macroinvertebrates)
+|Aquatic
+|Macroscopic crustaceans with 10 legs that may require specialized sampling approaches, separate from those of macroinvertebrates, such as crayfish, shrimp, and crabs
+
+|Fish
+|Aquatic
+|Fish that live all or part of their lives in freshwater (including anadromous and catadromous species)
+
+|Amphibians
+|Aquatic, semi-aquatic
+|Amphibians living in and around freshwater, such as frogs, newts, and mudpuppies
+
+|Reptiles
+|Aquatic, semi-aquatic
+|Reptiles living in and around freshwater, such as turtles, snakes, and crocodiles
+
+|Birds
+|Aquatic, semi-aquatic
+|Birds that live in or around freshwater for at least part of the year, such as wading and diving birds
+
+|Mammals
+|Aquatic, semi-aquatic
+|Mammals that live in or around freshwater, such as otters, beavers, and muskrats
+
+|===
+
+Many of the details about sampling methods that are recommended to be included in data submissions vary depending on the organism group, and applying the labels in <<table-01,Table 1>> would facilitate the use of conditional or recommended fields during data upload. For example, life stage is a relevant field for benthic macroinvertebrate or fish samples, but not for benthic algae samples. Below, we provide information about relevant fields and sampling details for freshwater organism groups.
+
+=== Metadata requirements
+
+==== Publishing specific data categories on GBIF
+
+An important part of publishing data on GBIF is ensuring that sufficient metadata are provided to allow future use of the published data. Resource metadata describe the details about the dataset itself, including the title, language, ownership, and usage rights. Metadata that describe the observations, such as the location and date, are included as part of the occurrence data. Extended metadata describing the sampling protocols, sample extent, and effort are provided within the sampling-event data. 
+
+Freshwater datasets published on GBIF should include the GBIF data class (listed as type of data: resources metadata, checklist, occurrence, or sampling-event) in the metadata. We recommend adding the type of observation (opportunistic observation data, targeted sampling data, or assemblage sampling data) and the type of data contribution (professional data, community-based monitoring data, or citizen science data) to the occurrence data. These categories reflect the opportunities and limitations of each dataset for large-scale data compilation and biodiversity assessment more accurately than the GBIF data classes. Table 2 indicates which of these categories can be applied to occurrence or sampling-event data. Note that the freshwater data categories may apply to different GBIF dataset classes depending on the amount of information available in the dataset, as indicated below. 
+
+[[table-02]]
+.GBIF data classes and the freshwater observation and contribution types that may be applied to each class. The “X” indicates which types of observations and contributions can be submitted to GBIF as either occurrence data or sampling-event data. GBIF data classes and freshwater data categories are defined in sections 2.1 and 2.2.
+[%autowidth]
+|===
+|Freshwater data categories |GBIF data class Occurrence data |Sampling-event data
+
+|Type of Observation
+
+|Opportunistic observation
+|X
+|
+
+|Targeted sampling data
+|X
+|X
+
+|Assemblage sampling data
+|X
+|X
+
+|Type of data contribution
+
+|Professional data
+|X
+|X
+
+|Community-based research
+|X
+|X
+
+|Citizen science
+|X
+|
+
+|===
+
+Opportunistic observation data are not collected as part of a planned sampling event, e.g., they are not collected through an organized effort to describe the assemblage composition or to estimate the geographic distribution or population size of a particular species. Instead, these data may represent secondary observations of non-target species or casual observations of species recorded as opportunity arises. Opportunistic observations are grouped as occurrence data under GBIF’s data classification system because there are no specific sampling methods to report (<<table-02>>,Table 2). Opportunistic observation data may be provided as presence-only data or as counts, but the latter is not particularly meaningful as there is no planned effort to quantify abundance.
+
+Targeted species sampling occurs as part of a planned sampling event, but is focused on the collection of a particular species or a subset of species. Assemblage sampling is similarly part of a planned sampling event, but effort is made to record all species observed during the event. Both targeted sampling data and assemblage sampling data are likely to be grouped as sampling-event data in GBIF (<<table-02>>,Table 2), as sampling effort was made following a protocol. However, whether these data are grouped as occurrence data or sampling-event data depends on whether the details and methods of sampling are available.
+
+Under the definition provided in section 2.1, most citizen science data are categorized as opportunistic observations. These observations are generally not made as part of an organized sampling effort following specific protocols (such an organized effort would generally constitute community-based monitoring), and there are no sampling methods to report. In contrast, professional data and community-based research data are generally collected as part of an organized sampling effort with a sampling protocol and can be grouped as either occurrence data or sampling-event data depending on whether or not event data are published (<<table-02>>,Table 2).
+
+==== GBIF-required metadata 
+
+The resource metadata that are required by GBIF describe details about a dataset, including its scope, ownership, and usage rights. GBIF requires metadata in XML format corresponding to the GBIF Metadata Profile, which is based on the Ecological Metadata Language (EML). All GBIF data classes require the same set of metadata for each dataset (Table 3). 
+When datasets are downloaded individually from GBIF, the XML metadata file is included and metadata fields from this table are automatically added to the occurrence file. When data are selected for download from within a polygon (thereby choosing data from multiple studies over a given geographic area), less of the metadata is provided in the occurrence table, but the permanent link to the data selection (provided by GBIF with the data download) allows the user to explore metadata for each individual project.
+
+[[table-03]]
+. Terms, definitions, examples, and comments for the metadata terms required by GBIF to describe datasets. More information on the specific fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata 
+[%autowidth]
+|===
+|Term |Freshwater term definition |Freshwater example(s); pink fields indicate that you should choose either of these entries |Freshwater status |Freshwater comment
+
+|term:dwc[title]
+|a descriptive title of the dataset
+|"Amazon Fish Database"
+|required
+|
+
+|term:dwc[description]
+|short description of the dataset
+|"The Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…"
+|required
+|
+
+|term:dwc[metadata language]
+|language in which the metadata are provided
+|`English`, `German`
+|required
+|
+
+|term:dwc[data language]
+|language in which the data are provided
+|`English`, `German`
+|required
+|
+
+|term:dwc[publishing organization
+|name of the organisation that will be listed as the data publisher at gbif.org; the publishing organisation is the institution which holds or owns the dataset and is in charge of its contents and maintenance
+|`UMR EDB`
+|required
+|Can be left empty, if you plan to publish your data through the FIP/BioFresh IPT
+
+|term:dwc[type]
+|type of dataset, using one of GBIF's dataset classes (resources metadata, checklist, occurrence, or sampling-event)
+|"resources metadata", "checklist", "occurrence", "sampling event"
+|required
+|
+
+|term:dwc[update frequency]
+|the frequency with which changes are made to the dataset after its first publication
+|"daily", "weekly", "monthly", "biannually", "annually", "as needed", "continually", "irregular",  "not planned", "unknown", "other maintenance period"
+|required
+|
+
+|term:dwc[data license]
+|license under which the dataset can be used; GBIF encourages publishers to adopt the least restrictive possible from the three machine readable options; datsets with other licences cannot be registered with GBIF
+|"Public Domain (CC0 1.0)", "Creative Commons Attribution (CC-BY 4.0)", "Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)"
+|required
+|More information can be found here: https://www.gbif.org/terms
+
+|term:dwc[resource contact](s)
+|people and organisations that should be contacted to get more information about the dataset
+|first name: "Max"; last name: "Fisher"; position: "professor"; organization: "Amazon Research Center"
+|required
+|Please provide first name, last name, position and organization in seperate fields
+
+|term:dwc[resource creator](s)
+|people and organizations who created the dataset
+|first name: "Moritz"; last name: "King"; position: "senior scientist"; organization: "Amazon Research Center"
+|required
+|List creators in priority order. The list will be used to auto-generate the citation of the dataset. Please provide first name, last name, position and organization in separate fields.
+
+|term:dwc[metadata provider](s)
+|people and organizations responsible for producing the metadata of the dataset
+|first name: "Max"; last name "Fisher"; position: "professor"; organization: "Amazon Research Center"
+|required
+|Please provide first name, last name, position and organization in separate fields.
+
+|term:dwc[geographic coverage]
+|location (bounding box) of the dataset
+|bounding box: "West -72.949; East -49.746; South -9.449; North 2.636"; description: "Amazon Basin"
+|required
+|Please provide the coordinates for the bounding box in four separate fields. Additonally a description is needed.
+
+|term:dwc[project data]
+|metadata about the project under which the dataset was produced
+|"Amazonas Fish Project"
+|required
+|Please provide at least the title of the project. Add separte fields for identifier, description, funding, study area description or design description, if wanted. More information on the additional fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/manage-resources#metadata
+
+|term:dwc[sampling methods]
+|metadata about the sampling methods used for data collection, including study extent, sampling description and step description
+|study extent: "sampling of 24 rivers in the area during the years 2020 to 2022"; sampling description: "samples were taken according to the Amazonas Standard Fish Protocol"; step description: "fishes were identified to species level according to Ama & Zon 2023; analyses were undertaken with the R package "zn pack"."
+|strongly recommended
+|Mandatory in situations where data comes from a sampling event. Please use separate fields for study extent, sampling description and step description. More information on the additional fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/manage-resources#metadata
+
+|(resource) term:dwc[citation]
+|suggestion for how your dataset should be cited
+|"Fisher, M. & King, M., 2023: Amazon Fish Project 2020-2022. Project Deliverable."
+|strongly recommended
+|When data from a single project are downloaded from GBIF, reference will be provided in a file with the data download. When data from multiple projects are selected via polygon, a DOI will be generated for the full data selection and provided to the user (dataset-specific references available at the DOI). 
+
+|===
+
+==== Metadata required for freshwater data
+
+As outlined in section 2.1, there are additional metadata fields that are necessary to describe details about the data, including where, when, and how the data were collected. Some of this information can be reported within the GBIF metadata, while other fields may be better associated with the occurrence or sampling-event data.  
+
+Habitat descriptions should at minimum include the realm and biome to indicate whether observations were made in freshwater and in what water body type. For example, these fields may indicate that a semi-aquatic plant was found adjacent to a pond rather than in the pond. The habitat zone is also required to indicate comparability of data, as for organism groups such as benthic macroinvertebrates and zooplankton, assemblage composition will differ naturally in different lake zones and river mesohabitats.
+
+The amount of sampling method information that is required to make informed decisions about data comparability and data selection also differs among organism groups. In some cases, minimal sampling method information is required for data to retain usability and broad compatibility. Additional information is particularly needed for organism groups in which methods or equipment may selectively sample only a subset of size classes or taxa. For example, mesh size of sampling nets is important for zooplankton, benthic macroinvertebrates, and fish, as taxa and age classes may be excluded from larger mesh sizes. For phytoplankton, filter pore size is similarly important to ensure different sets of data are focused on a similar portion of the phytoplankton assemblage. Sampling equipment type is highly relevant for benthic macroinvertebrates and fish and can have an impact on the degree of comparability among samples. For microscopic organism groups, it might also be necessary to report the microscope magnification used when processing samples. For some other organisms groups such as macrophytes, amphibians, reptiles, birds, and mammals, the method itself may provide the most relevant information about sample comparability. Across all organism groups, sampling effort, measured as sampled area, time, catch per unit effort, or other similar measures, can be used to standardize estimates of abundance of taxa, even if sampling methods differ. All of these details improve the utility of data published on GBIF and can facilitate large-scale analyses of data from different data sources.
