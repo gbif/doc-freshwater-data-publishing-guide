@@ -6,7 +6,7 @@
 [[benthic]]benthic:: Organisms that live on the bottom (on or in the substrate) of a body of water or wetland.
 [[biome]]biome:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^] there are three biomes in freshwater: 1) rivers and streams; 2) lakes; and 3) artificial wetlands. Groundwater, brackish water, palustrine wetlands, and coastal systems are grouped within transitional realms.
 [[DwC]]DwC:: https://dwc.tdwg.org/[Darwin Core^] data exchange standard
-[[ecosystem functional group]]ecosystem functional group:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], ecosystem functional groups describe ecological conditions within the realms e.g., permanent, seasonal or episodic/ephemeral; freeze-thaw; upland or lowland; large or small; etc. 
+[[ecosystem-functional-group]]ecosystem functional group:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], ecosystem functional groups describe ecological conditions within the realms e.g., permanent, seasonal or episodic/ephemeral; freeze-thaw; upland or lowland; large or small; etc. 
 [[FIP]]FIP:: http://www.freshwaterplatform.eu/[Freshwater Information Platform^]
 [[IPT]]IPT:: https://www.gbif.org/ipt[Integrated Publishing Toolkit^], localized repository software for publishing biodiversity data to GBIF
 [[lake-zone]]lake zone:: Lake habitat zones defined based on depth and characteristics related to light penetration, oxygen levels, substrates and temperature; includes littoral, sub-littoral, profundal, and pelagic
