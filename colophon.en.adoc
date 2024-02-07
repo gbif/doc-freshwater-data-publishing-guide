@@ -15,7 +15,7 @@ https://orcid.org/0000-0002-8098-4825[Jennifer Lento^] & https://orcid.org/0000-
 
 === Licence
 
-The document _The special guide to something_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
+The document _Freshwater Data Publishing Guide_ is licensed under https://creativecommons.org/licenses/by-sa/4.0[Creative Commons Attribution-ShareAlike 4.0 Unported License].
 
 === Persistent URI
 
