@@ -145,7 +145,7 @@ Many of the details about sampling methods that are recommended to be included i
 
 An important part of publishing data on GBIF is ensuring that sufficient metadata are provided to allow future use of the published data. Resource metadata describe the details about the dataset itself, including the title, language, ownership, and usage rights. Metadata that describe the observations, such as the location and date, are included as part of the occurrence data. Extended metadata describing the sampling protocols, sample extent, and effort are provided within the sampling-event data. 
 
-Freshwater datasets published on GBIF should include the GBIF data class (listed as type of data: resources metadata, checklist, occurrence, or sampling-event) in the metadata. We recommend adding the type of observation (opportunistic observation data, targeted sampling data, or assemblage sampling data) and the type of data contribution (professional data, community-based monitoring data, or citizen science data) to the occurrence data. These categories reflect the opportunities and limitations of each dataset for large-scale data compilation and biodiversity assessment more accurately than the GBIF data classes. Table 2 indicates which of these categories can be applied to occurrence or sampling-event data. Note that the freshwater data categories may apply to different GBIF dataset classes depending on the amount of information available in the dataset, as indicated below. 
+Freshwater datasets published on GBIF should include the GBIF data class (listed as type of data: resources metadata, checklist, occurrence, or sampling-event) in the metadata. We recommend adding the type of observation (opportunistic observation data, targeted sampling data, or assemblage sampling data) and the type of data contribution (professional data, community-based monitoring data, or citizen science data) to the occurrence data. These categories reflect the opportunities and limitations of each dataset for large-scale data compilation and biodiversity assessment more accurately than the GBIF data classes. <<table-02,Table 2>> indicates which of these categories can be applied to occurrence or sampling-event data. Note that the freshwater data categories may apply to different GBIF dataset classes depending on the amount of information available in the dataset, as indicated below. 
 
 [[table-02]]
 .GBIF data classes and the freshwater observation and contribution types that may be applied to each class. The “X” indicates which types of observations and contributions can be submitted to GBIF as either occurrence data or sampling-event data. GBIF data classes and freshwater data categories are defined in sections 2.1 and 2.2.
@@ -192,11 +192,12 @@ Under the definition provided in section 2.1, most citizen science data are cate
 
 ==== GBIF-required metadata 
 
-The resource metadata that are required by GBIF describe details about a dataset, including its scope, ownership, and usage rights. GBIF requires metadata in XML format corresponding to the GBIF Metadata Profile, which is based on the Ecological Metadata Language (EML). All GBIF data classes require the same set of metadata for each dataset (Table 3). 
+The resource metadata that are required by GBIF describe details about a dataset, including its scope, ownership, and usage rights. GBIF requires metadata in XML format corresponding to the GBIF Metadata Profile, which is based on the Ecological Metadata Language (EML). All GBIF data classes require the same set of metadata for each dataset (<<table-03,Table 3>>).
+
 When datasets are downloaded individually from GBIF, the XML metadata file is included and metadata fields from this table are automatically added to the occurrence file. When data are selected for download from within a polygon (thereby choosing data from multiple studies over a given geographic area), less of the metadata is provided in the occurrence table, but the permanent link to the data selection (provided by GBIF with the data download) allows the user to explore metadata for each individual project.
 
 [[table-03]]
-. Terms, definitions, examples, and comments for the metadata terms required by GBIF to describe datasets. More information on the specific fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata 
+.Terms, definitions, examples, and comments for the metadata terms required by GBIF to describe datasets. More information on the specific fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata 
 [%autowidth]
 |===
 |Term |Freshwater term definition |Freshwater example(s); pink fields indicate that you should choose either of these entries |Freshwater status |Freshwater comment
@@ -215,7 +216,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 
 |term:dwc[metadata language]
 |language in which the metadata are provided
-|`English`, `German`
+|"English", "German"
 |required
 |
 
@@ -225,7 +226,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 |required
 |
 
-|term:dwc[publishing organization
+|term:dwc[publishing organization]
 |name of the organisation that will be listed as the data publisher at gbif.org; the publishing organisation is the institution which holds or owns the dataset and is in charge of its contents and maintenance
 |`UMR EDB`
 |required
