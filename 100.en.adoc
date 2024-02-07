@@ -198,7 +198,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 
 [[table-03]]
 .Terms, definitions, examples and comments for the metadata fields required by GBIF to describe datasets (https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata[more information^] on specific fields)
-[cols="18,25,25,13,~"]
+[cols="18,25,25,12,~"]
 |===
 | Term |Freshwater term definition |Freshwater example(s) |Freshwater status |Freshwater comment
 
