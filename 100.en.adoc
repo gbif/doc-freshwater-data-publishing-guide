@@ -110,7 +110,8 @@ Adding the organism group to which an observation belongs is a way to make data 
 |Aquatic, semi-aquatic
 |Macroscopic invertebrates collected from benthic habitats, such as segmented and unsegmented worms, molluscs, and freshwater insects; may also include crustaceans
 
-|Decapods (may be grouped with benthic macroinvertebrates)
+|Decapods +
+(may be grouped with benthic macroinvertebrates)
 |Aquatic
 |Macroscopic crustaceans with 10 legs that may require specialized sampling approaches, separate from those of macroinvertebrates, such as crayfish, shrimp, and crabs
 
