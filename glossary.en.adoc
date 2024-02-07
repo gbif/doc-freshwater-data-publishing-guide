@@ -9,10 +9,10 @@
 [[ecosystem functional group]]ecosystem functional group:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], ecosystem functional groups describe ecological conditions within the realms e.g., permanent, seasonal or episodic/ephemeral; freeze-thaw; upland or lowland; large or small; etc. 
 [[FIP]]FIP:: http://www.freshwaterplatform.eu/[Freshwater Information Platform^]
 [[IPT]]IPT:: https://www.gbif.org/ipt[Integrated Publishing Toolkit^], localized repository software for publishing biodiversity data to GBIF
-[[lake zone]]lake zone:: Lake habitat zones defined based on depth and characteristics related to light penetration, oxygen levels, substrates and temperature; includes littoral, sub-littoral, profundal, and pelagic
+[[lake-zone]]lake zone:: Lake habitat zones defined based on depth and characteristics related to light penetration, oxygen levels, substrates and temperature; includes littoral, sub-littoral, profundal, and pelagic
 [[microhabitat]]microhabitat:: Fine-scale habitat differences within a water body, such as areas with different substrate composition.
-[[organism group]]organism group:: Collections of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage, e.g. benthic invertebrates.
+[[organism-group]]organism group:: Collections of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage, e.g. benthic invertebrates.
 [[realm]]realm:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], there are five realms: 1) terrestrial; 2) freshwater; 3) marine; 4) subterranean; and 5) atmospheric components of the biosphere, as well as transitional zones between realms.
-[[river mesohabitat]]river mesohabitat:: Zones in a river differentiated based on types of flow, including riffles (fast-flowing, shallow, rocky areas), runs (deeper, fast-flowing areas), and pools (areas of slow-flowing or standing water).
+[[river-mesohabitat]]river mesohabitat:: Zones in a river differentiated based on types of flow, including riffles (fast-flowing, shallow, rocky areas), runs (deeper, fast-flowing areas), and pools (areas of slow-flowing or standing water).
 
 <<<
