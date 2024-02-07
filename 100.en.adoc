@@ -184,11 +184,11 @@ Freshwater datasets published on GBIF should include the GBIF data class (listed
 
 |===
 
-Opportunistic observation data are not collected as part of a planned sampling event, e.g., they are not collected through an organized effort to describe the assemblage composition or to estimate the geographic distribution or population size of a particular species. Instead, these data may represent secondary observations of non-target species or casual observations of species recorded as opportunity arises. Opportunistic observations are grouped as occurrence data under GBIF’s data classification system because there are no specific sampling methods to report (<<table-02>>,Table 2). Opportunistic observation data may be provided as presence-only data or as counts, but the latter is not particularly meaningful as there is no planned effort to quantify abundance.
+Opportunistic observation data are not collected as part of a planned sampling event, e.g. they are not collected through an organized effort to describe the assemblage composition or to estimate the geographic distribution or population size of a particular species. Instead, these data may represent secondary observations of non-target species or casual observations of species recorded as opportunity arises. Opportunistic observations are grouped as occurrence data under GBIF’s data classification system because there are no specific sampling methods to report (<<table-02,Table 2>>). Opportunistic observation data may be provided as presence-only data or as counts, but the latter is not particularly meaningful as there is no planned effort to quantify abundance.
 
-Targeted species sampling occurs as part of a planned sampling event, but is focused on the collection of a particular species or a subset of species. Assemblage sampling is similarly part of a planned sampling event, but effort is made to record all species observed during the event. Both targeted sampling data and assemblage sampling data are likely to be grouped as sampling-event data in GBIF (<<table-02>>,Table 2), as sampling effort was made following a protocol. However, whether these data are grouped as occurrence data or sampling-event data depends on whether the details and methods of sampling are available.
+Targeted species sampling occurs as part of a planned sampling event, but is focused on the collection of a particular species or a subset of species. Assemblage sampling is similarly part of a planned sampling event, but effort is made to record all species observed during the event. Both targeted sampling data and assemblage sampling data are likely to be grouped as sampling-event data in GBIF (<<table-02,Table 2>>), as sampling effort was made following a protocol. However, whether these data are grouped as occurrence data or sampling-event data depends on whether the details and methods of sampling are available.
 
-Under the definition provided in section 2.1, most citizen science data are categorized as opportunistic observations. These observations are generally not made as part of an organized sampling effort following specific protocols (such an organized effort would generally constitute community-based monitoring), and there are no sampling methods to report. In contrast, professional data and community-based research data are generally collected as part of an organized sampling effort with a sampling protocol and can be grouped as either occurrence data or sampling-event data depending on whether or not event data are published (<<table-02>>,Table 2).
+Under the definition provided in section 2.1, most citizen science data are categorized as opportunistic observations. These observations are generally not made as part of an organized sampling effort following specific protocols (such an organized effort would generally constitute community-based monitoring), and there are no sampling methods to report. In contrast, professional data and community-based research data are generally collected as part of an organized sampling effort with a sampling protocol and can be grouped as either occurrence data or sampling-event data depending on whether or not event data are published (<<table-02,Table 2>>).
 
 ==== GBIF-required metadata 
 
@@ -202,43 +202,46 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 |===
 |Term |Freshwater term definition |Freshwater example(s); pink fields indicate that you should choose either of these entries |Freshwater status |Freshwater comment
 
-|term:dwc[title]
+| term:dwc[title]
 |a descriptive title of the dataset
 |"Amazon Fish Database"
 |required
 |
 
-|term:dwc[description]
+| term:dwc[description]
 |short description of the dataset
 |"The Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…"
 |required
 |
 
-|term:dwc[metadata language]
+| term:dwc[metadataLanguage]
 |language in which the metadata are provided
 |"English", "German"
 |required
 |
 
-|term:dwc[data language]
+| term:dwc[data language]
 |language in which the data are provided
 |`English`, `German`
 |required
 |
 
-|term:dwc[publishing organization]
-|name of the organisation that will be listed as the data publisher at gbif.org; the publishing organisation is the institution which holds or owns the dataset and is in charge of its contents and maintenance
-|`UMR EDB`
+| term:dwc[publishing organization]
+| Name of the organisation that will be listed as the data publisher at gbif.org; the publishing organisation is the institution which holds or owns the dataset and is in charge of its contents and maintenance
+|UMR EDB
 |required
 |Can be left empty, if you plan to publish your data through the FIP/BioFresh IPT
 
-|term:dwc[type]
-|type of dataset, using one of GBIF's dataset classes (resources metadata, checklist, occurrence, or sampling-event)
-|"resources metadata", "checklist", "occurrence", "sampling event"
+| term:dwc[type]
+|Type of dataset, using one of GBIF's dataset classes
+|"resources metadata" +
+"checklist" +
+"occurrence" +
+"sampling event"
 |required
 |
 
-|term:dwc[update frequency]
+| term:dwc[update frequency]
 |the frequency with which changes are made to the dataset after its first publication
 |"daily", "weekly", "monthly", "biannually", "annually", "as needed", "continually", "irregular",  "not planned", "unknown", "other maintenance period"
 |required
