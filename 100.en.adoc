@@ -151,8 +151,7 @@ Freshwater datasets published on GBIF should include the GBIF data class (listed
 .GBIF data classes and the freshwater observation and contribution types that may be applied to each class. The “X” indicates which types of observations and contributions can be submitted to GBIF as either occurrence data or sampling-event data. GBIF data classes and freshwater data categories are defined in sections 2.1 and 2.2.
 [cols="34,33,33"]
 |===
-.2+|Freshwater data categories 2+|GBIF data class
-|Occurrence data |Sampling-event data
+.2+|Freshwater data categories 2+|GBIF data class |Occurrence data |Sampling-event data
 
 3+|Type of Observation
 
