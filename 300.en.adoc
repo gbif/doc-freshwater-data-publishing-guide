@@ -124,7 +124,7 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 |Provide as much detail as possible about procedures followed in the lab to process and idenfity samples, including any sub-sampling procedures, sample treatment/staining, slide mounting, and magnifications used. If relevant, include a reference to the protocol used.
 |occurrence
 
-===|
+|===
 
 NOTE: `pink fields indicate that you should choose either of these entries`	
 
