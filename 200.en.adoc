@@ -15,6 +15,21 @@ Checklist data are not specific to a location and do not represent individual ob
 
 [[table-04]]
 .Terms, definitions, examples, and comments for the terms required by GBIF to publish checklist datasets (see https://www.gbif.org/data-quality-requirements-checklists[more information^] on the specific fields).
+[cols="%autowidth"]
+|===
+|term |definition |example(s) |status |comment
+
+|term:dwc[taxonID]
+|a unique identifier for the taxon; may be a global unique identifier or an identifier specific to the dataset
+|"8fa58e08-08de-4ac1-b69c-1235340b7001" +
+"32567" +
+"ID-fwe-32567"
+|required
+|Ideally, the taxonID is a persistent global unique identifier. As a minimum requirement, it has to be unique within the published dataset.
+
+|===
+
+NOTE: `pink fields indicate that you should choose either of these entries`
 
 ==== Occurrence datasets
 
@@ -23,7 +38,20 @@ Occurrence data provide information about observations of taxa and the locations
 Occurrence data can be provided as presence data (i.e., a “1” for a site where the taxon was observed) or as counts in the field individualCount (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (i.e. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (i.e., in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density, or biomass as part of targeted or assemblage sampling, these measures should be recorded in the field organismQuantity with units recorded in organismQuantityType (Table 5). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (i.e. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field occurrenceStatus (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
 
 [[[table-05]]
-.Terms, definitions, examples, and comments for the terms required by GBIF to publish occurrence datasets (https://www.gbif.org/data-quality-requirements-occurrences[more information^] on specific fields) 
+.Terms, definitions, examples, and comments for the terms required by GBIF to publish occurrence datasets (https://www.gbif.org/data-quality-requirements-occurrences[more information^] on specific fields)
+[cols="%autowidth"]
+|===
+|Term	|Freshwater definition |Example |Status |Comment
+
+|term:dwc[occurrenceID]
+|Identifier for the Occurrence; in the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique
+|"AT:BOKU:DAN_0003:8755" [country:institutionCode:sampleCode:speciesID]
+|required
+|This should be a unique identifier for the occurrence, allowing the same occurrence to be recognised across dataset versions as well as through data downloads and use. At the very least the identifier should be unique to the dataset, and ideally a globally unique identifier.
+
+|===
+
+NOTE: `pink fields indicate that you should choose either of these entries`
 
 ==== Sampling-event datasets
 
@@ -33,6 +61,17 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 [[table-06]
 .Terms, definitions, examples, and comments for the terms required by GBIF to publish sampling-event datasets (https://www.gbif.org/data-quality-requirements-sampling-events[more information^] on the specific fields)
+[cols="%autowidth"]
+|===
+|Term	|Freshwater definition |Example |Status |Comment
+
+|term:dwc[eventID]
+|identifier for the set of information associated with an Event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset
+|"AT:BOKU:DAN_0003:MHS1" [country:institutionCode:sampleCode:method]
+|required
+|If Occurrence has Event data (i.e., methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
+
+|===
 
 === Specific requirements for publishing freshwater data (freshwater amendments)
 
@@ -54,3 +93,15 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 [[table-07]]
 .Terms, definitions, examples, and comments for the terms recommended to be included with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields)
+[cols="%autowidth"]
+|===
+|Term	|Freshwater definition |Example |Status |Comment |Inclusion
+
+|term:dwc[rightsHolder]
+|a person or organisation owning or managing the rights over the resource
+|"BOKU University" [University of Natural Resources and Life Sciences, BOKU Vienna]
+|strongly recommended
+|
+|metadata
+
+|===
