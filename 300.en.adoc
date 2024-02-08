@@ -8,6 +8,21 @@ The proposed DwC extension includes the classification of the type of observatio
 
 To allow for data to be selected more efficiently for freshwater meta-analyses, the freshwater DwC extension also includes fields for the organism group, the season of sampling, as well as specifications for the sampling methods.
 
+[glossary]
+==== 3.1.1 Recommended terms for a DwC freshwater extension
+
+freshwaterBiome:: _definition_: ecologically similar components of freshwaters with broadly similar features +
+_examples_: "lakes", "rivers", "wetlands", "groundwater", "adjacent to freshwater", ”interstitial” +
+_status_: required +
+_comment_: Please classify your event accordingly based on where the observation was made. If observation was in a terrestrial habitat adjacent to freshwater, indicate "adjacent to freshwater". +
+_inclusion_: occurrence
+
+freshwaterEcosystemFunctionalGroup:: _definition_: typology within biomes that classifies ecosystems by joining those with similar ecological conditions +
+_examples_: "lowland rivers", "large lakes", "ponds" (see typology for full list)
+_status_: required +
+_comment_: Please follow the definitions of the https://global-ecosystems.org/[IUCN Global Ecosystem Typology^] for consistency +
+_inclusion_: occurrence
+
 [[table-08]]
 .Terms, definitions, examples, and comments for the terms recommended for inclusion in a freshwater DwC extension.
 [cols="%autowidth"]
@@ -128,22 +143,6 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 
 NOTE: `pink fields indicate that you should choose either of these entries`	
 
-[glossary]
-==== Appendix A: Recommended terms for a DwC freshwater extension
-
-freshwaterBiome:: _definition_: ecologically similar components of freshwaters with broadly similar features +
-_examples_: "lakes", "rivers", "wetlands", "groundwater", "adjacent to freshwater", ”interstitial” +
-_status_: required +
-_comment_: Please classify your event accordingly based on where the observation was made. If observation was in a terrestrial habitat adjacent to freshwater, indicate "adjacent to freshwater". +
-_inclusion_: occurrence
-
-freshwaterEcosystemFunctionalGroup:: _definition_: typology within biomes that classifies ecosystems by joining those with similar ecological conditions +
-_examples_: "lowland rivers", "large lakes", "ponds" (see typology for full list)
-_status_: required +
-_comment_: Please follow the definitions of the https://global-ecosystems.org/[IUCN Global Ecosystem Typology^] for consistency +
-_inclusion_: occurrence
-
-
 === Freshwater data tagging
 
 Data portals such as GBIF offer a great variety of data, but still show limitations in terms of freshwater species. This relates mostly to the fact that freshwater species and freshwater datasets are not specifically tagged and therefore hard to find among millions of terrestrial and marine species and occurrence records. If looking for entire freshwater datasets (e.g. recordings of whole assemblages) this often has to be done through searching for specific freshwater species, which is a time-consuming task.
@@ -161,19 +160,3 @@ Species observed in freshwaters are typically good indicators of the health/stat
 While findability – through capable search engines – seems to be less of a pressing issue, accessibility of data, interoperability between data infrastructures and reusability still play a major role. This guideline seeks to streamline data publication in terms of data reuse and accessibility by making them available through GBIF and by including a specific set of fields for freshwater-relevant information. Alternatively, other publishing platforms that guarantee exchange with GBIF like the data portal of the Freshwater Information Platform (FIPbio) or the South African https://freshwaterbiodiversity.org/[Freshwater Biodiversity Information System^], which both focus on freshwater data, can be used. In any case, we advise that priority be given to infrastructures that provide biogeographic information and are well-connected with GBIF, rather than using simple repositories for data publishing.
 
 Once freshwater data can be more easily filtered within GBIF (through respective tagging of freshwater species), it will be possible to more easily assess global freshwater taxa coverage and to actually identify data and/or research gaps in freshwater biodiversity.
-
-
-[glossary]
-== Appendix A: Recommended terms for a DwC freshwater extension
-
-freshwaterBiome:: _definition_: ecologically similar components of freshwaters with broadly similar features +
-_examples_: "lakes", "rivers", "wetlands", "groundwater", "adjacent to freshwater", ”interstitial” +
-_status_: required +
-_comment_: Please classify your event accordingly based on where the observation was made. If observation was in a terrestrial habitat adjacent to freshwater, indicate "adjacent to freshwater". +
-_inclusion_: occurrence
-
-freshwaterEcosystemFunctionalGroup:: _definition_: typology within biomes that classifies ecosystems by joining those with similar ecological conditions +
-_examples_: "lowland rivers", "large lakes", "ponds" (see typology for full list)
-_status_: required +
-_comment_: Please follow the definitions of the https://global-ecosystems.org/[IUCN Global Ecosystem Typology^] for consistency +
-_inclusion_: occurrence
