@@ -10,7 +10,7 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 
 [[table-08]]
 .Terms, definitions, examples, and comments for the terms recommended to be included as a freshwater DwC extension.
-[cols="~,~,~,10,~,10"]
+[cols="%autowidth"]
 |===
 |term	|definition |example(s) |status |comment |inclusion
 
@@ -28,7 +28,10 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 
 |freshwaterEcosystemFunctionalGroup
 |typology within biomes that classifies ecosystems by joining those with similar ecological conditions
-|"lowland rivers", "large lakes", "ponds" (see typology for full list)
+|"lowland rivers" +
+"large lakes" +
+"ponds" +
+(see typology for full list)
 |required
 |Please follow the definitions of the https://global-ecosystems.org/[IUCN Global Ecosystem Typology^] for consistency
 |occurrence
