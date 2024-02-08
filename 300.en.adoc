@@ -148,7 +148,7 @@ Once freshwater data can be more easily filtered within GBIF (through respective
 
 
 [glossary]
-== Recommended terms for a DwC freshwater extension
+== Appendix A: Recommended terms for a DwC freshwater extension
 
 freshwaterBiome:: _definition_: ecologically similar components of freshwaters with broadly similar features +
 _examples_: "lakes", "rivers", "wetlands", "groundwater", "adjacent to freshwater", ”interstitial” +
