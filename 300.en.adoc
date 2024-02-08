@@ -8,8 +8,18 @@ The proposed DwC extension includes the classification of the type of observatio
 
 To allow for data to be selected more efficiently for freshwater meta-analyses, the freshwater DwC extension also includes fields for the organism group, the season of sampling, as well as specifications for the sampling methods.
 
+[glossary]
+== Recommended terms for a DwC freshwater extension
+
+freshwaterBiome:: _definition_: ecologically similar components of freshwaters with broadly similar features +
+_examples_: "lakes", "rivers", "wetlands", "groundwater", "adjacent to freshwater", ”interstitial” +
+_status_: required +
+_comment_: Please classify your event accordingly based on where the observation was made. If observation was in a terrestrial habitat adjacent to freshwater, indicate "adjacent to freshwater".	+
+_inclusion_: occurrence
+
+
 [[table-08]]
-.Terms, definitions, examples, and comments for the terms recommended to be included as a freshwater DwC extension.
+.Terms, definitions, examples, and comments for the terms recommended for inclusion in a freshwater DwC extension.
 [cols="%autowidth"]
 |===
 |term	|definition |example(s) |status |comment |inclusion
