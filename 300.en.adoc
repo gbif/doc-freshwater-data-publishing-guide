@@ -132,7 +132,7 @@ NOTE: `pink fields indicate that you should choose either of these entries`
 
 Data portals such as GBIF offer a great variety of data, but still show limitations in terms of freshwater species. This relates mostly to the fact that freshwater species and freshwater datasets are not specifically tagged and therefore hard to find among millions of terrestrial and marine species and occurrence records. If looking for entire freshwater datasets (e.g. recordings of whole assemblages) this often has to be done through searching for specific freshwater species, which is a time-consuming task.
 
-Freshwater datasets that are submitted to GBIF through a GBIF node or uploaded using htttps://www.gbif.org/ipt[GBIF Integrated Publishing Toolkit^] (IPT) software should therefore be tagged as “freshwater” to make the dataset more visible to the freshwater community. This can be done by allocating the specific dataset to the “Freshwater Network” during the publication process, after registering it with GBIF.
+Freshwater datasets that are submitted to GBIF through a GBIF node or uploaded using https://www.gbif.org/ipt[GBIF Integrated Publishing Toolkit^] (IPT) software should therefore be tagged as “freshwater” to make the dataset more visible to the freshwater community. This can be done by allocating the specific dataset to the “Freshwater Network” during the publication process, after registering it with GBIF.
 
 === Importance of reliable taxonomy 
 
