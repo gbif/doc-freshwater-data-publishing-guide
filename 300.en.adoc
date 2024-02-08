@@ -43,6 +43,7 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 "pelagic" +
 "profundal"
 |share, if available (based on freshwaterBiome)
+| 
 |occurrence
 
 |freshwaterRiverMesohabitat
@@ -51,6 +52,7 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 "run" +
 "pool"
 |share, if available (based on freshwaterBiome)
+| 
 |occurrence
 
 |freshwaterTypeOfContribution
@@ -59,6 +61,7 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 "community-based research data" +
 "citizen science data"
 |required
+| 
 |occurrence
 
 |freshwaterTypeoOfObservation
@@ -67,6 +70,7 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 "targeted sampling" +
 "assemblage sampling"
 |required
+| 
 |occurrence
 
 |freshwaterOrganismGroup
@@ -85,8 +89,9 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 "birds" +
 "mammals"
 |required
-
+| 
 |occurrence
+
 |freshwaterSeason	indicates the season in which a sample was collected
 |"winter" +
 "spring" +
@@ -95,7 +100,29 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 "wet" +
 "dry"
 |strongly recommended
+| 
 |occurrence
+
+|freshwaterSamplingEquipment
+|name or description of the sampling instrument that was used for collecting the taxa, including mesh sizes where applicable
+|"light trap" +
+"500 μm mesh kick net" +
+"80 μm mesh plankton net" +
+"6.25, 8, 10, 12.5, 15.5, 19.5, 24, 29, 35, 43, 55 mm mesh gill net"
+|required	
+|It is important that both the sampling equipment and the net mesh size (if nets were used) are provided, as mesh size gives an indication of the size of organisms retained.
+|occurrence
+
+|freshwaterSampleProcessing
+|name or description of the sample processing protocol (i.e., procedures followed after sample collection to sort and identify taxa)	
+|"20x microscope magnification" +
+"subsampled with Marchant box until 300 organisms identified - abundance estimated based on the number of cells processed" +
+"samples filtered on 45 μm pore size filter paper prior to identification" +
+"samples mounted on slide and random transects identified under 500x inverted microscope until 300 individuals filaments or colonies counted and identified" +
+|share, if available (based on freshwaterOrganismGroup (fungi, microbes, benthic algae, phytoplankton, zooplankton, benthic macroinvertebrates))
+|Provide as much detail as possible about procedures followed in the lab to process and idenfity samples, including any sub-sampling procedures, sample treatment/staining, slide mounting, and magnifications used. If relevant, include a reference to the protocol used.
+|occurrence
+
 
 ===|
 
