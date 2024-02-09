@@ -80,7 +80,7 @@ Adding the organism group to which an observation belongs is a way to make data 
 .Freshwater organism groups, their status as aquatic and/or semi-aquatic, and a description of each group with examples of taxa that are part of the group. 
 [cols="22,22,~"]
 |===
-|Organism Group	|Aquatic Status |Description
+|Organism group	|Aquatic status |Description
 
 |Fungi	
 |Aquatic
