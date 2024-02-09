@@ -152,7 +152,7 @@ Freshwater datasets published on GBIF should include the GBIF data class (listed
 [cols="34,33,33"]
 |===
 .2+|Freshwater data categories 2+^|GBIF data class 
-| ^|Occurrence data ^|Sampling-event data
+^|Occurrence data ^|Sampling-event data
 
 3+|Type of observation
 
