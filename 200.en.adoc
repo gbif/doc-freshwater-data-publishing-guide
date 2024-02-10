@@ -412,9 +412,9 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[recordedBy]
 |A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original Occurrence; the primary collector or observer should be listed first.
-^|"Jen Lento (`post`) Astrid Schmidt-Kloiber"
+^|"Jen Lento \| Astrid Schmidt-Kloiber"
 |Strongly recommended
-|Recommended best practice is to separate the values in a list with space vertical bar space or post.  
+|Recommended best practice is to separate the values in a list with space vertical bar space, or post (\|).  
 |Occurrence
 
 |term:dwc[sex]
@@ -606,16 +606,16 @@ Event
 |term:dwc[identifiedBy]
 |	a name or a list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject	HYPERLINK "http://rs.tdwg.org/dwc/terms/identifiedBy"http://rs.tdwg.org/dwc/terms/identifiedBy
 ^|"Hans Malicky" +
-"Jen Lento (`post`) Astrid Schmidt-Kloiber"	
+"Jen Lento \| Astrid Schmidt-Kloiber"	
 |Strongly recommended
-|Recommended best practice is to separate the values in a list with space vertical bar space, or post.	
+|Recommended best practice is to separate the values in a list with space vertical bar space, or post (\|).	
 |Occurrence
 
 |term:dwc[identificationReferences]
 |A reference or a list (concatenated and separated) of references (publication, global unique identifier, URI) used in the Identification	
 ^|"Malicky, H. 2004 (2nd edtion): Atlas of European Trichoptera. Springer. 1-341."	
 |Strongly recommended
-|Recommended best practice is to separate the values in a list with space vertical bar space, or post. Add a DOI if available.
+|Recommended best practice is to separate the values in a list with space vertical bar space, or post (\|). Add a DOI if available.
 |Occurrence
 
 |term:dwc[identificationVerificationStatus]
