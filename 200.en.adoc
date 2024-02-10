@@ -301,28 +301,32 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 |term:dwc[coordinateUncertaintyInMeters] 
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the Location.
-|"30" (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
-"100" (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
+>|"30" +
+(reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
+ +
+"100" +
+(reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
 |Share, if available	
 |Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term. Uncertainty can be used to specify the radius of a sampling area around a central point provided in term:dwc[decimalLatitude] and term:dwc[decimalLongitude].
 
 |term:dwc[footprintWKT]
 |An area description, specifying the location of the sample event in well-known text (WKT) markup language
-|"POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))" [a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21]
+>|"POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))" +
+(a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21)
 |Strongly recommended
 |A WKT representation of the shape (footprint, geometry) that defines the location. This differs from the point-radius representation that is combined from the elements term:dwc[decimalLatitude], term:dwc[decimalLongitude] and term:dwc[coordinateUncertaintyInMeters] in that it can define shapes that are not circles. Note that it is possible to supply both a point-radius and a footprintWKT location for the same sample event.
 
 |term:dwc[footprintSRS]
-The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in footprintWKT is based.
-|"EPSG:4326" +
+|The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in footprintWKT is based.
+>|"EPSG:4326" +
 "unknown"
 |Strongly recommended
 |Recommended best practice is to use the EPSG code of the SRS, if known. If none of these is known, use the value "unknown". It is also permitted to provide the SRS in Well-Known-Text, especially if no EPSG code provides the necessary values for the attributes of the SRS. Do not use this term to describe the SRS of the decimalLatitude and decimalLongitude, nor of any verbatim coordinates - use the geodeticDatum and verbatimSRS instead.
 
 |term:dwc[countryCode]
 |Standard code for the country in which the Location occurs.
-|"AR" [Argentina] +
- "SV" [El Salvador]	
+>|"AR" (Argentina) +
+ "SV" (El Salvador)	
 |Strongly recommended
 |Recommended best practice is to use ISO 3166-1-alpha-2 country codes. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level.
 
@@ -347,16 +351,55 @@ Additional fields for observation data include the sex and life stage, both of w
 Sampling method details recommended to be included as part of the freshwater DwC extension are fields for sampling equipment (e.g. type of net or sampler), mesh size of nets, and sample processing protocols. Each of these details has been shown to be vital to selecting data for meta-analysis (https://caff.is/freshwater[Lento et al. 2019^]; https://doi.org/10.1111/fwb.13873[Goedkoop et al. 2022^), and including separate fields for them instead of grouping them all within the protocol field increases the chances that complete information will be provided without ambiguities.
 
 [[table-07]]
-.Terms, definitions, examples, and comments for the terms recommended to be included with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields)
+.Terms, definitions, examples, and comments for the terms recommended to be included with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
 [cols="%autowidth"]
 |===
 |Term	|Freshwater definition |Example |Status |Comment |Inclusion
 
 |term:dwc[rightsHolder]
 |a person or organisation owning or managing the rights over the resource
-|"BOKU University" [University of Natural Resources and Life Sciences, BOKU Vienna]
-|strongly recommended
-|
-|metadata
+>|"BOKU University" +
+(University of Natural Resources and Life Sciences, BOKU Vienna)
+|Strongly recommended
+| 
+|Metadata
+
+|term:dwc[institutionCode]
+|Name or acronym of the institution having custody of the dataset or record.
+>|"BOKU" +
+(University of Natural Resources and Life Sciences, BOKU Vienna) +
+ +
+"UNB" +
+(University New Brunswick)
+Required		
+| 
+|Metadata
+
+|term:dwc[collectionID]
+|Identifier for the collection or dataset from which the record was derived.
+>|"urn:lsid:biocol.org:col:34818" +
+"https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c"
+|Strongly recommended
+|For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].	occurrence
+
+|term:dwc[informationWithheld]
+|Additional information that exists, but that has not been shared in the given record.
+>|"location information not given for endangered species"
+|Strongly recommended
+|A note on possible information that was intentionally not included into the dataset.
+|Occurrence
+
+|term:dwc[dynamicProperties]
+|List of additional measurements, facts, characteristics, or assertions about the record; meant to provide a mechanism for structured content.
+>|"biome:river" +
+"ecosystem functional group:lowland river" +
+"microhabitat:sand" +
+"data category:opportunistic observation" +
+"type of contribution:community-based research data" +
+"organism group:fish"
+|Strongly recommended
+|Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group or microhabitat until the freshwater extension is created and available for use. Note that this field is not searchable on GBIF.
+|Occurrence
+
 
 |===
