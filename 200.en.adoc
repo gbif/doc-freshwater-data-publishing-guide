@@ -91,7 +91,8 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 
 |term:dwc[occurrenceID]
 |Identifier for the Occurrence; in the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique
-^|"AT:BOKU:DAN_0003:8755" [country:institutionCode:sampleCode:speciesID]
+^|"AT:BOKU:DAN_0003:8755" +
+(country:institutionCode:sampleCode:speciesID)
 |Required
 |This should be a unique identifier for the occurrence, allowing the same occurrence to be recognised across dataset versions as well as through data downloads and use. At the very least the identifier should be unique to the dataset, and ideally a globally unique identifier.
 
@@ -105,24 +106,27 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
-^|"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]	
+^|"Adicella cremisa Malicky, 1972" +
+(genus + specificEpithet + scientificNameAuthorship)
 |Required
 |"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g., cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, i.e., working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
 |term:dwc[eventDate]
 |The date or interval during which an Event occurred/the occurrence record was collected; not suitable for a time in a geological context (e.g. 5000 BP)
-^|"1809-02-12" [12 February 1809]
+^|"1809-02-12" +
+(12 February 1809)
 |Required
-|Use the following format: `yyyy-mm-dd` four-digit year - month - day. Please make sure to provide separate columns for year, month and day as well (see freshwater recommended terms). Note that the time should not be included as part of this element, please use eventTime instead where required.
+|Use the following format: `yyyy-mm-dd` four-digit year-month-day. Please make sure to provide separate columns for year, month and day as well (see freshwater recommended terms). Note that the time should not be included as part of this element, please use eventTime instead where required.
 
 |term:dwc[eventID] +
 (_if linked to an event_)
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset.
-^|"AT:BOKU:DAN_0003:MHS" [country:institutionCode:sampleCode:method]
+^|"AT:BOKU:DAN_0003:MHS" +
+(country:institutionCode:sampleCode:method)
 |Required, if event data are available
 |If Occurrence has Event data (i.e. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
 
-|term:dwc[taxonRank
+|term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName].
 ^|"kingdom" +
 "phylum" +
@@ -222,9 +226,9 @@ NOTE: `pink fields indicate that you should choose either of these entries`
 
 ==== Sampling-event datasets
 
-When occurrence data have additional metadata describing sampling methods, this is called an event and the additional metadata are provided as sampling-event data (<<table-06,Table 6>>). Please note that each event dataset consists of two files: the sampling-event dataset and the associated occurrence dataset. The associated occurrence dataset looks like the one in 3.1.2. but needs to be amended with the eventID (mandatory; identifying the event and linking the two datasets) and the occurrenceStatus (recommended to indicate whether a taxon was present or absent at a site). 
+When occurrence data have additional metadata describing sampling methods, this is called an event and the additional metadata are provided as sampling-event data (<<table-06,Table 6>>). Please note that each event dataset consists of two files: the sampling-event dataset and the associated occurrence dataset. The associated occurrence dataset looks like the one in <Occurrence datasets,§2.1.2>>. but needs to be amended with the term:dwc[eventID] (mandatory; identifying the event and linking the two datasets) and the term:dwc[occurrenceStatus] (recommended to indicate whether a taxon was present or absent at a site). 
 
-Sampling methods are described in the sampling-event dataset with the field samplingProtocol, which provides a name/link to a specific protocol and/or description of the protocol (<<table-06,Table 6>>). The recommended best practice is to have a separate event for each sampling method used. In addition to describing the protocol, the field sampleSizeValue and sampleSizeUnit can be used to indicate the spatial or temporal extent of sampling for the described sampling event, as a measure of sampling effort for each event. In addition, the field samplingEffort can be used to record the total effort spent on the event, for example, when there were multiple nets, multiple microhabitats sampled, or multiple periods of time over which sampling occurred. Additional details about sampling methods are recommended to be included in the freshwater DwC extensions described in section 4.1. 
+Sampling methods are described in the sampling-event dataset with the field term:dwc[samplingProtocol], which provides a name/link to a specific protocol and/or description of the protocol (<<table-06,Table 6>>). The recommended best practice is to have a separate event for each sampling method used. In addition to describing the protocol, the field term:dwc[sampleSizeValue] and term:dwc[sampleSizeUnit] can be used to indicate the spatial or temporal extent of sampling for the described sampling event, as a measure of sampling effort for each event. In addition, the field term:dwc[samplingEffort] can be used to record the total effort spent on the event, for example, when there were multiple nets, multiple microhabitats sampled, or multiple periods of time over which sampling occurred. Additional details about sampling methods are recommended to be included in the freshwater DwC extensions described in <<Freshwater DwC extension,§3.1>>. 
 
 [[table-06]]
 .Terms, definitions, examples, and comments for the terms required by GBIF to publish sampling-event datasets (https://www.gbif.org/data-quality-requirements-sampling-events[more information^] on the specific fields)
@@ -235,7 +239,7 @@ Sampling methods are described in the sampling-event dataset with the field samp
 |term:dwc[eventID]
 |Identifier for the set of information associated with an Event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset
 ^|"AT:BOKU:DAN_0003:MHS1" +(country:institutionCode:sampleCode:method)
-|required
+|Required
 |If Occurrence has Event data (i.e., methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
 
 |term:dwc[eventDate]
@@ -344,9 +348,9 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 <<table-07,Table 7>> lists the DwC fields that would be useful to add to freshwater datasets to allow for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
 
-* freshwater mandatory: as an addition to the GBIF mandatory fields, we recommend mandatory fields for freshwater samples
-* freshwater recommended: data that are useful to be reported
-* freshwater conditional: data that should be reported, but that are only relevant to particular organism groups or habitats (as indicated)
+* *Freshwater mandatory*: as an addition to the GBIF mandatory fields, we recommend mandatory fields for freshwater samples
+* *Freshwater recommended*: data that are useful to be reported
+* *Freshwater conditional*: data that should be reported, but that are only relevant to particular organism groups or habitats (as indicated)
 
 We provide examples for the content of the fields, and where necessary, even selection lists to choose from.
 
