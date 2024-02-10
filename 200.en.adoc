@@ -371,7 +371,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
  +
 "UNB" +
 (University New Brunswick)
-Required		
+|Required		
 | 
 |Metadata
 
@@ -380,7 +380,8 @@ Required
 >|"urn:lsid:biocol.org:col:34818" +
 "https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c"
 |Strongly recommended
-|For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].	occurrence
+|For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].
+|Occurrence
 
 |term:dwc[informationWithheld]
 |Additional information that exists, but that has not been shared in the given record.
