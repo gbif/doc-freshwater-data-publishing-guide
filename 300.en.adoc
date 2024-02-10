@@ -2,7 +2,7 @@
 
 === Freshwater DwC extension
 
-While we have recommended that occurrence and sampling-event data be amended with other specific DwC fields when publishing freshwater data (see 3.2 and <<table-07,Table 7>>), several of the fields that should be included in the (meta)data as best practices do not currently have appropriate equivalents in DwC. Our recommendation is that a freshwater DwC extension should be created to allow these fields to be entered and grouped with freshwater data (<<table-08,Table 8>>). Prior to the extension being created, the recommendation is to enter all details in the dynamicProperties field, but as this field is not searchable, the greatest functionality will result from an extension.
+While we have recommended that occurrence and sampling-event data be amended with other specific DwC fields when publishing freshwater data (see 2.2 and <<table-07,Table 7>>), several of the fields that should be included in the (meta)data as best practices do not currently have appropriate equivalents in DwC. Our recommendation is that a freshwater DwC extension should be created to allow these fields to be entered and grouped with freshwater data (<<table-08,Table 8>>). Prior to the extension being created, the recommendation is to enter all details in the dynamicProperties field, but as this field is not searchable, the greatest functionality will result from an extension.
 
 The proposed DwC extension includes the classification of the type of observation (opportunistic, targeted, or assemblage sampling) and type of contribution (professional, community-based research, or citizen science data; Table 8). In addition, the location of the observation is further described by the biome, ecosystem functional group, and freshwater lake zone or river mesohabitat (conditional on the biome). 
 
@@ -13,15 +13,25 @@ To allow for data to be selected more efficiently for freshwater meta-analyses, 
 
 freshwaterBiome:: _definition_: ecologically similar components of freshwaters with broadly similar features +
 _examples_: "lakes", "rivers", "wetlands", "groundwater", "adjacent to freshwater", ”interstitial” +
-_status_: required +
+_status_: Required +
 _comment_: Please classify your event accordingly based on where the observation was made. If observation was in a terrestrial habitat adjacent to freshwater, indicate "adjacent to freshwater". +
-_inclusion_: occurrence
+_inclusion_: Occurrence
 
 freshwaterEcosystemFunctionalGroup:: _definition_: typology within biomes that classifies ecosystems by joining those with similar ecological conditions +
 _examples_: "lowland rivers", "large lakes", "ponds" (see typology for full list) +
-_status_: required +
+_status_: Required +
 _comment_: Please follow the definitions of the https://global-ecosystems.org/[IUCN Global Ecosystem Typology^] for consistency +
-_inclusion_: occurrence
+_inclusion_: Occurrence
+
+freshwaterLakeZone:: _definition_: typology within the lake biome that classifies this ecosystem into habitat zones +
+_examples_: "littoral", "sub-littoral", "pelagic", "profundal" +
+_status_: Share, if available (based on freshwaterBiome) +
+_inclusion_: Occurrence
+
+freshwaterRiverMesohabitat:: _definition_: typology within the river biome that classifies this ecosystem into habitat zones +
+_examples_:"riffle", "run", "pool" +
+_status_: Share, if available (based on freshwaterBiome) +
+_inclusion_: Occurrence
 
 [[table-08]]
 .Terms, definitions, examples, and comments for the terms recommended for inclusion in a freshwater DwC extension.
