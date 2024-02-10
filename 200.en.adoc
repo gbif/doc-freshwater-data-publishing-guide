@@ -5,9 +5,9 @@
 
 GBIF makes use of the Darwin Core Standard (DwC) to provide a standardized framework for formatting data for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of data from different sources through a common format and a number of required and recommended fields. 
 
-Though GBIF suggests the required and recommended fields for the above-mentioned types of datasets, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <Introduction>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible we also provide Excel templates for all data classes.
+Though GBIF suggests the required and recommended fields for the above-mentioned types of datasets, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <<Introduction>>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible we also provide Excel templates for all data classes.
 
-What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When data are uploaded, the taxonomic backbone of GBIF will be used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
+What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When data are uploaded, the https://doi.org/10.15468/39omei[GBIF Backbone Taxonomy^] is used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
 
 ==== Checklist datasets
 
@@ -21,21 +21,21 @@ Checklist data are not specific to a location and do not represent individual ob
 
 |term:dwc[taxonID]
 |A unique identifier for the taxon; may be a global unique identifier or an identifier specific to the dataset.
-|"8fa58e08-08de-4ac1-b69c-1235340b7001" +
+^|"8fa58e08-08de-4ac1-b69c-1235340b7001" +
 "32567" +
 "ID-fwe-32567"
-|required
+|Required
 |Ideally, the taxonID is a persistent global unique identifier. As a minimum requirement, it has to be unique within the published dataset.
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known	
-|"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]
-|required	
+^|"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]
+|Required	
 |Names should be compliant to the most recent nomenclatural code. This term should not contain identification qualifications (e.g., cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, i.e., working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
 |term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName]
-|"kingdom" +
+^|"kingdom" +
 "phylum" +
 "class" +
 "order" +
@@ -46,31 +46,31 @@ Checklist data are not specific to a location and do not represent individual ob
 "subspecies" +
 "varietas" +
 "forma"
-|required
+|Required
 |Recommended best practice is to use a controlled vocabulary.
 
 |term:dwc[kingdom]
 | Full scientific name of the kingdom in which the taxon is classified.
-|"Animalia" +
+^|"Animalia" +
 "Plantae" +
 "Fungi" +
 "Protista" +
 "Monera"
-|strongly recommended
+|Strongly recommended
 |Inclusion of kingdom helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
 
 |term:dwc[parentNameUsageID]
 |The taxonID of the next available higher-ranked (parent) entry within the checklist dataset, if higher taxon names are supplied as separate entries in the list
-|"2704173" (GBIF) +
+^|"2704173" (GBIF) +
 "tsn:41074" (ITIS)
-|strongly recommended
+|Strongly recommended
 |This supports the representation of the dataset as a hierarchy, e.g. for the publication of a taxonomy. For Darwin Core Archives, the related record should be present locally in the same archive. 
 
 |term:dwc[acceptedNameUsageID]
 |Within the record of a synonym, the taxonID of the accepted taxon name entry within the checklist dataset, if both synonyms and accepted names are supplied.
-|"2704179" (GBIF) +
+^|"2704179" (GBIF) +
 "tsn:41107" (ITIS)
-|strongly recommended
+|Strongly recommended
 |This supports the representation of synonymy for a taxonomic dataset. For Darwin Core Archives the related record should be present locally in the same archive.
 
 |===
@@ -81,7 +81,7 @@ NOTE: `pink fields indicate that you should choose either of these entries`
 
 Occurrence data provide information about observations of taxa and the locations where they were found (<<table-05,Table 5>>). Although only coarse location information is required, the recommended best practice is to always provide coordinates (latitude and longitude in decimal degrees), a geodetic datum, and a measure of the uncertainty around the coordinates (estimated precision). 
 
-Occurrence data can be provided as presence data (i.e., a “1” for a site where the taxon was observed) or as counts in the field individualCount (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (i.e. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (i.e., in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density, or biomass as part of targeted or assemblage sampling, these measures should be recorded in the field organismQuantity with units recorded in organismQuantityType (Table 5). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (i.e. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field occurrenceStatus (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
+Occurrence data can be provided as presence data (i.e. a “1” for a site where the taxon was observed) or as counts in the field term:dwc[individualCount] (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (i.e. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (i.e., in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density or biomass as part of targeted or assemblage sampling, these measures should be recorded in the field term:dwc[organismQuantity] with units recorded in term:dwc[organismQuantityType] (<<table-05,Table 5>>). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (i.e. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field term:dwc[occurrenceStatus] (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
 
 [[table-05]]
 .Terms, definitions, examples, and comments for the terms required by GBIF to publish occurrence datasets (https://www.gbif.org/data-quality-requirements-occurrences[more information^] on specific fields)
@@ -91,13 +91,13 @@ Occurrence data can be provided as presence data (i.e., a “1” for a site whe
 
 |term:dwc[occurrenceID]
 |Identifier for the Occurrence; in the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique
-|"AT:BOKU:DAN_0003:8755" [country:institutionCode:sampleCode:speciesID]
+^|"AT:BOKU:DAN_0003:8755" [country:institutionCode:sampleCode:speciesID]
 |Required
 |This should be a unique identifier for the occurrence, allowing the same occurrence to be recognised across dataset versions as well as through data downloads and use. At the very least the identifier should be unique to the dataset, and ideally a globally unique identifier.
 
 |term:dwc[basisOfRecord]
 |The specific nature (type) of the individual data record
-|"PreservedSpecimen" +
+^|"PreservedSpecimen" +
 "FossilSpecimen" +
 "LivingSpecimen"
 |Required
@@ -105,26 +105,26 @@ Occurrence data can be provided as presence data (i.e., a “1” for a site whe
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
-|"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]	
+^|"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]	
 |Required
 |"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g., cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, i.e., working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
 |term:dwc[eventDate]
 |The date or interval during which an Event occurred/the occurrence record was collected; not suitable for a time in a geological context (e.g. 5000 BP)
-|"1809-02-12" [12 February 1809]
+^|"1809-02-12" [12 February 1809]
 |Required
 |Use the following format: `yyyy-mm-dd` four-digit year - month - day. Please make sure to provide separate columns for year, month and day as well (see freshwater recommended terms). Note that the time should not be included as part of this element, please use eventTime instead where required.
 
 |term:dwc[eventID] +
 (_if linked to an event_)
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset.
-|"AT:BOKU:DAN_0003:MHS" [country:institutionCode:sampleCode:method]
+^|"AT:BOKU:DAN_0003:MHS" [country:institutionCode:sampleCode:method]
 |Required, if event data are available
 |If Occurrence has Event data (i.e. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
 
 |term:dwc[taxonRank
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName].
-|"kingdom" +
+^|"kingdom" +
 "phylum" +
 "class" +
 "order" +
@@ -140,7 +140,7 @@ forma"
 
 |term:dwc[kingdom]
 |Full scientific name of the kingdom in which the taxon is classified.
-|"Animalia" +
+^|"Animalia" +
 "Plantae" +
 "Fungi" +
 "Protista" +
@@ -150,19 +150,19 @@ forma"
 
 |term:dwc[decimalLatitude]
 |Geographic latitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.	
-|"-41.0983423"	
+^|"-41.0983423"	
 |Strongly recommended
 |Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g., country).
 
 |term:dwc[decimalLongitude]
 |Geographic longitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.
-|"-121.1761111"
+^|"-121.1761111"
 |Strongly recommended
 |Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g., country).
 
 |term:dwc[geodeticDatum]
 |The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
-|"EPSG:4326" +
+^|"EPSG:4326" +
 "WGS84" +
 "unknown"	
 |Strongly recommended
@@ -170,7 +170,7 @@ forma"
 
 |term:dwc[coordinateUncertaintyInMeters]
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location.
-|"30" (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
+^|"30" (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
 "100" (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
 |Strongly recommended
 |Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term.
@@ -187,34 +187,34 @@ forma"
 
 |term:dwc[individualCount]
 |Number of individuals at the time of the Occurrence, indicated as presence or as a count.
-|"1"
+^|"1"
 |Strongly recommended
 |If you have presence data, please indicate "1" here. If a dataset derives from observed counts (e.g., point counts or opportunistic observations of individuals as encountered), enter the counts here. As these are only counts (not density or biomass), there are no units. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance under organismQuantity with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantity]
 |Number or enumeration value for the quantity of Organisms as abundance, density, or biomass.
-|"27" [organismQuantity] with "individuals per m2" [organismQuantityType] +
+^|"27" [organismQuantity] with "individuals per m2" [organismQuantityType] +
 "12.5" [organismQuantity] with "% biomass" [organismQuantityType] +
 "150" [organismQuantitiy] with "mg dry mass" [organismQuantityType] +
 "800" [organismQuantity] with "individuals" [organismQuantityType]
 |Strongly recommended
-|An entry for organismQuantity must have a corresponding term:dwc[organismQuantityType]. If you have abundance data, fill in the number individuals and add unit for it in term:dwc[organismQuantityType].  If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance here with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
+|An entry for organismQuantity must have a corresponding term:dwc[organismQuantityType]. If you have abundance data, fill in the number individuals and add unit for it in term:dwc[organismQuantityType]. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance here with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantityType]
 |Type of quantification system used for the quantity of Organisms
-|"27" [organismQuantity] with "individuals per m2" [organismQuantityType] +
+^|"27" [organismQuantity] with "individuals per m2" [organismQuantityType] +
 "12.5" [organismQuantity] with "% biomass" [organismQuantityType] +
 "150" [organismQuantitiy] with "mg dry mass" [organismQuantityType] +
 "800" [organismQuantity] with "individuals" [organismQuantityType]
 |Strongly recommended
-|A organismQuantityType must have a corresponding organismQuantity.  If you have abundance data, fill in the number individuals in organismQuantity and add unit for it here.
+|A organismQuantityType must have a corresponding organismQuantity. If you have abundance data, fill in the number individuals in organismQuantity and add unit for it here.
 
 |term:dwc[occurrenceStatus ]
 |Statement about the presence or absence of a Taxon at a Location
-|"present" +
+^|"present" +
 "absent"
 |Share _if available_	
-|For Occurrences, the default vocabulary is recommended to consist of present and absent, but absent should only be used if it is a true absence, i.e., effort was put into trying to detect the species and it was not detected. For example, if using targeted sampling to estimate species range, true absences can be identifed here, or if a species was previous noted at this location but was not there at the time of the sampling (potentially indicating species loss), then please indicate "absent" here.
+|For occurrences, the default vocabulary is recommended to consist of present and absent, but absent should only be used if it is a true absence, i.e., effort was put into trying to detect the species and it was not detected. For example, if using targeted sampling to estimate species range, true absences can be identifed here, or if a species was previous noted at this location but was not there at the time of the sampling (potentially indicating species loss), then please indicate "absent" here.
 
 |===
 
