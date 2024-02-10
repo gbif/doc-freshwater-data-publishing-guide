@@ -104,7 +104,7 @@ Occurrence data can be provided as presence data (i.e., a “1” for a site whe
 |Use "PreservedSpecimen", if the species is preserved somewhere, so that checking back is possible. "FossilSpecimen" refers to fossil samples from, e.g., sediment cores. "LivingSpecimen" refers to observations of living organisms that were not collected (e.g., catch and release or point count).
 
 |term:dwc[scientificName]
-The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
+|The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
 |"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]	
 |Required
 |"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g., cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, i.e., working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
@@ -484,6 +484,74 @@ Event
 |Please fill this column additionally to the term:dwc[eventDate].	
 |Occurrence +
 Event
+
+|term:dwc[day]
+|Day of the month on which the Event occurred.
+^|"9" +
+"28"
+|Share, if available
+|Please fill this column additionally to the eventDate.
+|Occurrence +
+Event
+
+|term:dwc[verbatimEventDate]
+|The verbatim original representation of the date and time information for an Event
+^|"spring 1900" +
+"Marzo 2002"
+|Share, if available
+|Please keep your original date/time stamp here (if applicable).
+|Occurrence +
+Event
+
+|term:dwc[habitat]
+|A category or description of the habitat in which the Event occurred.
+^|"sand" +
+"silt" +
+"clay" +
+"gravel" +
+"pebble" +
+"cobble" +
+"boulder" +
+"rocky substrate" +
+"vegetation" +
+"wood" +
+"bedrock" +
+"air" +
+"water column" +
+"shoreline" +
+"water surface"	
+|Share, if available
+|Enter the freshwater microhabitat here.	
+|Occurrence
+
+|term:dwc[eventRemarks]
+|Comments or notes about the Event.
+^|"After the recent rains the river is nearly at flood stage."
+|Share, if available
+| 
+|Event
+
+|term:dwc[waterBody]
+|Name of the water body in which the Location occurs
+^|"River Danube" +
+"Lake Constance"
+|Required
+|Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names. 	
+|Occurrence
+
+|term:dwc[locality]
+|The specific description of the place, providing regional context to the observation
+^|"25 km downstream Vienna"
+|Strongly recommended
+|Less specific geographic information can be provided in other geographic terms (term:dwc[higherGeography], term:dwc[continent], term:dwc[country], term:dwc[stateProvince], term:dwc[county], term:dwc[municipality], term:dwc[waterBody], term:dwc[island], term:dwc[islandGroup).
+|Occurrence
+
+|term:dwc[minimumElevationInMeters
+|The lower limit of the range of elevation (altitude, usually above sea level), in meters.
+^|"100"
+|Strongly recommended
+|If sampling was done at one altitude only (i.e., no range), enter the actual altitude at which your sample was taken and leave maximumElevationInMeters blank.
+|Occurrence
 
 
 |===
