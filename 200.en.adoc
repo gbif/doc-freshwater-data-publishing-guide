@@ -554,11 +554,39 @@ Event
 |Less specific geographic information can be provided in other geographic terms (term:dwc[higherGeography], term:dwc[continent], term:dwc[country], term:dwc[stateProvince], term:dwc[county], term:dwc[municipality], term:dwc[waterBody], term:dwc[island], term:dwc[islandGroup).
 |Occurrence
 
-|term:dwc[minimumElevationInMeters
+|term:dwc[minimumElevationInMeters]
 |The lower limit of the range of elevation (altitude, usually above sea level), in meters.
 ^|"100"
 |Strongly recommended
 |If sampling was done at one altitude only (i.e., no range), enter the actual altitude at which your sample was taken and leave maximumElevationInMeters blank.
+|Occurrence
+
+|term:dwc[maximumElevationInMeters]
+|The upper limit of the range of elevation (altitude, usually above sea level), in metres.
+^|"200"	
+|Share, if available	
+|If sampling was done at one altitude only (i.e., no range), enter the actual altitude at which your sample was taken in minimumElevationInMeters and leave maximumElevationInMeters blank.	
+|Occurrence
+
+|term:dwc[verbatimElevation]
+|The original description of the elevation (altitude, usually above sea level) of the Location.
+^|"100-200 m"	
+|Share, if available
+| 
+| 
+
+|term:dwc[minimumDepthInMeters]
+|The lesser depth of a range of depth below the local surface, in metres.
+^|"0.5"	
+|Strongly recommended
+|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in |term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e., at one single depth), enter the actual depth in which your sample was taken and leave |term:dwc[maximumDepthInMeters] blank.
+|Occurrence
+
+|term:dwc[maximumDepthInMeters]
+|The greater depth of a range of depth below the local surface, in metres.
+^|"1"
+|Share, if available
+|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in |term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e. at one single depth), enter the actual depth in which your sample was taken in |term:dwc[minimumDepthInMeters] and leave |term:dwc[maximumDepthInMeters] blank.	
 |Occurrence
 
 
