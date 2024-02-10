@@ -5,7 +5,7 @@
 
 GBIF makes use of the Darwin Core Standard (DwC) to provide a standardized framework for formatting data for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of data from different sources through a common format and a number of required and recommended fields. 
 
-Though GBIF suggests the required and recommended fields for the above-mentioned types of datasets, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <<Introduction>>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible we also provide Excel templates for all data classes.
+Though GBIF suggests the required and recommended fields for the above-mentioned types of datasets, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <Introduction>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible we also provide Excel templates for all data classes.
 
 What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When data are uploaded, the taxonomic backbone of GBIF will be used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
 
@@ -239,7 +239,7 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 |term:dwc[samplingProtocol]
 |Names of, references to, or descriptions of the methods or protocols used during an Event.
-|"Environment Canada. (2012). Canadian Aquatic Biomonitoring Network Field Manual - Wadeable Streams. Available at http://publications.gc.ca/pub?id=9.696248&sl=0" +
+^|"Environment Canada. (2012). Canadian Aquatic Biomonitoring Network Field Manual - Wadeable Streams. Available at http://publications.gc.ca/pub?id=9.696248&sl=0" +
 "SS–EN 27 828, Water quality - Methods for biological sampling - Guidance on  the handnet sampling of benthic macroinvertebrates" +
 "net fishing and full/partly following NS-EN 14757"
 |Required	
@@ -247,13 +247,13 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 |term:dwc[sampleSizeValue]
 |Numeric value for a measurement of the size (time duration, length, area, or volume) of an indivdual sample in the sampling Event.
-|"5" (sampleSizeValue with "metre" as term:dwc[sampleSizeUnit])
+^|"5" (sampleSizeValue with "metre" as term:dwc[sampleSizeUnit])
 |Required
 |A sampleSizeValue must have a corresponding term:dwc[sampleSizeUnit]. The sample size can relate to time duration, a spatial length (e.g. of a trawl), an area or a volume. 
 
 |term:dwc[sampleSizeUnit]
 |The unit of measurement of the size (time duration, length, area, or volume) of a sample in a sampling Event.
-|"minute" +
+^|"minute" +
 "metre" +
 "square metre"
 |Required
@@ -261,39 +261,39 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 |term:dwc[parentEventID]
 |Identifier for the broader Event that groups this and potentially other Events; may be a global unique identifier or an identifier specific to the dataset.
-|"A1" parentEventID to identify a transect of samples with its own eventIDs: "A1:1", "A1:2") +
+^|"A1" parentEventID to identify a transect of samples with its own eventIDs: "A1:1", "A1:2") +
 "AT:BOKU:DAN" (country:institutionCode:projectCode)
 |Strongly recommended
 |Used in situations where the event is part of an event series. In order to be able to reference a parent event, this event needs to be specified as a separate entry, typically within the same dataset, carrying its own eventID. Refer to the eventID of the parent event in the sample event record to specify the relationship between the two entries.
 
 |term:dwc[samplingEffort]
 |Measure for the amount of effort expended during an Event.
-|"40 trap-nights" +
+^|"40 trap-nights" +
 "10 observer-hours"
 |Strongly recommended
 |Used to provide evidence of the rigour of the sampling event, e.g. the number of people involved, total area sampled (summed across different sampled microhabitats), or the total number of hours spent on the event (e.g., net set time summed across multiple nets). There is no controlled vocabulary, but the recommendation is to keep this information brief and factual, giving users enough information to compare between sampling events.
 
 |term:dwc[locationID]
 |Identifier that links to a set of data describing the sample event location, if available; may be a global unique identifier or an identifier specific to the dataset.
-|"http://www.geonames.org/10793757/dnb-6.html"
+^|"http://www.geonames.org/10793757/dnb-6.html"
 |Strongly recommended
 |If such a reference cannot be meaningfully supplied, consider supplying more location details, e.g. through use of the data elements term:dwc[locality], term:dwc[minimumElevationInMeters], term:dwc[minimumDepthInMeters], term:dwc[stateProvince], term:dwc[locationRemarks] etc.
 
 |term:dwc[decimalLatitude]
 |Geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location.
-|"-41.0983423"
+^|"-41.0983423"
 |Strongly recommended
 |Positive values are north of the Equator, negative values are south of it. Note that a sample event that spans an area rather than a point location should additionally supply the coordinateUncertaintyInMeters to specify the approximate extension of the area. 
 
 |term:dwc[decimalLongitude]
 |Geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location.
-|"-121.1761111"
+^|"-121.1761111"
 |Strongly recommended
 |Positive values are east of the Greenwich Meridian, negative values are west of it. Note that a sample event that spans an area rather than a point location should additionally supply the coordinateUncertaintyInMeters to specify the approximate extension of the area. 
 
 |term:dwc[geodeticDatum]
 |The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
-|"EPSG:4326" +
+^|"EPSG:4326" +
 "WGS84" +
 "unknown"
 |Strongly recommended
@@ -301,7 +301,7 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 |term:dwc[coordinateUncertaintyInMeters] 
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the Location.
->|"30" +
+^|"30" +
 (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
  +
 "100" +
@@ -311,21 +311,21 @@ Sampling methods are described in the sampling-event dataset with the field samp
 
 |term:dwc[footprintWKT]
 |An area description, specifying the location of the sample event in well-known text (WKT) markup language
->|"POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))" +
+^|"POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))" +
 (a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21)
 |Strongly recommended
 |A WKT representation of the shape (footprint, geometry) that defines the location. This differs from the point-radius representation that is combined from the elements term:dwc[decimalLatitude], term:dwc[decimalLongitude] and term:dwc[coordinateUncertaintyInMeters] in that it can define shapes that are not circles. Note that it is possible to supply both a point-radius and a footprintWKT location for the same sample event.
 
 |term:dwc[footprintSRS]
 |The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in footprintWKT is based.
->|"EPSG:4326" +
+^|"EPSG:4326" +
 "unknown"
 |Strongly recommended
 |Recommended best practice is to use the EPSG code of the SRS, if known. If none of these is known, use the value "unknown". It is also permitted to provide the SRS in Well-Known-Text, especially if no EPSG code provides the necessary values for the attributes of the SRS. Do not use this term to describe the SRS of the decimalLatitude and decimalLongitude, nor of any verbatim coordinates - use the geodeticDatum and verbatimSRS instead.
 
 |term:dwc[countryCode]
 |Standard code for the country in which the Location occurs.
->|"AR" (Argentina) +
+^|"AR" (Argentina) +
  "SV" (El Salvador)	
 |Strongly recommended
 |Recommended best practice is to use ISO 3166-1-alpha-2 country codes. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level.
@@ -358,7 +358,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[rightsHolder]
 |a person or organisation owning or managing the rights over the resource
->|"BOKU University" +
+^|"BOKU University" +
 (University of Natural Resources and Life Sciences, BOKU Vienna)
 |Strongly recommended
 | 
@@ -366,7 +366,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[institutionCode]
 |Name or acronym of the institution having custody of the dataset or record.
->|"BOKU" +
+^|"BOKU" +
 (University of Natural Resources and Life Sciences, BOKU Vienna) +
  +
 "UNB" +
@@ -377,7 +377,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[collectionID]
 |Identifier for the collection or dataset from which the record was derived.
->|"urn:lsid:biocol.org:col:34818" +
+^|"urn:lsid:biocol.org:col:34818" +
 "https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c"
 |Strongly recommended
 |For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].
@@ -385,14 +385,14 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[informationWithheld]
 |Additional information that exists, but that has not been shared in the given record.
->|"location information not given for endangered species"
+^|"location information not given for endangered species"
 |Strongly recommended
 |A note on possible information that was intentionally not included into the dataset.
 |Occurrence
 
 |term:dwc[dynamicProperties]
 |List of additional measurements, facts, characteristics, or assertions about the record; meant to provide a mechanism for structured content.
->|"biome:river" +
+^|"biome:river" +
 "ecosystem functional group:lowland river" +
 "microhabitat:sand" +
 "data category:opportunistic observation" +
@@ -401,6 +401,89 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Strongly recommended
 |Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group or microhabitat until the freshwater extension is created and available for use. Note that this field is not searchable on GBIF.
 |Occurrence
+
+|term:dwc[recordedBy]
+|A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original Occurrence; the primary collector or observer should be listed first.
+|"Jen Lento `|` Astrid Schmidt-Kloiber"
+|Strongly recommended
+|Recommended best practice is to separate the values in a list with space vertical bar space or post `|`).  
+|Occurrence
+
+|term:dwc[sex]
+|The sex of the individual(s) represented in the Occurrence.
+"female" +
+"male"
+|Share, if available (based on the organism group (Decapoda, fish, mammals, birds))
+| 
+|Occurrence
+
+|term:dwc[lifeStage]
+|The age class or life stage of the Organim(s) at the time the Occurrence was recorded.
+^|"egg" +
+"larva" +
+"adult" +
+"subimago" +
+"juvenile" +
+"nymph" +
+"early instar" +
+"young of year" +
+"nauplii" +
+"copepodite"
+|Share, if available (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
+| 
+|Occurrence
+
+|term:dwc[occurrenceRemarks]
+|Comments or notes about the Occurrence
+^|"found dead outside of the water"
+|Strongly recommended
+| 
+|Occurrence
+
+|term:dwc[eventType]
+|The nature of the Event
+^|"sample" +
+"observation" +
+"bioblitz" +
+"expedition" +
+"survey" +
+"project" +
+"site visit" +
+"biotic interaction"
+|Strongly recommended
+| 
+|Event
+
+|term:dwc[eventTime]
+|The time or interval during which an Event occurred.
+^|"14:07-0600" +
+(2:07pm in the time zone six hours earlier than UTC) +
+ +
+"13:00:00Z/15:30:00Z" +
+(the interval between 1pm UTC and 3:30pm UTC)
+|Share, if available
+|Recommended best practice is to use a time of day that conforms to ISO 8601-1:2019. Please also add the time zone in relation to UTC.
+|Event
+
+|term:dwc[year]
+|Four-digit year in which the Event occurred.
+^|"2008"
+|Share, if available	
+|Please fill this column additionally to the eventDate.
+|Occurrence +
+Event
+
+|term:dwc[month] 
+|Month in which the Event occurred
+^|"1" +
+(January) +
+ +
+"10" +
+(October)	
+|Share, if available
+|Please fill this column additionally to the term:dwc[eventDate].	
+|Occurrence +
+Event
 
 
 |===
