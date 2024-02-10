@@ -412,14 +412,14 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[recordedBy]
 |A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original Occurrence; the primary collector or observer should be listed first.
-|"Jen Lento `|` Astrid Schmidt-Kloiber"
+^|"Jen Lento (`post`) Astrid Schmidt-Kloiber"
 |Strongly recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space or post.  
 |Occurrence
 
 |term:dwc[sex]
 |The sex of the individual(s) represented in the Occurrence.
-"female" +
+^|"female" +
 "male"
 |Share, if available (based on the organism group (Decapoda, fish, mammals, birds))
 | 
