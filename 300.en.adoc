@@ -2,11 +2,11 @@
 
 === Freshwater DwC extension
 
-While we have recommended that occurrence and sampling-event data be amended with other specific DwC fields when publishing freshwater data (see 2.2 and <<table-07,Table 7>>), several of the fields that should be included in the (meta)data as best practices do not currently have appropriate equivalents in DwC. Our recommendation is that a freshwater DwC extension should be created to allow these fields to be entered and grouped with freshwater data (<<table-08,Table 8>>). Prior to the extension being created, the recommendation is to enter all details in the dynamicProperties field, but as this field is not searchable, the greatest functionality will result from an extension.
+While we have recommended that occurrence and sampling-event data be amended with other specific DwC fields when publishing freshwater data (see <<§2.2>> and <<table-07,Table 7>>), several of the fields that should be included in the (meta)data as best practices do not currently have appropriate equivalents in DwC. Our recommendation is that a freshwater DwC extension should be created to allow these fields to be entered and grouped with freshwater data (<<table-08,Table 8>>). Prior to the extension being created, the recommendation is to enter all details in the term:dwc[dynamicProperties] field, but as this field is not searchable, the greatest functionality will result from an extension.
 
-The proposed DwC extension includes the classification of the type of observation (opportunistic, targeted, or assemblage sampling) and type of contribution (professional, community-based research, or citizen science data; Table 8). In addition, the location of the observation is further described by the biome, ecosystem functional group, and freshwater lake zone or river mesohabitat (conditional on the biome). 
+The proposed DwC extension includes the classification of the type of observation (opportunistic, targeted, or assemblage sampling) and type of contribution (professional, community-based research, or citizen science data; <table-08,Table 8>>). In addition, the location of the observation is further described by the biome, ecosystem functional group, and freshwater lake zone or river mesohabitat (conditional on the biome). 
 
-To allow for data to be selected more efficiently for freshwater meta-analyses, the freshwater DwC extension also includes fields for the organism group, the season of sampling, as well as specifications for the sampling methods.
+To allow data to be selected more efficiently for freshwater meta-analyses, the freshwater DwC extension also includes fields for the organism group and the season of sampling, as well as specifications for the sampling methods.
 
 [glossary]
 ==== 3.1.1 Recommended terms for a DwC freshwater extension
@@ -155,7 +155,7 @@ NOTE: `pink fields indicate that you should choose either of these entries`
 
 === Freshwater data tagging
 
-Data portals such as GBIF offer a great variety of data, but still show limitations in terms of freshwater species. This relates mostly to the fact that freshwater species and freshwater datasets are not specifically tagged and therefore hard to find among millions of terrestrial and marine species and occurrence records. If looking for entire freshwater datasets (e.g. recordings of whole assemblages) this often has to be done through searching for specific freshwater species, which is a time-consuming task.
+Data portals such as GBIF.org offer a great variety of data but still show limitations in terms of freshwater species. This relates mostly to the fact that freshwater species and freshwater datasets are not specifically tagged and therefore hard to find among millions of terrestrial and marine species and occurrence records. If looking for entire freshwater datasets (e.g. recordings of whole assemblages) this often has to be done through searching for specific freshwater species, which is a time-consuming task.
 
 Freshwater datasets that are submitted to GBIF through a GBIF node or uploaded using https://www.gbif.org/ipt[GBIF Integrated Publishing Toolkit^] (IPT) software should therefore be tagged as “freshwater” to make the dataset more visible to the freshwater community. This can be done by allocating the specific dataset to the “Freshwater Network” during the publication process, after registering it with GBIF.
 
