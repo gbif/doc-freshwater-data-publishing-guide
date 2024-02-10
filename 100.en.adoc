@@ -17,9 +17,9 @@ One of the challenges of freshwater data is the prevalence of organisms that mak
 
 Information about the biome in which an observation was made is also important for understanding the data and for grouping comparable data. The IUCN Global Ecosystem Typology separates the freshwater realm into three biomes:
 
-.rivers and streams
-.lakes
-.artificial wetlands; with groundwater, brackish water, palustrine wetlands, and coastal systems grouped within transitional realms.
+. rivers and streams
+. lakes
+. artificial wetlands; with groundwater, brackish water, palustrine wetlands, and coastal systems grouped within transitional realms.
 
 This classification, which describes the type of water body in which the organism was observed, can provide important ecological information to support observations. Within biomes, ecosystem functional groups, which describe ecological conditions (e.g. permanent, seasonal or episodic/ephemeral; freeze-thaw; upland or lowland; large or small), provide further information that is relevant to understanding how comparable ecosystems (and therefore observations) might be. Classification of sampled ecosystems within these groups is necessary to understand the data and facilitate broad-scale assessments of biodiversity. 
 
