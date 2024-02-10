@@ -589,5 +589,104 @@ Event
 |If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in |term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e. at one single depth), enter the actual depth in which your sample was taken in |term:dwc[minimumDepthInMeters] and leave |term:dwc[maximumDepthInMeters] blank.	
 |Occurrence
 
+|term:dwc[verbatimDepth]
+|The original description of the depth below the local surface
+^|"0.5 - 1 m"	
+|Share, if available
+| 
+|Occurrence
+
+|term:dwc[identificationQualifier]
+|A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the Identification
+^|"cf."	
+|Strongly recommended
+|Can be used to add doubts, but it is recommend to only report "safe" records.	
+|Occurrence
+
+|term:dwc[identifiedBy]
+|	a name or a list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject	HYPERLINK "http://rs.tdwg.org/dwc/terms/identifiedBy"http://rs.tdwg.org/dwc/terms/identifiedBy
+^|"Hans Malicky" +
+"Jen Lento (`post`) Astrid Schmidt-Kloiber"	
+|Strongly recommended
+|Recommended best practice is to separate the values in a list with space vertical bar space, or post.	
+|Occurrence
+
+|term:dwc[identificationReferences]
+|A reference or a list (concatenated and separated) of references (publication, global unique identifier, URI) used in the Identification	
+^|"Malicky, H. 2004 (2nd edtion): Atlas of European Trichoptera. Springer. 1-341."	
+|Strongly recommended
+|Recommended best practice is to separate the values in a list with space vertical bar space, or post. Add a DOI if available.
+|Occurrence
+
+|term:dwc[identificationVerificationStatus]
+|A categorical indicator of the extent to which the taxonomic identification has been verified to be correct
+^|"0" (unverified) +
+"1" (verified)	
+|Strongly recommended
+|Use "1" for a verification through a renown expert and "0" for an unverified taxon.
+|Occurrence
+
+|term:dwc[identificationRemarks]
+|Comments or notes about the Identification.
+^|"H. Malicky"	
+|Share, if available (based on term:dwc[identificationVerificationStatus])
+|Use this field to indicate the person who has verified the identification. You can also use it for describing difficulties with the identification.
+|Occurrence
+
+|term:dwc[class]
+|The full scientific name of the class in which the Taxon is classified.
+^|"Mammalia" +
+"Insecta"
+|Share, if available
+|Inclusion of class helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
+|Occurrence
+
+|term:dwc[vernacularName]
+|Common or vernacular name
+^|"Wassergeistchen" +
+"yellow-bellied toad"
+|Strongly recommended		
+| 
+|Occurrence
+
+|term:dwc[measurementType]
+|The nature of the measurement, fact, characteristic, or assertion.
+^|"temperature" +
+"pH"	
+|Share, if available
+|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
+|Event
+
+|term:dwc[measurementValue]
+|The value of the measurement, fact, characteristic, or assertion.
+^|"-1" +
+"7.1"	
+|Share, if available
+|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
+|Event
+
+|term:dwc[measurementUnit]
+|The unit associated with the measurementValue
+^|"°C" +
+"g" +
+"%"	
+|Share, if available
+|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
+|Event
+
+|term:dwc[measurementMethod]
+|A description of or reference to (publication, URI) the method or protocol used to determine the measurement, fact, characteristic, or assertion
+^|"water thermometer" +
+"pH meter"	
+|Share, if available
+| 
+|Event
+
+|term:dwc[measurementRemarks]
+|Comments or notes accompanying the measurementType
+^|"water partly frozen"
+|Share, if available
+| 
+|Event
 
 |===
