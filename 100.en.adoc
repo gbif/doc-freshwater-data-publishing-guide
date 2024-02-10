@@ -11,7 +11,7 @@ As a result of their unique habitat, freshwater organisms have certain character
 
 ==== Habitat use by freshwater organisms
 
-There are several spatial scales at which habitat information should be reported with observation data to improve data utility and usability. Here, we define these based on definitions in the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], which is a hierarchical classification system that groups the world’s ecosystems by realm, biome, and ecosystem functional groups. At the largest scale, realms differentiate between terrestrial, freshwater, marine, subterranean, and atmospheric components of the biosphere, as well as transitional zones between realms. Biomes are ecologically-similar sub-components of realms with broadly similar features. Within biomes, the typology classifies ecosystems by joining those with similar ecological conditions into ecosystem functional groups. Different classification levels in the hierarchy of this typology (as described below) offer relevant information to better understand observations of freshwater data.  
+There are several spatial scales at which habitat information should be reported with observation data to improve data utility and usability. Here, we define these based on definitions in the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], which is a hierarchical classification system that groups the world’s ecosystems by realm, biome, and ecosystem functional groups. At the largest scale, realms differentiate between terrestrial, freshwater, marine, subterranean, and atmospheric components of the biosphere, as well as transitional zones between realms. Biomes are ecologically similar subcomponents of realms with broadly similar features. Within biomes, the typology classifies ecosystems by joining those with similar ecological conditions into ecosystem functional groups. Different classification levels in the hierarchy of this typology (as described below) offer relevant information to better understand observations of freshwater data.  
 
 One of the challenges of freshwater data is the prevalence of organisms that make use of multiple realms. For example, a large number of freshwater macroinvertebrates are insects, many of which live in freshwater only during particular life stages (e.g. as immature larvae or nymphs) and live in the terrestrial realm as adults. Some fish species are anadromous or catadromous, which means that part of their life is spent in freshwater and part is spent in marine habitats. Many bird species make use of freshwater for feeding, while breeding and nesting in terrestrial habitats. Some plant species are capable of growing in freshwater systems but also in high-moisture terrestrial habitats. In these and other cases, it is not sufficient to simply know that the species was observed. It is highly relevant to know whether observations of the species were made in and around freshwater or in another realm, as this provides important information about life stage, spatial distribution, and habitat use. 
 
@@ -233,7 +233,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 |
 
 |publishingOrganization
-| Name of the organisation that will be listed as the data publisher at gbif.org; the publishing organisation is the institution which holds or owns the dataset and is in charge of its contents and maintenance
+| Name of the organization that will be listed as the data publisher at gbif.org; the publishing organization is the institution which holds or owns the dataset and is in charge of its contents and maintenance
 |UMR EDB
 |required
 |Can be left empty, if you plan to publish your data through the FIP/BioFresh IPT
@@ -272,7 +272,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 |More information can be found here: https://www.gbif.org/terms
 
 |resourceContact(s)
-|people and organisations that should be contacted to get more information about the dataset
+|people and organizations that should be contacted to get more information about the dataset
 |first name: "Max" +
 last name: "Fisher" +
 position: "professor" +
