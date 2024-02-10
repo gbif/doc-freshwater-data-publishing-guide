@@ -344,6 +344,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 |===
 
+[[§2.2]]
 === Specific requirements for publishing freshwater data (freshwater amendments)
 
 <<table-07,Table 7>> lists the <DwC> fields that would be useful to add to freshwater datasets to allow for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
