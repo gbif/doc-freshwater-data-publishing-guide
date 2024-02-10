@@ -579,14 +579,14 @@ Event
 |The lesser depth of a range of depth below the local surface, in metres.
 ^|"0.5"	
 |Strongly recommended
-|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in |term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e., at one single depth), enter the actual depth in which your sample was taken and leave |term:dwc[maximumDepthInMeters] blank.
+|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e., at one single depth), enter the actual depth in which your sample was taken and leave term:dwc[maximumDepthInMeters] blank.
 |Occurrence
 
 |term:dwc[maximumDepthInMeters]
 |The greater depth of a range of depth below the local surface, in metres.
 ^|"1"
 |Share, if available
-|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in |term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e. at one single depth), enter the actual depth in which your sample was taken in |term:dwc[minimumDepthInMeters] and leave |term:dwc[maximumDepthInMeters] blank.	
+|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e. at one single depth), enter the actual depth in which your sample was taken in term:dwc[minimumDepthInMeters] and leave term:dwc[maximumDepthInMeters] blank.	
 |Occurrence
 
 |term:dwc[verbatimDepth]
