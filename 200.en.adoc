@@ -120,7 +120,7 @@ Occurrence data can be provided as presence data (i.e., a “1” for a site whe
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset.
 |"AT:BOKU:DAN_0003:MHS" [country:institutionCode:sampleCode:method]
 |Required, if event data are available
-|If Occurrence has Event data (i.e., methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
+|If Occurrence has Event data (i.e. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
 
 |term:dwc[taxonRank
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName].
@@ -138,7 +138,7 @@ forma"
 |Strongly recommended
 |Recommended best practice is to use a controlled vocabulary.
 
-|term:dwc[kingdom
+|term:dwc[kingdom]
 |Full scientific name of the kingdom in which the taxon is classified.
 |"Animalia" +
 "Plantae" +
@@ -161,7 +161,7 @@ forma"
 |Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g., country).
 
 |term:dwc[geodeticDatum]
-The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
+|The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
 |"EPSG:4326" +
 "WGS84" +
 "unknown"	
@@ -175,7 +175,15 @@ The coordinate system and set of reference points upon which the geographic coor
 |Strongly recommended
 |Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term.
 
-|term:dwc[countryCode	standard code for the country in which the Location occurs	HYPERLINK "http://rs.tdwg.org/dwc/terms/countryCode"http://rs.tdwg.org/dwc/terms/countryCode	"AR" [Argentina], "SV" [El Salvador]	strongly recommended	Recommended best practice is to use ISO 3166-1-alpha-2 country codes. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level.
+|term:dwc[countryCode]
+|Standard code for the country in which the Location occurs.
+^|"AR" +
+(Argentina) +
+ +
+"SV" +
+(El Salvador)
+|Strongly recommended
+|Recommended best practice is to use ISO 3166-1-alpha-2 country codes. Recommended best practice is to leave this field blank if the Location spans multiple entities at this administrative level.
 
 |term:dwc[individualCount]
 |Number of individuals at the time of the Occurrence, indicated as presence or as a count.
