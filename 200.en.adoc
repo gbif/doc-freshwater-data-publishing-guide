@@ -1,6 +1,7 @@
 [[publishing-considerations]]
 == Specific freshwater data publishing considerations
 
+[[data-prep-and-standards]]
 === Data preparation and standards
 
 GBIF makes use of the Darwin Core Standard (DwC) to provide a standardized framework for formatting data for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of data from different sources through a common format and a number of required and recommended fields. 
@@ -9,6 +10,7 @@ Though GBIF suggests the required and recommended fields for the above-mentioned
 
 What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When data are uploaded, the https://doi.org/10.15468/39omei[GBIF Backbone Taxonomy^] is used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
 
+[[checklist-datasets]]
 ==== Checklist datasets
 
 Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (i.e., kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
@@ -77,6 +79,7 @@ Checklist data are not specific to a location and do not represent individual ob
 
 NOTE: `pink fields indicate that you should choose either of these entries`
 
+[[occurrence-datasets]]
 ==== Occurrence datasets
 
 Occurrence data provide information about observations of taxa and the locations where they were found (<<table-05,Table 5>>). Although only coarse location information is required, the recommended best practice is to always provide coordinates (latitude and longitude in decimal degrees), a geodetic datum, and a measure of the uncertainty around the coordinates (estimated precision). 
@@ -224,6 +227,7 @@ forma"
 
 NOTE: `pink fields indicate that you should choose either of these entries`
 
+[[sampling-event-datasets]]
 ==== Sampling-event datasets
 
 When occurrence data have additional metadata describing sampling methods, this is called an event and the additional metadata are provided as sampling-event data (<<table-06,Table 6>>). Please note that each event dataset consists of two files: the sampling-event dataset and the associated occurrence dataset. The associated occurrence dataset looks like the one in <Occurrence datasets,§2.1.2>>. but needs to be amended with the term:dwc[eventID] (mandatory; identifying the event and linking the two datasets) and the term:dwc[occurrenceStatus] (recommended to indicate whether a taxon was present or absent at a site). 
@@ -344,7 +348,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 |===
 
-[[§2.2]]
+[[freshwater-amendments]]
 === Specific requirements for publishing freshwater data (freshwater amendments)
 
 <<table-07,Table 7>> lists the <DwC> fields that would be useful to add to freshwater datasets to allow for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
