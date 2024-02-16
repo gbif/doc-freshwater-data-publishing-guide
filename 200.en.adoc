@@ -699,3 +699,5 @@ Event
 |Event
 
 |===
+
+NOTE: `pink fields indicate that you should choose either of these entries`
