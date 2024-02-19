@@ -212,7 +212,7 @@ Under the definition provided in <<Characteristic features of freshwater data,§
 [[gbif-required-metadata]]
 ==== GBIF-required metadata 
 
-The metadata required by GBIF describes details about a dataset that include its scope, ownership and usage rights. GBIF requires metadata in XML format corresponding to the GBIF Metadata Profile, which is based on the Ecological Metadata Language (EML). All GBIF data classes require the same set of metadata for each dataset (<<table-03,Table 3>>).
+The metadata required by GBIF describes details about a dataset that include its scope, ownership and usage rights. GBIF requires metadata in XML format corresponding to the https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile[GBIF Metadata Profile^], which is based on the Ecological Metadata Language (EML). All GBIF data classes require the same set of metadata for each dataset (<<table-03,Table 3>>).
 
 When datasets are downloaded individually from GBIF, the XML metadata file is included and metadata fields from this table are automatically added to the occurrence file. When data are selected for download from within a polygon (thereby choosing data from multiple studies over a given geographic area), less of the metadata is provided in the occurrence table, but the permanent link to the data selection (provided by GBIF with the data download) allows the user to explore metadata for each individual project.
 
