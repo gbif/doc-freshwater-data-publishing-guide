@@ -4,9 +4,9 @@
 [[data-prep-and-standards]]
 === Data preparation and standards
 
-GBIF makes use of the Darwin Core Standard (DwC) to provide a standardized framework for formatting data for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of data from different sources through a common format and a number of required and recommended fields. 
+GBIF makes use of the Darwin Core Standard (<<DwC>>) to provide a standardized framework for formatting data for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of data from different sources through a common format and a number of required and recommended fields. 
 
-Though GBIF suggests the required and recommended fields for the above-mentioned types of datasets, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <<Introduction>>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible we also provide Excel templates for all data classes.
+Though GBIF suggests the required and recommended fields for its <<gbif-dataset-classes,four dataset classes>>, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <<Introduction>>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible, we have also provided Excel templates for all data classes.
 
 What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When data are uploaded, the https://doi.org/10.15468/39omei[GBIF Backbone Taxonomy^] is used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
 
@@ -16,16 +16,14 @@ What is important for checklist and occurrence datasets is the inclusion of well
 Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (i.e., kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
 
 [[table-04]]
-.Terms, definitions, examples, and comments for the terms required by GBIF to publish checklist datasets (see https://www.gbif.org/data-quality-requirements-checklists[more information^] on the specific fields).
+.Freshwater-specific terms, definitions, examples, and comments for the terms required or recommended for publishing checklist datasets to GBIF (see https://www.gbif.org/data-quality-requirements-checklists[more information^] on the specific fields).
 [cols="%autowidth"]
 |===
 |term |definition |example(s) |status |comment
 
 |term:dwc[taxonID]
 |A unique identifier for the taxon; may be a global unique identifier or an identifier specific to the dataset.
-^|"8fa58e08-08de-4ac1-b69c-1235340b7001" +
-"32567" +
-"ID-fwe-32567"
+^|For example, "8fa58e08-08de-4ac1-b69c-1235340b7001", "32567", "ID-fwe-32567"
 |Required
 |Ideally, the taxonID is a persistent global unique identifier. As a minimum requirement, it has to be unique within the published dataset.
 
@@ -37,47 +35,29 @@ Checklist data are not specific to a location and do not represent individual ob
 
 |term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName]
-^|"kingdom" +
-"phylum" +
-"class" +
-"order" +
-"family" +
-"subfamily" +
-"genus" +
-"species" +
-"subspecies" +
-"varietas" +
-"forma"
+^|One of "kingdom", "phylum", "class", "order", "family", "subfamily", "genus", "species", "subspecies", "varietas", "forma"
 |Required
 |Recommended best practice is to use a controlled vocabulary.
 
 |term:dwc[kingdom]
 | Full scientific name of the kingdom in which the taxon is classified.
-^|"Animalia" +
-"Plantae" +
-"Fungi" +
-"Protista" +
-"Monera"
+^|One of "Animalia", "Plantae", "Fungi", "Protista", "Monera"
 |Strongly recommended
 |Inclusion of kingdom helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
 
 |term:dwc[parentNameUsageID]
 |The taxonID of the next available higher-ranked (parent) entry within the checklist dataset, if higher taxon names are supplied as separate entries in the list
-^|"2704173" (GBIF) +
-"tsn:41074" (ITIS)
+^|For example "2704173" (GBIF), "tsn:41074" (ITIS) etc.
 |Strongly recommended
 |This supports the representation of the dataset as a hierarchy, e.g. for the publication of a taxonomy. For Darwin Core Archives, the related record should be present locally in the same archive. 
 
 |term:dwc[acceptedNameUsageID]
 |Within the record of a synonym, the taxonID of the accepted taxon name entry within the checklist dataset, if both synonyms and accepted names are supplied.
-^|"2704179" (GBIF) +
-"tsn:41107" (ITIS)
+^|For example "2704179" (GBIF), "tsn:41107" (ITIS), etc.
 |Strongly recommended
 |This supports the representation of synonymy for a taxonomic dataset. For Darwin Core Archives the related record should be present locally in the same archive.
 
 |===
-
-NOTE: `pink fields indicate that you should choose either of these entries`
 
 [[occurrence-datasets]]
 ==== Occurrence datasets
