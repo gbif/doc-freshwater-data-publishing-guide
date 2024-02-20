@@ -143,7 +143,7 @@ _inclusion_: Occurrence
 |occurrence
 
 |freshwaterSampleProcessing
-|name or description of the sample processing protocol (i.e., procedures followed after sample collection to sort and identify taxa)	
+|name or description of the sample processing protocol (e.g. procedures followed after sample collection to sort and identify taxa)	
 |"20x microscope magnification" +
 "subsampled with Marchant box until 300 organisms identified - abundance estimated based on the number of cells processed" +
 "samples filtered on 45 μm pore size filter paper prior to identification" +
