@@ -13,7 +13,7 @@ What is important for checklist and occurrence datasets is the inclusion of well
 [[checklist-datasets]]
 ==== Checklist datasets
 
-Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (i.e., kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
+Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (e.g. kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
 
 [[table-04]]
 .Freshwater-specific terms, definitions, examples, and comments required or recommended for publishing checklist datasets to GBIF (see https://www.gbif.org/data-quality-requirements-checklists[more information^] on the specific fields).
@@ -31,7 +31,7 @@ Checklist data are not specific to a location and do not represent individual ob
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known	
 |"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]
 |Required	
-|Names should be compliant to the most recent nomenclatural code. This term should not contain identification qualifications (e.g., cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, i.e., working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
+|Names should be compliant to the most recent nomenclatural code. This term should not contain identification qualifications (e.g. cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, e.g. working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
 |term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName]
@@ -64,7 +64,7 @@ Checklist data are not specific to a location and do not represent individual ob
 
 Occurrence data provide information about observations of taxa and the locations where they were found (<<table-05,Table 5>>). Although only coarse location information is required, the recommended best practice is to always provide coordinates (latitude and longitude in decimal degrees), a geodetic datum, and a measure of the uncertainty around the coordinates (estimated precision). 
 
-Occurrence data can be provided as presence data (i.e. a “1” for a site where the taxon was observed) or as counts in the field term:dwc[individualCount] (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (i.e. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (i.e., in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density or biomass as part of targeted or <<assemblage>> sampling, these measures should be recorded in the field term:dwc[organismQuantity] with units recorded in term:dwc[organismQuantityType] (<<table-05,Table 5>>). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (i.e. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field term:dwc[occurrenceStatus] (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
+Occurrence data can be provided as presence data (e.g. a “1” for a site where the taxon was observed) or as counts in the field term:dwc[individualCount] (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (e.g. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (e.g. in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density or biomass as part of targeted or <<assemblage>> sampling, these measures should be recorded in the field term:dwc[organismQuantity] with units recorded in term:dwc[organismQuantityType] (<<table-05,Table 5>>). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (e.g. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field term:dwc[occurrenceStatus] (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
 
 [[table-05]]
 .Freshwater-specific terms, definitions, examples, and comments required or recommended for publishing occurrence datasets to GBIF (https://www.gbif.org/data-quality-requirements-occurrences[more information^] on specific fields)
@@ -82,13 +82,13 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 |The specific nature (type) of the individual data record
 |One of "PreservedSpecimen", "FossilSpecimen", "LivingSpecimen"
 |Required
-|Use "PreservedSpecimen", if the species is preserved somewhere, so that checking back is possible. "FossilSpecimen" refers to fossil samples from, e.g., sediment cores. "LivingSpecimen" refers to observations of living organisms that were not collected (e.g., catch and release or point count).
+|Use "PreservedSpecimen", if the species is preserved somewhere, so that checking back is possible. "FossilSpecimen" refers to fossil samples from, e.g. sediment cores. "LivingSpecimen" refers to observations of living organisms that were not collected (e.g. catch and release or point count).
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
 |"Adicella cremisa Malicky, 1972" (genus + specificEpithet + scientificNameAuthorship)
 |Required
-|"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g., cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, i.e., working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
+|"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g. cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, e.g. working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
 |term:dwc[eventDate]
 |The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context (e.g. 5000 BP)
@@ -101,7 +101,7 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset.
 |"AT:BOKU:DAN_0003:MHS" (country:institutionCode:sampleCode:method)
 |Required, if event data are available
-|If occurrence has event data (i.e. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
+|If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
 
 |term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName].
@@ -119,13 +119,13 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 |Geographic latitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.	
 |"-41.0983423"	
 |Strongly recommended
-|Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g., country).
+|Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
 
 |term:dwc[decimalLongitude]
 |Geographic longitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.
 |"-121.1761111"
 |Strongly recommended
-|Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g., country).
+|Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
 
 |term:dwc[geodeticDatum]
 |The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
@@ -151,7 +151,7 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 |Number of individuals at the time of the occurrence, indicated as presence or as a count.
 |"1"
 |Strongly recommended
-|If you have presence data, please indicate "1" here. If a dataset derives from observed counts (e.g., point counts or opportunistic observations of individuals as encountered), enter the counts here. As these are only counts (not density or biomass), there are no units. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance under organismQuantity with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
+|If you have presence data, please indicate "1" here. If a dataset derives from observed counts (e.g. point counts or opportunistic observations of individuals as encountered), enter the counts here. As these are only counts (not density or biomass), there are no units. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance under organismQuantity with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantity]
 |Number or enumeration value for the quantity of Organisms as abundance, density, or biomass.
@@ -175,7 +175,7 @@ Occurrence data can be provided as presence data (i.e. a “1” for a site wher
 |Statement about the presence or absence of a Taxon at a location
 |One of "present" or "absent"
 |Share _if available_	
-|For occurrences, the default vocabulary is recommended to consist of present and absent, but absent should only be used if it is a true absence, i.e., effort was put into trying to detect the species and it was not detected. For example, if using targeted sampling to estimate species range, true absences can be identifed here, or if a species was previous noted at this location but was not there at the time of the sampling (potentially indicating species loss), then please indicate "absent" here.
+|For occurrences, the default vocabulary is recommended to consist of present and absent, but absent should only be used if it is a true absence, e.g. effort was put into trying to detect the species and it was not detected. For example, if using targeted sampling to estimate species range, true absences can be identifed here, or if a species was previous noted at this location but was not there at the time of the sampling (potentially indicating species loss), then please indicate "absent" here.
 
 |===
 
@@ -196,7 +196,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset
 |"AT:BOKU:DAN_0003:MHS1" (country:institutionCode:sampleCode:method)
 |Required
-|If occurrence has event data (i.e., methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
+|If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
 
 |term:dwc[eventDate]
 |The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context.
@@ -234,7 +234,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 |Measure for the amount of effort expended during an event.
 |"40 trap-nights", "10 observer-hours"
 |Strongly recommended
-|Used to provide evidence of the rigour of the sampling event, e.g. the number of people involved, total area sampled (summed across different sampled microhabitats), or the total number of hours spent on the event (e.g., net set time summed across multiple nets). There is no controlled vocabulary, but the recommendation is to keep this information brief and factual, giving users enough information to compare between sampling events.
+|Used to provide evidence of the rigour of the sampling event, e.g. the number of people involved, total area sampled (summed across different sampled microhabitats), or the total number of hours spent on the event (e.g. net set time summed across multiple nets). There is no controlled vocabulary, but the recommendation is to keep this information brief and factual, giving users enough information to compare between sampling events.
 
 |term:dwc[locationID]
 |Identifier that links to a set of data describing the sample event location, if available; may be a global unique identifier or an identifier specific to the dataset.
@@ -300,9 +300,9 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 We provide examples for the content of the fields, and where necessary, even selection lists to choose from.
 
-The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). In addition, there are fields that describe the sampled habitat, such as the depth of sampling, the <<microhabitat>> (e.g., sand, gravel, cobble), and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>> and <<river mesohabitat>> can be entered in the term:dwc[dynamicProperties] field, although the ultimate goal is to create a freshwater DwC extension in GBIF (see <<Freshwater DwC extension,§3.1>>). 
+The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). In addition, there are fields that describe the sampled habitat, such as the depth of sampling, the <<microhabitat>> (e.g. sand, gravel, cobble), and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>> and <<river mesohabitat>> can be entered in the term:dwc[dynamicProperties] field, although the ultimate goal is to create a freshwater DwC extension in GBIF (see <<Freshwater DwC extension,§3.1>>). 
 
-Further details about the event time and date are also recommended for inclusion (<<table-07,Table 7>>). For example, it is recommended that data providers include year, month and day as separate columns in their data. This avoids ambiguities that might occur due to regional differences in how year, month, and day are combined into a single field (i.e. confusion of month and day). Furthermore, it is important that all years be entered as four-digit numbers, as historical data (e.g. early 1900s) might be present in GBIF because of digitizing of old records, and full four-digit years ensure that dates are not mishandled. 
+Further details about the event time and date are also recommended for inclusion (<<table-07,Table 7>>). For example, it is recommended that data providers include year, month and day as separate columns in their data. This avoids ambiguities that might occur due to regional differences in how year, month, and day are combined into a single field (e.g. confusion of month and day). Furthermore, it is important that all years be entered as four-digit numbers, as historical data (e.g. early 1900s) might be present in GBIF because of digitizing of old records, and full four-digit years ensure that dates are not mishandled. 
 
 Additional fields for observation data include the sex and life stage, both of which are conditional based on the organism group (for example, sex can be determined and is relevant for fish, mammals, birds, and decapods; life stage can be determined and is relevant for copepods, <<benthic>> macroinvertebrates, fish and birds). Furthermore, additional fields provide detail on the identification of the observed taxon, such as references and verification status.
 
@@ -457,14 +457,14 @@ Event
 |The lower limit of the range of elevation (altitude, usually above sea level), in meters.
 |"100"
 |Strongly recommended
-|If sampling was done at one altitude only (i.e., no range), enter the actual altitude at which your sample was taken and leave maximumElevationInMeters blank.
+|If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken and leave maximumElevationInMeters blank.
 |Occurrence
 
 |term:dwc[maximumElevationInMeters]
 |The upper limit of the range of elevation (altitude, usually above sea level), in metres.
 |"200"	
 |Share, if available	
-|If sampling was done at one altitude only (i.e., no range), enter the actual altitude at which your sample was taken in minimumElevationInMeters and leave maximumElevationInMeters blank.	
+|If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in minimumElevationInMeters and leave maximumElevationInMeters blank.	
 |Occurrence
 
 |term:dwc[verbatimElevation]
@@ -478,14 +478,14 @@ Event
 |The lesser depth of a range of depth below the local surface, in metres.
 |"0.5"	
 |Strongly recommended
-|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e., at one single depth), enter the actual depth in which your sample was taken and leave term:dwc[maximumDepthInMeters] blank.
+|If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken and leave term:dwc[maximumDepthInMeters] blank.
 |Occurrence
 
 |term:dwc[maximumDepthInMeters]
 |The greater depth of a range of depth below the local surface, in metres.
 |"1"
 |Share, if available
-|If sampling took place over a range of depths (e.g., depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (i.e. at one single depth), enter the actual depth in which your sample was taken in term:dwc[minimumDepthInMeters] and leave term:dwc[maximumDepthInMeters] blank.	
+|If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken in term:dwc[minimumDepthInMeters] and leave term:dwc[maximumDepthInMeters] blank.	
 |Occurrence
 
 |term:dwc[verbatimDepth]
