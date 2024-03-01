@@ -36,123 +36,37 @@ _examples_: One of "riffle", "run", "pool" +
 _status_: Share, if available (based on freshwaterBiome) +
 _inclusion_: Occurrence
 
-[[table-08]]
-.Terms, definitions, examples, and comments for the terms recommended for inclusion in a freshwater DwC extension.
-[cols="%autowidth"]
-|===
-|term	|definition |example(s) |status |comment |inclusion
+freshwaterTypeOfContribution:: _definition_: category based on the type of data contribution +
+_examples_: "professional data"; "community-based research data"; "citizen science data" +
+_status_: Required
+_inclusion_: Occurrence
 
-|freshwaterBiome
-|ecologically similar components of freshwaters with broadly similar features
-|"lakes" +
-"rivers" +
-"wetlands" +
-"groundwater" +
-"adjacent to freshwater" +
-”interstitial”
-|required
-|Please classify your event accordingly based on where the observation was made. If observation was in a terrestrial habitat adjacent to freshwater, indicate "adjacent to freshwater".	
-|occurrence
+freshwaterTypeoOfObservation:: _definition_: category of occurrence and sampling-event data based on the type of observation recorded +
+_examples_: "opportunistic observation"; "targeted sampling"; "assemblage sampling" +
+_status_: Required +
+_inclusion_: Occurrence
 
-|freshwaterEcosystemFunctionalGroup
-|typology within biomes that classifies ecosystems by joining those with similar ecological conditions
-|"lowland rivers" +
-"large lakes" +
-"ponds" +
-(see typology for full list)
-|required
-|Please follow the definitions of the https://global-ecosystems.org/[IUCN Global Ecosystem Typology^] for consistency
-|occurrence
+freshwaterOrganismGroup:: _definition_: collections of biologically and ecologically similar organisms that are generally grouped together and described as an assemblage +
+_examples_: "fungi"; "microbes"; "benthic algae"; "phytoplankton"; "macrophytes"; "zooplankton"; "benthic invertebrates"; "decapods"; "fish"; "amphibians"; "reptiles"; "birds"; "mammals" +
+_status_: Required +
+_inclusion_: Occurrence
 
-|freshwaterLakeZone
-|typology within the lake biome that classifies this ecosystem into habitat zones
-|"littoral" +
-"sub-littoral" +
-"pelagic" +
-"profundal"
-|share, if available (based on freshwaterBiome)
-| 
-|occurrence
+freshwaterSeason:: _definition_: indicates the season in which a sample was collected +
+_examples_: "winter"; "spring"; "summer"; "autumn"; "wet"; "dry" +
+_status_: Strongly recommended +
+_inclusion_: Occurrence
 
-|freshwaterRiverMesohabitat
-|typology within the river biome that classifies this ecosystem into habitat zones
-|"riffle" +
-"run" +
-"pool"
-|share, if available (based on freshwaterBiome)
-| 
-|occurrence
+freshwaterSamplingEquipment:: _definition_: name or description of the sampling instrument that was used for collecting the taxa, including mesh sizes where applicable +
+_examples_: "light trap"; "500 μm mesh kick net"; "80 μm mesh plankton net"; "6.25, 8, 10, 12.5, 15.5, 19.5, 24, 29, 35, 43, 55 mm mesh gill net" +
+_status_: Required +
+_comment_: It is important that both the sampling equipment and the net mesh size (if nets were used) are provided, as mesh size gives an indication of the size of organisms retained. +
+_inclusion_: Occurrence
 
-|freshwaterTypeOfContribution
-|category based on the type of data contribution
-|"professional data" +
-"community-based research data" +
-"citizen science data"
-|required
-| 
-|occurrence
-
-|freshwaterTypeoOfObservation
-|category of occurrence and sampling-event data based on the type of observation that was made
-|"opportunistic observation" +
-"targeted sampling" +
-"assemblage sampling"
-|required
-| 
-|occurrence
-
-|freshwaterOrganismGroup
-|collections of biologically and ecologically similar organisms that are generally grouped together and described as an assemblage
-|"fungi" +
-"microbes" +
-"benthic algae" +
-"phytoplankton" +
-"macrophytes" +
-"zooplankton" +
-"benthic invertebrates" +
-"decapods" +
-"fish" +
-"amphibians" +
-"reptiles" +
-"birds" +
-"mammals"
-|required
-| 
-|occurrence
-
-|freshwaterSeason
-|indicates the season in which a sample was collected
-|"winter" +
-"spring" +
-"summer" +
-"autumn" +
-"wet" +
-"dry"
-|strongly recommended
-| 
-|occurrence
-
-|freshwaterSamplingEquipment
-|name or description of the sampling instrument that was used for collecting the taxa, including mesh sizes where applicable
-|"light trap" +
-"500 μm mesh kick net" +
-"80 μm mesh plankton net" +
-"6.25, 8, 10, 12.5, 15.5, 19.5, 24, 29, 35, 43, 55 mm mesh gill net"
-|required	
-|It is important that both the sampling equipment and the net mesh size (if nets were used) are provided, as mesh size gives an indication of the size of organisms retained.
-|occurrence
-
-|freshwaterSampleProcessing
-|name or description of the sample processing protocol (e.g. procedures followed after sample collection to sort and identify taxa)	
-|"20x microscope magnification" +
-"subsampled with Marchant box until 300 organisms identified - abundance estimated based on the number of cells processed" +
-"samples filtered on 45 μm pore size filter paper prior to identification" +
-"samples mounted on slide and random transects identified under 500x inverted microscope until 300 individuals filaments or colonies counted and identified" +
-|share, if available (based on freshwaterOrganismGroup (fungi, microbes, benthic algae, phytoplankton, zooplankton, benthic macroinvertebrates))
-|Provide as much detail as possible about procedures followed in the lab to process and idenfity samples, including any sub-sampling procedures, sample treatment/staining, slide mounting, and magnifications used. If relevant, include a reference to the protocol used.
-|occurrence
-
-|===
+freshwaterSampleProcessing:: _definition_: name or description of the sample processing protocol (e.g. procedures followed after sample collection to sort and identify taxa)	+
+_examples_: "20x microscope magnification"; "subsampled with Marchant box until 300 organisms identified - abundance estimated based on the number of cells processed"; "samples filtered on 45 μm pore size filter paper prior to identification"; "samples mounted on slide and random transects identified under 500x inverted microscope until 300 individuals filaments or colonies counted and identified" +
+_status_: Share, if available (based on freshwaterOrganismGroup (fungi, microbes, benthic algae, phytoplankton, zooplankton, benthic macroinvertebrates) +
+_comment_: Provide as much detail as possible about procedures followed in the lab to process and idenfity samples, including any sub-sampling procedures, sample treatment/staining, slide mounting, and magnifications used. If relevant, include a reference to the protocol used.
+_inclusion_: Occurrence
 
 [[freshwater-data-tagging]]
 === Freshwater data tagging
