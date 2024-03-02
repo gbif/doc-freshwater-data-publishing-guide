@@ -213,56 +213,56 @@ The metadata required by GBIF describes details about a dataset that include its
 When datasets are downloaded individually from GBIF, the XML metadata file is included and metadata fields from this table are automatically added to the occurrence file. When data are selected for download from within a polygon (thereby choosing data from multiple studies over a given geographic area), less of the metadata is provided in the occurrence table, but the permanent link to the data selection (provided by GBIF with the data download) allows the user to explore metadata for each individual project.
 
 [[table-03]]
-.Freshwater-specific terms, definitions, examples and comments for the metadata fields required by GBIF to describe datasets (https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata[more information^] on specific fields)
+.Terms with freshwater-specific definitions, examples and comments for the metadata fields required by GBIF (https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata[more information^])
 [cols="18,25,25,12,~"]
 |===
 |Term |Definition |Example(s) |Status |Comment
 
 |`title`
 |A descriptive title of the dataset
-^|"Amazon Fish Database"
+|"Amazon Fish Database"
 |Required
 |
 
 |`description`
 |Short description of the dataset
-^|"The Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…"
+|"The Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…"
 |Required
 |
 
 |`metadataLanguage`
 |Language in which the metadata is provided
-^|"English", "German", etc.
+|"English", "German", etc.
 |Required
 |
 
 |`dataLanguage`
 |Language in which the data is provided
-^|"English", "German", etc.
+|"English", "German", etc.
 |Required
 |
 
 |`publishingOrganization`
 |Name of the organization that will be listed as the data publisher at gbif.org; the publishing organization is the institution which holds or owns the dataset and is in charge of its contents and maintenance
-^|"UMR EDB"
+|`UMR EDB`
 |Required
 |Can be left empty, if you plan to publish your data through the FIP/BioFresh IPT
 
 |`type`
 |Type of dataset, using one of GBIF's dataset classes
-^|One of "resources metadata", "checklist", "occurrence", "sampling event"
+|One of "resources metadata", "checklist", "occurrence", "sampling event"
 |Required
 |
 
 |`updateFrequency`
 |The frequency with which changes are made to the dataset after its first publication
-^|One of "daily", "weekly", "monthly", "biannually", "annually", "as needed", "continually", "irregular", "not planned", "unknown", "other maintenance period"
+|One of "daily", "weekly", "monthly", "biannually", "annually", "as needed", "continually", "irregular", "not planned", "unknown", "other maintenance period"
 |Required
 |
 
 |`dataLicense`
 |Licence under which the dataset can be used; GBIF encourages publishers to adopt the least restrictive possible from the three machine readable options; datsets with other licences cannot be registered with GBIF.
-^|"Public Domain (CC0 1.0)" +
+|"Public Domain (CC0 1.0)" +
 "Creative Commons Attribution (CC-BY 4.0)" +
 "Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)"
 |Required
@@ -270,7 +270,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 
 |`resourceContact(s)`
 |People and organizations that should be contacted to get more information about the dataset
-^|first name: "Max" +
+|first name: "Max" +
 last name: "Fisher" +
 position: "professor" +
 organization: "Amazon Research Center"
@@ -279,7 +279,7 @@ organization: "Amazon Research Center"
 
 |`resourceCreator(s)`
 |People and organizations who created the dataset
-^|first name: "Moritz" +
+|first name: "Moritz" +
 last name: "King" +
 position: "senior scientist" +
 organization: "Amazon Research Center"
@@ -288,7 +288,7 @@ organization: "Amazon Research Center"
 
 |`metadataProvider(s)`
 |People and organizations responsible for producing the metadata of the dataset
-^|first name: "Max" +
+|first name: "Max" +
 last name "Fisher" +
 position: "professor" +
 organization: "Amazon Research Center"
@@ -297,24 +297,25 @@ organization: "Amazon Research Center"
 
 |`geographicCoverage`
 |Location (bounding box) of the dataset
-^|For example, a bounding box: "West -72.949; East -49.746; South -9.449; North 2.636", or description: "Amazon Basin"
+|For example, a bounding box: "West -72.949; East -49.746; South -9.449; North 2.636", or description: "Amazon Basin"
 |Required
 |Please provide the coordinates for the bounding box in four separate fields. Additonally a description is needed.
 
-|`Metadata about the project under which the dataset was produced`
-^|"Amazonas Fish Project"
+|`projectData`
+|Metadata about the project under which the dataset was produced
+|`Amazonas Fish Project`
 |Required
 |Please provide at least the title of the project. Add separte fields for identifier, description, funding, study area description or design description, if wanted. More information on the additional fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/manage-resources#metadata
 
 |`samplingMethods`
 |Metadata about the sampling methods used for data collection, including study extent, sampling description and step description
-^|For example, study extent: "Sampling of 24 rivers in the area during the years 2020 to 2022", sampling description: "Samples were taken according to the Amazonas Standard Fish Protocol", step description: "Fishes were identified to species level according to Ama & Zon 2023; analyses were undertaken with the R package 'zn pack'."
+|For example, study extent: `Sampling of 24 rivers in the area during the years 2020 to 2022`, sampling description: `Samples were taken according to the Amazonas Standard Fish Protocol`, step description: `Fishes were identified to species level according to Ama & Zon 2023; analyses were undertaken with the R package 'zn pack'.`
 |Strongly recommended
 |Mandatory in situations where data comes from a sampling event. Please use separate fields for study extent, sampling description and step description. More information on the additional fields can be found here: https://ipt.gbif.org/manual/en/ipt/latest/manage-resources#metadata
 
 |`citation`
 |Suggestion for how your dataset should be cited
-^|"Fisher, M. & King, M., 2023: Amazon Fish Project 2020-2022. Project Deliverable."
+|`Fisher, M. & King, M., 2023: Amazon Fish Project 2020-2022. Project Deliverable.`
 |Strongly recommended
 |When data from a single project are downloaded from GBIF, reference will be provided in a file with the data download. When data from multiple projects are selected via polygon, a DOI will be generated for the full data selection and provided to the user (dataset-specific references available at the DOI). 
 
