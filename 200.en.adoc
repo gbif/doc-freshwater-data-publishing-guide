@@ -16,7 +16,7 @@ What is important for checklist and occurrence datasets is the inclusion of well
 Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (e.g. kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
 
 [[table-04]]
-.Freshwater-specific terms, definitions, examples, and comments required or recommended for publishing checklist datasets to GBIF (see https://www.gbif.org/data-quality-requirements-checklists[more information^] on the specific fields).
+.Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-checklists[[fields GBIF requires or recommends for checklist datasets^].
 [cols="%autowidth"]
 |===
 |term |definition |example(s) |status |comment
@@ -67,7 +67,7 @@ Occurrence data provide information about observations of taxa and the locations
 Occurrence data can be provided as presence data (e.g. a “1” for a site where the taxon was observed) or as counts in the field term:dwc[individualCount] (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (e.g. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (e.g. in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density or biomass as part of targeted or assemblage sampling, these measures should be recorded in the field term:dwc[organismQuantity] with units recorded in term:dwc[organismQuantityType] (<<table-05,Table 5>>). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (e.g. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field term:dwc[occurrenceStatus] (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
 
 [[table-05]]
-.Freshwater-specific terms, definitions, examples, and comments required or recommended for publishing occurrence datasets to GBIF (https://www.gbif.org/data-quality-requirements-occurrences[more information^] on specific fields)
+.Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-occurrences[fields GBIF requires or recommends for occurrence datasets^]
 [cols="%autowidth"]
 |===
 |Term	|Freshwater definition |Example |Status |Comment
@@ -187,7 +187,7 @@ When occurrence data have additional metadata describing sampling methods, this 
 Sampling methods are described in the sampling-event dataset with the field term:dwc[samplingProtocol], which provides a name/link to a specific protocol and/or description of the protocol (<<table-06,Table 6>>). The recommended best practice is to have a separate event for each sampling method used. In addition to describing the protocol, the field term:dwc[sampleSizeValue] and term:dwc[sampleSizeUnit] can be used to indicate the spatial or temporal extent of sampling for the described sampling event, as a measure of sampling effort for each event. In addition, the field term:dwc[samplingEffort] can be used to record the total effort spent on the event, for example, when there were multiple nets, multiple <<microhabitats>> sampled, or multiple periods of time over which sampling occurred. Additional details about sampling methods are recommended to be included in the freshwater DwC extensions described in <<Freshwater DwC extension,§3.1>>. 
 
 [[table-06]]
-.Freshwater specific terms, definitions, examples, and comments  required or recommended for publishing sampling-event datasets to GBIF (https://www.gbif.org/data-quality-requirements-sampling-events[more information^] on the specific fields)
+.Terms with freshwater-specificdefinitions, examples, and comments for https://www.gbif.org/data-quality-requirements-sampling-events[fields GBIF requires or recommends for sampling-event datasets^]
 [cols="%autowidth"]
 |===
 |Term	|Freshwater definition |Example |Status |Comment
