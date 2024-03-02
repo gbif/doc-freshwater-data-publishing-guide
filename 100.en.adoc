@@ -213,32 +213,32 @@ The metadata required by GBIF describes details about a dataset that include its
 When datasets are downloaded individually from GBIF, the XML metadata file is included and metadata fields from this table are automatically added to the occurrence file. When data are selected for download from within a polygon (thereby choosing data from multiple studies over a given geographic area), less of the metadata is provided in the occurrence table, but the permanent link to the data selection (provided by GBIF with the data download) allows the user to explore metadata for each individual project.
 
 [[table-03]]
-.Terms with freshwater-specific definitions, examples and comments for the metadata fields required by GBIF (https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata[more information^])
-[cols="18,25,25,12,~"]
+.Terms with freshwater-specific definitions, examples and comments for the https://ipt.gbif.org/manual/en/ipt/latest/gbif-metadata-profile#validation-of-metadata[metadata fields required by GBIF^]
+[cols="17,26,26,11,~"]
 |===
 |Term |Definition |Example(s) |Status |Comment
 
 |`title`
 |A descriptive title of the dataset
-|"Amazon Fish Database"
+|`Amazon Fish Database`
 |Required
 |
 
 |`description`
 |Short description of the dataset
-|"The Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…"
+|"`he Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…`
 |Required
 |
 
 |`metadataLanguage`
 |Language in which the metadata is provided
-|"English", "German", etc.
+|`English`, `German`, etc.
 |Required
 |
 
 |`dataLanguage`
 |Language in which the data is provided
-|"English", "German", etc.
+|`English`, `German`, etc.
 |Required
 |
 
@@ -250,54 +250,54 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 
 |`type`
 |Type of dataset, using one of GBIF's dataset classes
-|One of "resources metadata", "checklist", "occurrence", "sampling event"
+|One of `resources metadata`, `checklist`, `occurrence`, `sampling event`
 |Required
 |
 
 |`updateFrequency`
 |The frequency with which changes are made to the dataset after its first publication
-|One of "daily", "weekly", "monthly", "biannually", "annually", "as needed", "continually", "irregular", "not planned", "unknown", "other maintenance period"
+|One of `daily`, `weekly`, `monthly`, `biannually`, `annually`, `as needed`, `continually`, `irregular`, `not planned`, `unknown`, `other maintenance period`
 |Required
 |
 
 |`dataLicense`
 |Licence under which the dataset can be used; GBIF encourages publishers to adopt the least restrictive possible from the three machine readable options; datsets with other licences cannot be registered with GBIF.
-|"Public Domain (CC0 1.0)" +
-"Creative Commons Attribution (CC-BY 4.0)" +
-"Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)"
+|`Public Domain (CC0 1.0) +
+`Creative Commons Attribution (CC-BY 4.0)` +
+`Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)`
 |Required
 |More information can be found here: https://www.gbif.org/terms
 
 |`resourceContact(s)`
 |People and organizations that should be contacted to get more information about the dataset
-|first name: "Max" +
-last name: "Fisher" +
-position: "professor" +
-organization: "Amazon Research Center"
+|first name: `Max` +
+last name: `Fisher` +
+position: `professor` +
+organization: `Amazon Research Center
 |Required
 |Please provide first name, last name, position and organization in seperate fields
 
 |`resourceCreator(s)`
 |People and organizations who created the dataset
-|first name: "Moritz" +
-last name: "King" +
-position: "senior scientist" +
-organization: "Amazon Research Center"
+|first name: `Moritz` +
+last name: `King` +
+position: `senior scientist` +
+organization: `Amazon Research Center`
 |Required
 |List creators in priority order. The list will be used to auto-generate the citation of the dataset. Please provide first name, last name, position and organization in separate fields.
 
 |`metadataProvider(s)`
 |People and organizations responsible for producing the metadata of the dataset
-|first name: "Max" +
-last name "Fisher" +
-position: "professor" +
-organization: "Amazon Research Center"
+|first name: `Max` +
+last name `Fisher` +
+position: `professor` +
+organization: `Amazon Research Center`
 |Required
 |Please provide first name, last name, position and organization in separate fields.
 
 |`geographicCoverage`
 |Location (bounding box) of the dataset
-|For example, a bounding box: "West -72.949; East -49.746; South -9.449; North 2.636", or description: "Amazon Basin"
+|E.g. a bounding box: `West -72.949; East -49.746; South -9.449; North 2.636`, or description: `Amazon Basin`
 |Required
 |Please provide the coordinates for the bounding box in four separate fields. Additonally a description is needed.
 
