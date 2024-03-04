@@ -199,13 +199,13 @@ Sampling methods are described in the sampling-event dataset with the field term
 |If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
 
 |term:dwc[eventDate]
-|The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context.
+|The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context
 |"1809-02-12" (12 February 1809)
 |Required
 |Use the following format: four-digit year - month - day `yyyy-mm-dd`. Please make sure to provide separate columns for year, month and day as well (see freshwater recommended terms). Note that the time should not be included as part of this element, please use eventTime instead where required.
 
 |term:dwc[samplingProtocol]
-|Names of, references to, or descriptions of the methods or protocols used during an event.
+|Names of, references to, or descriptions of the methods or protocols used during an event
 |"Environment Canada. (2012). Canadian Aquatic Biomonitoring Network Field Manual - Wadeable Streams. Available at http://publications.gc.ca/pub?id=9.696248&sl=0" +
 "SS–EN 27 828, Water quality - Methods for biological sampling - Guidance on  the handnet sampling of benthic macroinvertebrates" +
 "net fishing and full/partly following NS-EN 14757"
@@ -213,55 +213,55 @@ Sampling methods are described in the sampling-event dataset with the field term
 |Recommended best practice is describe an event with no more than one sampling protocol/method, and have a separate event for each method used, with occurrences separated by method. If a more detailed description of the method or protocol exists, providing a reference is strongly encouraged.
 
 |term:dwc[sampleSizeValue]
-|Numeric value for a measurement of the size (time duration, length, area, or volume) of an indivdual sample in the sampling event.
+|Numeric value for a measurement of the size (time duration, length, area, or volume) of an individual sample in the sampling event
 |"5" (sampleSizeValue with "metre" as term:dwc[sampleSizeUnit])
 |Required
 |A sampleSizeValue must have a corresponding term:dwc[sampleSizeUnit]. The sample size can relate to time duration, a spatial length (e.g. of a trawl), an area or a volume. 
 
 |term:dwc[sampleSizeUnit]
-|The unit of measurement of the size (time duration, length, area, or volume) of a sample in a sampling event.
+|The unit of measurement of the size (time duration, length, area, or volume) of a sample in a sampling event
 |"minute", "metre", "square metre"
 |Required
 |A sampleSizeUnit must have a corresponding term:dwc[sampleSizeValue]. Recommended best practice is to use a controlled vocabulary for the sampleSizeUnit.
 
 |term:dwc[parentEventID]
-|Identifier for the broader event that groups this and potentially other events; may be a global unique identifier or an identifier specific to the dataset.
+|Identifier for the broader event that groups this and potentially other events; may be a global unique identifier or an identifier specific to the dataset
 |"A1" (parentEventID to identify a transect of samples with its own eventIDs: "A1:1", "A1:2"), "AT:BOKU:DAN" (country:institutionCode:projectCode)
 |Strongly recommended
 |Used in situations where the event is part of an event series. In order to be able to reference a parent event, this event needs to be specified as a separate entry, typically within the same dataset, carrying its own eventID. Refer to the eventID of the parent event in the sample event record to specify the relationship between the two entries.
 
 |term:dwc[samplingEffort]
-|Measure for the amount of effort expended during an event.
+|Measure for the amount of effort expended during an event
 |"40 trap-nights", "10 observer-hours"
 |Strongly recommended
 |Used to provide evidence of the rigour of the sampling event, e.g. the number of people involved, total area sampled (summed across different sampled microhabitats), or the total number of hours spent on the event (e.g. net set time summed across multiple nets). There is no controlled vocabulary, but the recommendation is to keep this information brief and factual, giving users enough information to compare between sampling events.
 
 |term:dwc[locationID]
-|Identifier that links to a set of data describing the sample event location, if available; may be a global unique identifier or an identifier specific to the dataset.
+|Identifier that links to a set of data describing the sample event location, if available; may be a global unique identifier or an identifier specific to the dataset
 |"http://www.geonames.org/10793757/dnb-6.html"
 |Strongly recommended
 |If such a reference cannot be meaningfully supplied, consider supplying more location details, e.g. through use of the data elements term:dwc[locality], term:dwc[minimumElevationInMeters], term:dwc[minimumDepthInMeters], term:dwc[stateProvince], term:dwc[locationRemarks] etc.
 
 |term:dwc[decimalLatitude]
-|Geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a location.
+|Geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a location
 |"-41.0983423"
 |Strongly recommended
 |Positive values are north of the Equator, negative values are south of it. Note that a sample event that spans an area rather than a point location should additionally supply the coordinateUncertaintyInMeters to specify the approximate extension of the area. 
 
 |term:dwc[decimalLongitude]
-|Geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a location.
+|Geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a location
 |"-121.1761111"
 |Strongly recommended
 |Positive values are east of the Greenwich Meridian, negative values are west of it. Note that a sample event that spans an area rather than a point location should additionally supply the coordinateUncertaintyInMeters to specify the approximate extension of the area. 
 
 |term:dwc[geodeticDatum]
-|The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
+|The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based
 |"EPSG:4326", "WGS84", "unknown"
 |Strongly recommended
 |Recommended best practice is to use the EPSG code of the spatial reference system, if known. If no geodetic datum is specified, GBIF's indexing process assumes "WGS84".
 
 |term:dwc[coordinateUncertaintyInMeters] 
-|The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location.
+|The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location
 |"30" (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
 "100" (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
 |Share, if available	
@@ -275,13 +275,13 @@ Sampling methods are described in the sampling-event dataset with the field term
 |A WKT representation of the shape (footprint, geometry) that defines the location. This differs from the point-radius representation that is combined from the elements term:dwc[decimalLatitude], term:dwc[decimalLongitude] and term:dwc[coordinateUncertaintyInMeters] in that it can define shapes that are not circles. Note that it is possible to supply both a point-radius and a footprintWKT location for the same sample event.
 
 |term:dwc[footprintSRS]
-|The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in footprintWKT is based.
+|The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in footprintWKT is based
 |"EPSG:4326", "unknown"
 |Strongly recommended
 |Recommended best practice is to use the EPSG code of the SRS, if known. If none of these is known, use the value "unknown". It is also permitted to provide the SRS in Well-Known-Text, especially if no EPSG code provides the necessary values for the attributes of the SRS. Do not use this term to describe the SRS of the decimalLatitude and decimalLongitude, nor of any verbatim coordinates - use the geodeticDatum and verbatimSRS instead.
 
 |term:dwc[countryCode]
-|Standard code for the country in which the location occurs.
+|Standard code for the country in which the location occurs
 |"AR" (Argentina) +
 "SV" (El Salvador)	
 |Strongly recommended
