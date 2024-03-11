@@ -16,7 +16,7 @@ What is important for checklist and occurrence datasets is the inclusion of well
 Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (e.g. kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
 
 [[table-04]]
-.Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-checklists[[fields GBIF requires or recommends for checklist datasets^].
+.Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-checklists[fields GBIF requires or recommends for checklist datasets^].
 [cols="%autowidth"]
 |===
 |term |definition |example(s) |status |comment
@@ -29,7 +29,7 @@ Checklist data are not specific to a location and do not represent individual ob
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known	
-|"Adicella cremisa Malicky, 1972" [genus + specificEpithet + scientificNameAuthorship]
+|"Adicella cremisa Malicky, 1972" (genus + specificEpithet + scientificNameAuthorship)
 |Required	
 |Names should be compliant to the most recent nomenclatural code. This term should not contain identification qualifications (e.g. cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, e.g. working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
@@ -155,19 +155,19 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 
 |term:dwc[organismQuantity]
 |Number or enumeration value for the quantity of Organisms as abundance, density, or biomass.
-|"27" [organismQuantity] with "individuals per m2" [organismQuantityType] +
-"12.5" [organismQuantity] with "% biomass" [organismQuantityType] +
-"150" [organismQuantitiy] with "mg dry mass" [organismQuantityType] +
-"800" [organismQuantity] with "individuals" [organismQuantityType]
+|"27" (organismQuantity) with "individuals per m2" (organismQuantityType) +
+"12.5" (organismQuantity) with "% biomass" (organismQuantityType) +
+"150" (organismQuantitiy) with "mg dry mass" (organismQuantityType) +
+"800" (organismQuantity) with "individuals" (organismQuantityType)
 |Strongly recommended
 |An entry for organismQuantity must have a corresponding term:dwc[organismQuantityType]. If you have abundance data, fill in the number individuals and add unit for it in term:dwc[organismQuantityType]. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance here with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantityType]
 |Type of quantification system used for the quantity of Organisms
-|"27" [organismQuantity] with "individuals per m2" [organismQuantityType] +
-"12.5" [organismQuantity] with "% biomass" [organismQuantityType] +
-"150" [organismQuantitiy] with "mg dry mass" [organismQuantityType] +
-"800" [organismQuantity] with "individuals" [organismQuantityType]
+|"27" (organismQuantity) with "individuals per m2" (organismQuantityType) +
+"12.5" (organismQuantity) with "% biomass" (organismQuantityType) +
+"150" (organismQuantitiy) with "mg dry mass" (organismQuantityType) +
+"800" (organismQuantity) with "individuals" (organismQuantityType)
 |Strongly recommended
 |A organismQuantityType must have a corresponding organismQuantity. If you have abundance data, fill in the number individuals in organismQuantity and add unit for it here.
 
@@ -450,7 +450,7 @@ Event
 |The specific description of the place, providing regional context to the observation
 |"25 km downstream Vienna"
 |Strongly recommended
-|Less specific geographic information can be provided in other geographic terms (term:dwc[higherGeography], term:dwc[continent], term:dwc[country], term:dwc[stateProvince], term:dwc[county], term:dwc[municipality], term:dwc[waterBody], term:dwc[island], term:dwc[islandGroup).
+|Less specific geographic information can be provided in other geographic terms (term:dwc[higherGeography], term:dwc[continent], term:dwc[country], term:dwc[stateProvince], term:dwc[county], term:dwc[municipality], term:dwc[waterBody], term:dwc[island], term:dwc[islandGroup].
 |Occurrence
 
 |term:dwc[minimumElevationInMeters]
