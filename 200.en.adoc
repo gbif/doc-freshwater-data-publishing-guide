@@ -70,7 +70,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-occurrences[fields GBIF requires or recommends for occurrence datasets^]
 [cols="%autowidth"]
 |===
-|Term	|Freshwater definition |Example |Status |Comment
+|Term	|Definition |Example |Status |Comment
 
 |term:dwc[occurrenceID]
 |Identifier for the occurrence; in the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique
@@ -190,7 +190,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-sampling-events[fields GBIF requires or recommends for sampling-event datasets^]
 [cols="%autowidth"]
 |===
-|Term	|Freshwater definition |Example |Status |Comment
+|Term	|Definition |Example |Status |Comment
 
 |term:dwc[eventID]
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset
