@@ -23,7 +23,7 @@ Checklist data are not specific to a location and do not represent individual ob
 
 |term:dwc[taxonID]
 |A unique identifier for the taxon; may be a global unique identifier or an identifier specific to the dataset.
-|For example, "8fa58e08-08de-4ac1-b69c-1235340b7001", "32567", "ID-fwe-32567"
+|"8fa58e08-08de-4ac1-b69c-1235340b7001", "32567", "ID-fwe-32567"
 |Required
 |Ideally, the taxonID is a persistent global unique identifier. As a minimum requirement, it has to be unique within the published dataset.
 
@@ -47,13 +47,13 @@ Checklist data are not specific to a location and do not represent individual ob
 
 |term:dwc[parentNameUsageID]
 |The taxonID of the next available higher-ranked (parent) entry within the checklist dataset, if higher taxon names are supplied as separate entries in the list
-|For example "2704173" (GBIF), "tsn:41074" (ITIS) etc.
+|"2704173" (GBIF), "tsn:41074" (ITIS) etc.
 |Strongly recommended
 |This supports the representation of the dataset as a hierarchy, e.g. for the publication of a taxonomy. For Darwin Core Archives, the related record should be present locally in the same archive. 
 
 |term:dwc[acceptedNameUsageID]
 |Within the record of a synonym, the taxonID of the accepted taxon name entry within the checklist dataset, if both synonyms and accepted names are supplied.
-|For example "2704179" (GBIF), "tsn:41107" (ITIS), etc.
+|"2704179" (GBIF), "tsn:41107" (ITIS), etc.
 |Strongly recommended
 |This supports the representation of synonymy for a taxonomic dataset. For Darwin Core Archives the related record should be present locally in the same archive.
 
