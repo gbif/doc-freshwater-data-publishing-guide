@@ -312,7 +312,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 .Terms, definitions, examples, and comments for the terms recommended to be included with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
 [cols="%autowidth"]
 |===
-|Term	|Freshwater definition |Example |Status |Comment |Inclusion
+|Term	|Definition |Example |Status |Comment |Inclusion
 
 |term:dwc[rightsHolder]
 |a person or organisation owning or managing the rights over the resource
