@@ -174,7 +174,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |term:dwc[occurrenceStatus ]
 |Statement about the presence or absence of a Taxon at a location
 |One of `present` or `absent`
-|Share _if available_	
+|Share if available
 |For occurrences, the default vocabulary is recommended to consist of present and absent, but absent should only be used if it is a true absence, e.g. effort was put into trying to detect the species and it was not detected. For example, if using targeted sampling to estimate species range, true absences can be identifed here, or if a species was previous noted at this location but was not there at the time of the sampling (potentially indicating species loss), then please indicate "absent" here.
 
 |===
@@ -188,7 +188,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 [[table-06]]
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-sampling-events[fields GBIF requires or recommends for sampling-event datasets^]
-[cols="17,26,26,11,20"]
+[cols="17,28,28,11,16"]
 |===
 |Term	|Definition |Example |Status |Comment
 
@@ -270,7 +270,7 @@ sampleCode:method)
 
 |term:dwc[footprintWKT]
 |An area description, specifying the location of the sample event in well-known text (WKT) markup language
-|`POLYGON ((10 20, 11 20, +
+|`POLYGON ((10 20, 11 20,` +
 `11 21, 10 21, 10 20))` +
 (a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21)
 |Strongly recommended
