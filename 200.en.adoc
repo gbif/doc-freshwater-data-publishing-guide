@@ -68,7 +68,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 
 [[table-05]]
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-occurrences[fields GBIF requires or recommends for occurrence datasets^]
-[cols="17,26,26,11,~"]
+[cols="10,30,30,10,20"]
 |===
 |Term	|Definition |Example |Status |Comment
 
@@ -192,7 +192,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 [[table-06]]
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-sampling-events[fields GBIF requires or recommends for sampling-event datasets^]
-[cols="17,28,28,11,16"]
+[cols="10,30,30,10,20"]
 |===
 |Term	|Definition |Example |Status |Comment
 
