@@ -346,7 +346,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[dynamicProperties]
 |List of additional measurements, facts, characteristics, or assertions about the record; meant to provide a mechanism for structured content.
-|"biome:river`, `ecosystem functional group:lowland river`, `microhabitat:sand`, `data category:opportunistic observation`, `type of contribution:community-based research data`, `organism group:fish`
+|`biome:river`, `ecosystem functional group:lowland river`, `microhabitat:sand`, `data category:opportunistic observation`, `type of contribution:community-based research data`, `organism group:fish`
 |Strongly recommended
 |Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group or microhabitat until the freshwater extension is created and available for use. Note that this field is not searchable on GBIF.
 |Occurrence
