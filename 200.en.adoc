@@ -316,14 +316,14 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Term	|Definition |Example |Status |Comment |Inclusion
 
 |term:dwc[rightsHolder]
-|a person or organisation owning or managing the rights over the resource
+|A person or organisation owning or managing the rights over the resource
 |`BOKU University` (University of Natural Resources and Life Sciences, BOKU Vienna)
 |Strongly recommended
 | 
 |Metadata
 
 |term:dwc[institutionCode]
-|Name or acronym of the institution having custody of the dataset or record.
+|Name or acronym of the institution having custody of the dataset or record
 |`BOKU` (University of Natural Resources and Life Sciences, BOKU Vienna) +
 `UNB` (University New Brunswick)
 |Required		
@@ -331,28 +331,28 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Metadata
 
 |term:dwc[collectionID]
-|Identifier for the collection or dataset from which the record was derived.
+|Identifier for the collection or dataset from which the record was derived
 |`urn:lsid:biocol.org:col:34818`, `https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c`
 |Strongly recommended
 |For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].
 |Occurrence
 
 |term:dwc[informationWithheld]
-|Additional information that exists, but that has not been shared in the given record.
+|Additional information that exists, but that has not been shared in the given record
 |`location information not given for endangered species`
 |Strongly recommended
 |A note on possible information that was intentionally not included into the dataset.
 |Occurrence
 
 |term:dwc[dynamicProperties]
-|List of additional measurements, facts, characteristics, or assertions about the record; meant to provide a mechanism for structured content.
+|List of additional measurements, facts, characteristics, or assertions about the record; meant to provide a mechanism for structured content
 |`biome:river`, `ecosystem functional group:lowland river`, `microhabitat:sand`, `data category:opportunistic observation`, `type of contribution:community-based research data`, `organism group:fish`
 |Strongly recommended
 |Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group or microhabitat until the freshwater extension is created and available for use. Note that this field is not searchable on GBIF.
 |Occurrence
 
 |term:dwc[recordedBy]
-|A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original occurrence; the primary collector or observer should be listed first.
+|A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original occurrence; the primary collector or observer should be listed first
 |`Jen Lento \| Astrid Schmidt-Kloiber`
 |Strongly recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (\|).  
@@ -366,7 +366,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Occurrence
 
 |term:dwc[lifeStage]
-|The age class or life stage of the Organism(s) at the time the occurrence was recorded.
+|The age class or life stage of the Organism(s) at the time the occurrence was recorded
 |One of `egg`, `larva`, `adult`, `subimago`, `juvenile`, `nymph`, `early instar`, `young of year`, `nauplii`, `copepodite`
 |Share, if available (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
 | 
@@ -387,7 +387,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Event
 
 |term:dwc[eventTime]
-|The time or interval during which an event occurred.
+|The time or interval during which an event occurred
 |`14:07-0600` (2:07pm in the time zone six hours earlier than UTC) +
 `13:00:00Z/15:30:00Z` (the interval between 1pm UTC and 3:30pm UTC)
 |Share, if available
@@ -395,7 +395,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Event
 
 |term:dwc[year]
-|Four-digit year in which the event occurred.
+|Four-digit year in which the event occurred
 |`2008`
 |Share, if available	
 |Please fill this column additionally to the eventDate.
@@ -411,7 +411,7 @@ Event
 Event
 
 |term:dwc[day]
-|Day of the month on which the event occurred.
+|Day of the month on which the event occurred
 |`9`, `28`
 |Share, if available
 |Please fill this column additionally to the eventDate.
@@ -419,7 +419,7 @@ Event
 Event
 
 |term:dwc[verbatimEventDate]
-|The verbatim original representation of the date and time information for an event.
+|The verbatim original representation of the date and time information for an event
 |`spring 1900`, `Marzo 2002`
 |Share, if available
 |Please keep your original date/time stamp here (if applicable).
@@ -427,14 +427,14 @@ Event
 Event
 
 |term:dwc[habitat]
-|A category or description of the habitat in which the event occurred.
+|A category or description of the habitat in which the event occurred
 |`sand`, `silt`, `clay`, `gravel`, `pebble`, `cobble`, `boulder`, `rocky substrate`, `vegetation`, `wood`, `bedrock`, `air`, `water column`, `shoreline`, `water surface`
 |Share, if available
 |Enter the freshwater microhabitat here.	
 |Occurrence
 
 |term:dwc[eventRemarks]
-|Comments or notes about the event.
+|Comments or notes about the event
 |`After the recent rains the river is nearly at flood stage.`
 |Share, if available
 | 
@@ -455,35 +455,35 @@ Event
 |Occurrence
 
 |term:dwc[minimumElevationInMeters]
-|The lower limit of the range of elevation (altitude, usually above sea level), in meters.
+|The lower limit of the range of elevation (altitude, usually above sea level), in metres
 |`100`
 |Strongly recommended
 |If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken and leave maximumElevationInMeters blank.
 |Occurrence
 
 |term:dwc[maximumElevationInMeters]
-|The upper limit of the range of elevation (altitude, usually above sea level), in metres.
+|The upper limit of the range of elevation (altitude, usually above sea level), in metres
 |`200`
 |Share, if available	
 |If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in minimumElevationInMeters and leave maximumElevationInMeters blank.	
 |Occurrence
 
 |term:dwc[verbatimElevation]
-|The original description of the elevation (altitude, usually above sea level) of the location.
+|The original description of the elevation (altitude, usually above sea level) of the location
 |`100-200 m`
 |Share, if available
 | 
 | 
 
 |term:dwc[minimumDepthInMeters]
-|The lesser depth of a range of depth below the local surface, in metres.
+|The lesser depth of a range of depth below the local surface, in metres
 |"0.5"	
 |Strongly recommended
 |If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken and leave term:dwc[maximumDepthInMeters] blank.
 |Occurrence
 
 |term:dwc[maximumDepthInMeters]
-|The greater depth of a range of depth below the local surface, in metres.
+|The greater depth of a range of depth below the local surface, in metres
 |`1`
 |Share, if available
 |If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken in term:dwc[minimumDepthInMeters] and leave term:dwc[maximumDepthInMeters] blank.	
@@ -497,21 +497,21 @@ Event
 |Occurrence
 
 |term:dwc[identificationQualifier]
-|A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the Identification
+|A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the identification
 |`cf.`
 |Strongly recommended
-|Can be used to add doubts, but it is recommend to only report "safe" records.	
+|Can be used to add doubts, but it is recommend to only report "safe" records
 |Occurrence
 
 |term:dwc[identifiedBy]
-|	a name or a list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject	HYPERLINK "http://rs.tdwg.org/dwc/terms/identifiedBy"http://rs.tdwg.org/dwc/terms/identifiedBy
+|	a name or a list (concatenated and separated) of names of people, groups, or organizations who assigned the taxon to the subject
 |`Hans Malicky`, `Jen Lento \| Astrid Schmidt-Kloiber`
 |Strongly recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (\|).	
 |Occurrence
 
 |term:dwc[identificationReferences]
-|A reference or a list (concatenated and separated) of references (publication, global unique identifier, URI) used in the Identification	
+|A reference or a list (concatenated and separated) of references (publication, global unique identifier, URI) used in the identification	
 |`Malicky, H. 2004 (2nd edtion): Atlas of European Trichoptera. Springer. 1-341.`
 |Strongly recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (\|). Add a DOI if available.
@@ -525,14 +525,14 @@ Event
 |Occurrence
 
 |term:dwc[identificationRemarks]
-|Comments or notes about the Identification.
+|Comments or notes about the identification
 |`H. Malicky`
 |Share, if available (based on term:dwc[identificationVerificationStatus])
 |Use this field to indicate the person who has verified the identification. You can also use it for describing difficulties with the identification.
 |Occurrence
 
 |term:dwc[class]
-|The full scientific name of the class in which the Taxon is classified.
+|The full scientific name of the class in which the taxon is classified
 |`Mammalia`, `Insecta`
 |Share, if available
 |Inclusion of class helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
@@ -546,21 +546,21 @@ Event
 |Occurrence
 
 |term:dwc[measurementType]
-|The nature of the measurement, fact, characteristic, or assertion.
+|The nature of the measurement, fact, characteristic, or assertion
 |`temperature`, `pH`
 |Share, if available
 |This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
 |Event
 
 |term:dwc[measurementValue]
-|The value of the measurement, fact, characteristic, or assertion.
+|The value of the measurement, fact, characteristic, or assertion
 |`-1`, `7.1`
 |Share, if available
 |This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
 |Event
 
 |term:dwc[measurementUnit]
-|The unit associated with the measurementValue
+|The unit associated with the term:dwc[measurementValue]
 |`°C`, `g`, `%`
 |Share, if available
 |This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
@@ -574,7 +574,7 @@ Event
 |Event
 
 |term:dwc[measurementRemarks]
-|Comments or notes accompanying the measurementType
+|Comments or notes accompanying the term:dwc[measurementType]
 |`water partly frozen`
 |Share, if available
 | 
