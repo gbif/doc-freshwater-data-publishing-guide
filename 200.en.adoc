@@ -480,14 +480,14 @@ Event
 | 
 | 
 
-|term:dwc[minimumDepthInMeters]
+|link:https://rs.tdwg.org/dwc/terms/minimumDepthInMeters[`minimumDept{zwsp}InMeters`,role="term"]
 |The lesser depth of a range of depth below the local surface, in metres
 |`0.5`
 |Strongly recommended
 |If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken and leave term:dwc[maximumDepthInMeters] blank.
 |Occurrence
 
-|term:dwc[maximumDepthInMeters]
+|link:https://rs.tdwg.org/dwc/terms/maximumDepthInMeters[`maximumDept{zwsp}InMeters`,role="term"]
 |The greater depth of a range of depth below the local surface, in metres
 |`1`
 |Share, if available
@@ -501,7 +501,7 @@ Event
 | 
 |Occurrence
 
-|term:dwc[identificationQualifier]
+|link:https://rs.tdwg.org/dwc/terms/identificationQualifier[`identification{zwsp}Qualifier`,role="term"]
 |A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the identification
 |`cf.`
 |Strongly recommended
@@ -515,7 +515,7 @@ Event
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).	
 |Occurrence
 
-|term:dwc[identificationReferences]
+|link:https://rs.tdwg.org/dwc/terms/identificationReferences[`identification{zwsp}References`,role="term"]
 |A reference or a list (concatenated and separated) of references (publication, global unique identifier, URI) used in the identification	
 |`Malicky, H. 2004 (2nd edtion): Atlas of European Trichoptera. Springer. 1-341.`
 |Strongly recommended
