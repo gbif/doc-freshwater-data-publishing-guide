@@ -188,13 +188,14 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 [[table-06]]
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-sampling-events[fields GBIF requires or recommends for sampling-event datasets^]
-[cols="17,26,26,11,~"]
+[cols="17,26,26,11,20"]
 |===
 |Term	|Definition |Example |Status |Comment
 
 |term:dwc[eventID]
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset
-|`AT:BOKU:DAN_0003:MHS1` (country:institutionCode:sampleCode:method)
+|`AT:BOKU:DAN_0003:MHS1` (country:institutionCode: +
+sampleCode:method)
 |Required
 |If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
 
@@ -269,7 +270,8 @@ Sampling methods are described in the sampling-event dataset with the field term
 
 |term:dwc[footprintWKT]
 |An area description, specifying the location of the sample event in well-known text (WKT) markup language
-|`POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))` +
+|`POLYGON ((10 20, 11 20, +
+`11 21, 10 21, 10 20))` +
 (a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21)
 |Strongly recommended
 |A WKT representation of the shape (footprint, geometry) that defines the location. This differs from the point-radius representation that is combined from the elements term:dwc[decimalLatitude], term:dwc[decimalLongitude] and term:dwc[coordinateUncertaintyInMeters] in that it can define shapes that are not circles. Note that it is possible to supply both a point-radius and a footprintWKT location for the same sample event.
@@ -310,7 +312,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 [[table-07]]
 .Terms, definitions, examples, and comments recommended for inclusion with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
-[cols="15,24,24,11,~,8"]
+[cols="15,25,25,10,17,8"]
 |===
 |Term	|Definition |Example |Status |Comment |Inclusion
 
