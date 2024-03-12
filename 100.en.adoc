@@ -226,7 +226,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 
 |`description`
 |Short description of the dataset
-|"`he Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…`
+|`The Amazon Fish Database contains all fish occurrence records in the Amazon Basin.…`
 |Required
 |
 
