@@ -293,13 +293,13 @@ sampleCode:method)
 [[freshwater-amendments]]
 === Specific requirements for publishing freshwater data (freshwater amendments)
 
-<<table-07,Table 7>> lists the <<DwC>> fields that would be useful to add to freshwater datasets to allow for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
+<<table-07,Table 7>> lists the <<DwC>> fields useful to include in freshwater datasets for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
 
 * *Freshwater mandatory*: as an addition to the GBIF mandatory fields, we recommend mandatory fields for freshwater samples
 * *Freshwater recommended*: data that are useful to be reported
 * *Freshwater conditional*: data that should be reported, but that are only relevant to particular <<organism group,organism groups>> or habitats (as indicated)
 
-We provide examples for the content of the fields, and where necessary, even selection lists to choose from.
+We provide examples for the content of the fields and, in some cases, the full range of controlled values to choose from.
 
 The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). In addition, there are fields that describe the sampled habitat, such as the depth of sampling, the <<microhabitat>> (e.g. sand, gravel, cobble), and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>> and <<river mesohabitat>> can be entered in the term:dwc[dynamicProperties] field, although the ultimate goal is to create a freshwater DwC extension in GBIF (see <<Freshwater DwC extension,§3.1>>). 
 
@@ -311,7 +311,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 [[table-07]]
 .Terms, definitions, examples, and comments recommended for inclusion with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
-[cols=%autowidth]
+[cols="15,25,25,10,15,10"]
 |===
 |Term	|Definition |Example |Status |Comment |Inclusion
 
