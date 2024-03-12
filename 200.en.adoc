@@ -88,13 +88,13 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
 |`Adicella cremisa Malicky, 1972` (genus + specificEpithet + scientificNameAuthorship)
 |Required
-|"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g. cf.), which should instead be supplied in the identificationQualifier term. Ideally, the name supplied is at species level or below. Not permitted are, e.g. working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
+|"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g. cf.), which should instead be supplied in the term:dwc[identificationQualifier] term. Ideally, the name supplied is at species level or below. Not permitted are, e.g. working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
 |term:dwc[eventDate]
 |The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context (e.g. 5000 BP)
 |`1809-02-12` (12 February 1809)
 |Required
-|Use the following format: `yyyy-mm-dd` four-digit year-month-day. Please make sure to provide separate columns for year, month and day as well (see freshwater recommended terms). Note that the time should not be included as part of this element, please use eventTime instead where required.
+|Use the following format: `yyyy-mm-dd` four-digit year-month-day. Please make sure to provide separate columns for year, month and day as well (see <<freshwater-dwc-extension-terms,freshwater recommended terms>>). Note that the time should not be included as part of this element, please use eventTime instead where required.
 
 |term:dwc[eventID] +
 (_if linked to an event_)
@@ -154,7 +154,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |If you have presence data, please indicate "1" here. If a dataset derives from observed counts (e.g. point counts or opportunistic observations of individuals as encountered), enter the counts here. As these are only counts (not density or biomass), there are no units. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance under organismQuantity with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantity]
-|Number or enumeration value for the quantity of Organisms as abundance, density, or biomass.
+|Number or enumeration value for the quantity of organisms as abundance, density, or biomass.
 |`27` (organismQuantity) with "individuals per m2" (organismQuantityType) +
 `12.5` (organismQuantity) with "% biomass" (organismQuantityType) +
 `150` (organismQuantitiy) with "mg dry mass" (organismQuantityType) +
@@ -163,7 +163,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |An entry for organismQuantity must have a corresponding term:dwc[organismQuantityType]. If you have abundance data, fill in the number individuals and add unit for it in term:dwc[organismQuantityType]. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance here with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantityType]
-|Type of quantification system used for the quantity of Organisms
+|Type of quantification system used for the quantity of organisms
 |`27` (organismQuantity) with "individuals per m2" (organismQuantityType) +
 `12.5` (organismQuantity) with "% biomass" (organismQuantityType) +
 `150` (organismQuantitiy) with "mg dry mass" (organismQuantityType) +
@@ -172,7 +172,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |A organismQuantityType must have a corresponding organismQuantity. If you have abundance data, fill in the number individuals in organismQuantity and add unit for it here.
 
 |term:dwc[occurrenceStatus ]
-|Statement about the presence or absence of a Taxon at a location
+|Statement about the presence or absence of a taxon at a location
 |One of `present` or `absent`
 |Share if available
 |For occurrences, the default vocabulary is recommended to consist of present and absent, but absent should only be used if it is a true absence, e.g. effort was put into trying to detect the species and it was not detected. For example, if using targeted sampling to estimate species range, true absences can be identifed here, or if a species was previous noted at this location but was not there at the time of the sampling (potentially indicating species loss), then please indicate "absent" here.
@@ -549,21 +549,21 @@ Event
 |The nature of the measurement, fact, characteristic, or assertion
 |`temperature`, `pH`
 |Share, if available
-|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
+|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding term:dwc[measurementValue] and term:dwc[measurementUnit]. 	
 |Event
 
 |term:dwc[measurementValue]
 |The value of the measurement, fact, characteristic, or assertion
 |`-1`, `7.1`
 |Share, if available
-|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
+|This field is for additional measurements in the field, e.g. abiotic data. A term:dwc[measurementType] must have a corresponding measurementValue and term:dwc[measurementUnit]. 	
 |Event
 
 |term:dwc[measurementUnit]
 |The unit associated with the term:dwc[measurementValue]
 |`°C`, `g`, `%`
 |Share, if available
-|This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding measurementValue and measurementValue. 	
+|This field is for additional measurements in the field, e.g. abiotic data. A term:dwc[measurementType] must have a corresponding term:dwc[measurementValue] and measurementUnit. 	
 |Event
 
 |term:dwc[measurementMethod]
