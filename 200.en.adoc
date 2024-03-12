@@ -531,7 +531,7 @@ Event
 |term:dwc[identificationRemarks]
 |Comments or notes about the identification
 |`H. Malicky`
-|Share, if available (based on term:dwc[identificationVerificationStatus])
+|Share, if available (based on link:https://rs.tdwg.org/dwc/terms/identificationVerificationStatus[`identification{zwsp}Verification{zwsp}Status`,role="glossary"])
 |Use this field to indicate the person who has verified the identification. You can also use it for describing difficulties with the identification.
 |Occurrence
 
