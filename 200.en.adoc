@@ -315,7 +315,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 [[table-07]]
 .Terms, definitions, examples, and comments recommended for inclusion with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
-[cols="15%,25%,25%,10%,15%,10%"]
+[cols="10,28,28,9,15,10"]
 |===
 |Term	|Definition |Example |Status |Comment |Inclusion
 
