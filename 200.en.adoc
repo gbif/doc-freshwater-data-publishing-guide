@@ -74,7 +74,8 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 
 |term:dwc[occurrenceID]
 |Identifier for the occurrence; in the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique
-|`AT:BOKU:DAN_0003:8755` (country:institutionCode:sampleCode:speciesID)
+|`AT:BOKU:DAN_0003:8755` (country:institutionCode: +
+sampleCode:speciesID)
 |Required
 |This should be a unique identifier for the occurrence, allowing the same occurrence to be recognised across dataset versions as well as through data downloads and use. At the very least the identifier should be unique to the dataset, and ideally a globally unique identifier.
 
@@ -86,7 +87,8 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
-|`Adicella cremisa Malicky, 1972` (genus + specificEpithet + scientificNameAuthorship)
+|`Adicella cremisa Malicky, 1972` +
+(genus + specificEpithet + scientificNameAuthorship)
 |Required
 |"Names should be compliant to the most recent nomenclatural code (see https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[ICZN Code^]). This term should not contain identification qualifications (e.g. cf.), which should instead be supplied in the term:dwc[identificationQualifier] term. Ideally, the name supplied is at species level or below. Not permitted are, e.g. working names ("Adicella sp.4"), common names ("creamy caddisfly"), or names containing identification qualifiers ("Adicella cf. cremisa").
 
@@ -99,7 +101,9 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |term:dwc[eventID] +
 (_if linked to an event_)
 |Identifier for the set of information associated with an event (something that occurs at a place and time) allowing to link individual occurrences to a specific event; may be a global unique identifier or an identifier specific to the dataset.
-|`AT:BOKU:DAN_0003:MHS` (country:institutionCode:sampleCode:method)
+|`AT:BOKU:DAN_0003:MHS` +
+(country:institutionCode: +
+sampleCode:method)
 |Required, if event data are available
 |If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
 
@@ -133,7 +137,7 @@ Occurrence data can be provided as presence data (e.g. a “1” for a site wher
 |Strongly recommended
 |Recommended best practice is to use the EPSG code of the spatial reference system, if known. If no geodetic datum is specified, GBIF's indexing process assumes "WGS84".
 
-|term:dwc[coordinateUncertaintyInMeters]
+|link:https://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters[coordinate{zwsp}Uncertainty{zwsp}InMeters,role="glossary"]
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location.
 |`30` (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
 `100` (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
@@ -261,7 +265,7 @@ sampleCode:method)
 |Strongly recommended
 |Recommended best practice is to use the EPSG code of the spatial reference system, if known. If no geodetic datum is specified, GBIF's indexing process assumes "WGS84".
 
-|term:dwc[coordinateUncertaintyInMeters] 
+|link:https://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters[coordinate{zwsp}Uncertainty{zwsp}InMeters,role="glossary"]
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location
 |`30` (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
 `100` (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
