@@ -336,7 +336,8 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[collectionID]
 |Identifier for the collection or dataset from which the record was derived
-|`urn:lsid:biocol.org:col:34818`, `https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c`
+|`urn:lsid:biocol.org:` +
+`col:34818`, `https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c`
 |Strongly recommended
 |For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].
 |Occurrence
