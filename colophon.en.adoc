@@ -24,7 +24,3 @@ https://doi.org/10.35035/doc-sw3k-w725
 === Document control
 
 v.0.9.0 for community review, March 2024
-
-=== Cover image
-
-Eastern hellbender (_Cryptobranchus alleganiensis_), Pennsylvania, United States. Photo 2016  Anthony Brais via https://www.gbif.org/occurrence/2543069391[iNaturalist Research-grade Observations^], licensed under http://creativecommons.org/licenses/by-nc/4.0/[CC BY-NC 4.0].
