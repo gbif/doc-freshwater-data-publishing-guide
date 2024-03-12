@@ -274,7 +274,7 @@ sampleCode:method)
 
 |term:dwc[footprintWKT]
 |An area description, specifying the location of the sample event in well-known text (WKT) markup language
-|`POLYGON /((10 20, 11 20, 11 21, 10 21, 10 20))` +
+|`++POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))++` +
 (a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21)
 |Strongly recommended
 |A WKT representation of the shape (footprint, geometry) that defines the location. This differs from the point-radius representation that is combined from the elements term:dwc[decimalLatitude], term:dwc[decimalLongitude] and term:dwc[coordinateUncertaintyInMeters] in that it can define shapes that are not circles. Note that it is possible to supply both a point-radius and a footprintWKT location for the same sample event.
