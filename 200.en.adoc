@@ -478,7 +478,7 @@ Event
 |`100-200 m`
 |Share, if available
 | 
-| 
+|Occurrence 
 
 |link:https://rs.tdwg.org/dwc/terms/minimumDepthInMeters[`minimumDept{zwsp}InMeters`,role="term"]
 |The lesser depth of a range of depth below the local surface, in metres
