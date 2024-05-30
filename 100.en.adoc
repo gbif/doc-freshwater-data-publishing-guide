@@ -262,7 +262,7 @@ When datasets are downloaded individually from GBIF, the XML metadata file is in
 
 |`dataLicense`
 |Licence under which the dataset can be used; GBIF encourages publishers to adopt the least restrictive possible from the three machine readable options; datsets with other licences cannot be registered with GBIF.
-|`Public Domain (CC0 1.0) +
+|`Public Domain (CC0 1.0)` +
 `Creative Commons Attribution (CC-BY 4.0)` +
 `Creative Commons Attribution Non Commercial (CC-BY-NC 4.0)`
 |Required
