@@ -10,6 +10,8 @@
 :revdate: {git-metadata-date} {git-metadata-time} {git-metadata-timezone}
 :title-page-background-image: image::img/web/Cryptobranchus-alleganiensis-iNat-abrais-web.jpg[position=top center]
 :license: https://creativecommons.org/licenses/by-sa/4.0/
+// CSS rule override
+:docinfo: shared-head
 
 ifdef::backend-html5[]
 languageLinks:combined[]
