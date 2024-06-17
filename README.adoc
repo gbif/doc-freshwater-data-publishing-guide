@@ -1,11 +1,10 @@
 https://docs.gbif.org/documentation-guidelines/[image:https://docs.gbif.org/documentation-guidelines/gbif-document-shield.svg[GBIF Document]]
-// DOI badge: If you have a DOI, remove the comment ("// ") from the line below, change "10.EXAMPLE/EXAMPLE" to the DOI in all three places, and remove this line.
-// https://doi.org/10.EXAMPLE/EXAMPLE[image:https://zenodo.org/badge/DOI/10.EXAMPLE/EXAMPLE.svg[doi:10.EXAMPLE/EXAMPLE]]
+https://doi.org/10.35035/doc-sw3k-w725[image:https://zenodo.org/badge/DOI/10.35035/doc-sw3k-w725.svg[doi:10.35035/doc-sw3k-w725]]
 // License badge
 https://creativecommons.org/licenses/by-sa/4.0/[image:https://img.shields.io/badge/License-CC%20BY%2D-SA%204.0-lightgrey.svg[CC BY-SA 4.0]]
 https://builds.gbif.org/job/doc-freshwater-data-publishing-guide/lastBuild/console[image:https://builds.gbif.org/job/doc-freshwater-data-publishing-guide/badge/icon[Build status]]
 
-= GBIF Document Freshwater-Data-Publishing-Guide
+= GBIF Document Freshwater Data Publishing Guide
 
 _This is information *about* this document's source code.  It is not part of the document._
 
