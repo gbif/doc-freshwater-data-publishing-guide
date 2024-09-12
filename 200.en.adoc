@@ -1,19 +1,23 @@
 [[publishing-considerations]]
-== Specific freshwater data publishing considerations
+== Specific freshwater dataset publishing considerations
 
 [[data-prep-and-standards]]
-=== Data preparation and standards
+=== Dataset preparation and standards
 
-GBIF makes use of the Darwin Core Standard (<<DwC>>) to provide a standardized framework for formatting data for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of data from different sources through a common format and a number of required and recommended fields. 
+GBIF makes use of the Darwin Core Standard (<<DwC>>) to provide a standardized framework for formatting datasets for publication (see https://www.gbif.org/darwin-core[What is Darwin Core, and why does it matter?^]). DwC is a global standard that allows for integration of datasets from different sources through a common format and a number of required and recommended fields. 
 
-Though GBIF suggests the required and recommended fields for its <<gbif-dataset-classes,four dataset classes>>, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <<data-considerations,§2>>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF data classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater data publication as easy as possible, we have also provided Excel templates for all data classes.
+Though GBIF suggests the required and recommended fields for its <<gbif-dataset-classes,four dataset classes>>, freshwater datasets need a few more specifications to form useful and reusable data for global analyses (see <<data-considerations,§2>>). In the following section we provide guidance on all mandatory and recommended terms of the different GBIF dataset classes and how they are best used when preparing freshwater datasets by giving freshwater-specific examples and recommendations. For some terms we suggest using selected terms only to improve consistency among datasets. To make freshwater dataset publication as easy as possible, we have also provided Excel templates for all dataset classes.
 
-What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When data are uploaded, the https://doi.org/10.15468/39omei[GBIF Backbone Taxonomy^] is used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
+What is important for checklist and occurrence datasets is the inclusion of well-structured scientific names for taxa. When datasets are uploaded, the https://doi.org/10.15468/39omei[GBIF Backbone Taxonomy^] is used to check taxon names and update nomenclature as needed for consistency with current naming conventions. However, this process relies on a lack of ambiguity in the provided nomenclature. For example, taxonomic names at the genus or species level that are provided without any higher classifications (e.g. kingdom, class) may end up being misclassified by the taxonomic backbone if the same or similar species names are found in different kingdoms. This would result in inaccurate data. GBIF therefore recommends that users provide as much information as possible about higher classifications. Identification qualifiers (such as "cf."), working names, and common names should not be included in the term:dwc[scientificName] field, as these will not align with the taxonomic backbone and should instead be captured in the term:dwc[identificationQualifier] field. Author names are also an important component of scientific names to avoid misclassification, particularly for species-rich groups such as diatoms. The taxonomic authority (author who first published the species name following international rules) as well as the year of naming should be provided where possible, following the rules of author citation (https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1[learn about proper citation rules^]).
+
+GBIF provides a https://www.gbif.org/tools/species-lookup[species matching tool^] that allows users to normalize their species lists and ensure they match the taxonomic backbone in GBIF for data compatibility.
 
 [[checklist-datasets]]
 ==== Checklist datasets
 
-Checklist data are not specific to a location and do not represent individual observations. As a result, the fields required for checklist data are minimal compared to other data classes (<<table-04,Table 4>>). The primary focus for these datasets is on the scientific name of the taxon. As noted, higher classifications (e.g. kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
+Checklist datasets are not necessarily specific to a location and do not always represent individual observations. However, they can be location specific (like the country-specific https://www.gbif.org/dataset/search?publishing_org=cdef28b1-db4e-4c58-aa71-3c5238c2d0b5[Global Register of Introduced and Invasive Species (GRIIS) checklists^]) and may contain occurrences (https://www.gbif.org/dataset/6baf6a53-c106-40fb-bbde-f6d4e4051513[example^]). Checklist datasets may provide detailed information about https://rs.gbif.org/extension/gbif/1.0/distribution_2022-02-02.xml[species geographic distributions^] or https://rs.gbif.org/extension/gbif/1.0/speciesprofile_2019-01-29.xml[species profiles] that describe species characteristics. 
+
+There are fewer required fields for checklist datasets compared to other dataset classes (<<table-04,Table 4>>). As noted, higher classifications (e.g. kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
 
 [[table-04]]
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-checklists[fields GBIF requires or recommends for checklist datasets^].
@@ -62,9 +66,9 @@ Checklist data are not specific to a location and do not represent individual ob
 [[occurrence-datasets]]
 ==== Occurrence datasets
 
-Occurrence data provide information about observations of taxa and the locations where they were found (<<table-05,Table 5>>). Although only coarse location information is required, the recommended best practice is to always provide coordinates (latitude and longitude in decimal degrees), a geodetic datum, and a measure of the uncertainty around the coordinates (estimated precision). 
+Occurrence datasets provide information about observations of taxa and the locations where they were found (<<table-05,Table 5>>). Although only coarse location information is required, the recommended best practice is to always provide coordinates (term:dwc[decimalLatitude] and term:dwc[decimalLongitude] in decimal degrees), a term:dwc[geodeticDatum] which will automatically be interpreted to WGS84 when data are published to GBIF, and a measure of the uncertainty around the coordinates (term:dwc[coordinateUncertaintyInMeters]). 
 
-Occurrence data can be provided as presence data (e.g. a “1” for a site where the taxon was observed) or as counts in the field term:dwc[individualCount] (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (e.g. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (e.g. in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density or biomass as part of targeted or assemblage sampling, these measures should be recorded in the field term:dwc[organismQuantity] with units recorded in term:dwc[organismQuantityType] (<<table-05,Table 5>>). Ideally, such occurrence data should also be accompanied by sampling-event data to provide details on sampling methods. Finally, if effort has been put into recording true absences (e.g. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field term:dwc[occurrenceStatus] (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
+Occurrence datasets can be provided as presence data (e.g. a “1” for a site where the taxon was observed) or as counts in the field term:dwc[individualCount] (<<table-05,Table 5>>). Counts in this case refer to situations where there is not an effort to estimate the total abundance of the taxon (e.g. by collecting a sample), but instead, numbers of individuals are recorded (tallied) as individuals are encountered. This could include point counts (e.g. in bird surveys, when an observer counts the number of individuals of each species that is viewed or heard) or opportunistic observations. When an effort is made to estimate, for example, abundance, density or biomass as part of targeted or assemblage sampling, these measures should be recorded in the field term:dwc[organismQuantity] with units recorded in term:dwc[organismQuantityType] (<<table-05,Table 5>>). Ideally, such occurrence datasets should also be accompanied by sampling-event datasets to provide details on sampling methods. Finally, if effort has been put into recording true absences (e.g. through systematic and/or extensive sampling procedures), then presence or absence can be recorded in the field term:dwc[occurrenceStatus] (<<table-05,Table 5>>). These distinctions will facilitate meta-analysis of data collected in a similar manner or will allow for data to be adjusted as needed for analysis (e.g. all data converted to presence data). 
 
 [[table-05]]
 .Terms with freshwater-specific definitions, examples, and comments for https://www.gbif.org/data-quality-requirements-occurrences[fields GBIF requires or recommends for occurrence datasets^]
@@ -81,9 +85,9 @@ sampleCode:speciesID)
 
 |term:dwc[basisOfRecord]
 |The specific nature (type) of the individual data record
-|One of `PreservedSpecimen`, `FossilSpecimen`, `LivingSpecimen`
+|One of `PreservedSpecimen`, `FossilSpecimen`, `HumanObservation`
 |Required
-|Use "PreservedSpecimen", if the species is preserved somewhere, so that checking back is possible. "FossilSpecimen" refers to fossil samples from, e.g. sediment cores. "LivingSpecimen" refers to observations of living organisms that were not collected (e.g. catch and release or point count).
+|Use "PreservedSpecimen", if the species is preserved somewhere, so that checking back is possible. "FossilSpecimen" refers to fossil samples from, e.g. sediment cores. "HumanObservation" refers to observations of living organisms that were not collected (e.g. catch and release or point count).
 
 |term:dwc[scientificName]
 |The full scientific name of the organism, to the most precise taxonomic rank that is possible to supply, and including authorship and year of the name where applicable/known.
@@ -104,8 +108,8 @@ sampleCode:speciesID)
 |`AT:BOKU:DAN_0003:MHS` +
 (country:institutionCode: +
 sampleCode:method)
-|Required, if event data are available
-|If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
+|Required, if event dataset is available
+|If occurrence has event dataset (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the term:dwc[occurrenceID] without the species code and with the method added.
 
 |term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName].
@@ -123,13 +127,13 @@ sampleCode:method)
 |Geographic latitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.	
 |`-41.0983423`
 |Strongly recommended
-|Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
+|Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. For freshwater datasets, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
 
 |term:dwc[decimalLongitude]
 |Geographic longitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.
 |`-121.1761111`
 |Strongly recommended
-|Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater data, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
+|Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater datasets, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
 
 |term:dwc[geodeticDatum]
 |The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
@@ -186,7 +190,7 @@ sampleCode:method)
 [[sampling-event-datasets]]
 ==== Sampling-event datasets
 
-When occurrence data have additional metadata describing sampling methods, this is called an event and the additional metadata are provided as sampling-event data (<<table-06,Table 6>>). Please note that each event dataset consists of two files: the sampling-event dataset and the associated occurrence dataset. The associated occurrence dataset looks like the one in <<Occurrence datasets,§2.1.2>>. but needs to be amended with the term:dwc[eventID] (mandatory; identifying the event and linking the two datasets) and the term:dwc[occurrenceStatus] (recommended to indicate whether a taxon was present or absent at a site). 
+When occurrence datasets have additional metadata describing sampling methods, this is called an event and the additional metadata are provided as a sampling-event dataset (<<table-06,Table 6>>). Please note that each event dataset consists of two files: the sampling-event dataset and the associated occurrence dataset. The associated occurrence dataset looks like the one in <<Occurrence datasets,§2.1.2>>. but needs to be amended with the term:dwc[eventID] (mandatory; identifying the event and linking the two datasets) and the term:dwc[occurrenceStatus] (recommended to indicate whether a taxon was present or absent at a site). 
 
 Sampling methods are described in the sampling-event dataset with the field term:dwc[samplingProtocol], which provides a name/link to a specific protocol and/or description of the protocol (<<table-06,Table 6>>). The recommended best practice is to have a separate event for each sampling method used. In addition to describing the protocol, the field term:dwc[sampleSizeValue] and term:dwc[sampleSizeUnit] can be used to indicate the spatial or temporal extent of sampling for the described sampling event, as a measure of sampling effort for each event. In addition, the field term:dwc[samplingEffort] can be used to record the total effort spent on the event, for example, when there were multiple nets, multiple <<microhabitats,microhabitat>> sampled, or multiple periods of time over which sampling occurred. Additional details about sampling methods are recommended to be included in the freshwater DwC extensions described in <<Freshwater DwC extension,§3.1>>. 
 
@@ -201,7 +205,7 @@ Sampling methods are described in the sampling-event dataset with the field term
 |`AT:BOKU:DAN_0003:MHS1` (country:institutionCode: +
 sampleCode:method)
 |Required
-|If occurrence has event data (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
+|If occurrence has an event dataset (e.g. methods metadata describing the sampling event during which the occurrence was recorded), provide the identifier for the information associated with the event. This can e.g. be entered as the occurrenceID without the species code and with the method added.
 
 |term:dwc[eventDate]
 |The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context
@@ -295,7 +299,7 @@ sampleCode:method)
 |===
 
 [[freshwater-amendments]]
-=== Specific requirements for publishing freshwater data (freshwater amendments)
+=== Specific requirements for publishing freshwater datasets (freshwater amendments)
 
 <<table-07,Table 7>> lists the <<DwC>> fields useful to include in freshwater datasets for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
 
@@ -305,16 +309,16 @@ sampleCode:method)
 
 We provide examples for the content of the fields and, in some cases, the full range of controlled values to choose from.
 
-The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). In addition, there are fields that describe the sampled habitat, such as the depth of sampling, the <<microhabitat>> (e.g. sand, gravel, cobble), and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>> and <<river mesohabitat>> can be entered in the term:dwc[dynamicProperties] field, although the ultimate goal is to create a freshwater DwC extension in GBIF (see <<Freshwater DwC extension,§3.1>>). 
+The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). The organism group should be included for all GBIF dataset classes (<<Freshwater DwC extension,§1.2.1>>). This information is not currently captured in existing DwC terms. It is recommended that the term freshwaterOrganismGroup be defined in a freshwater extension of DwC so that it can be a searchable term in GBIF (<<Freshwater DwC extension,§3.1.1>>), but until the creation of that extension, this information should be included in the dynamicProperties term (e.g., as organism group:fish). In addition, there are fields that describe the sampled habitat, such as the depth of sampling, the <<microhabitat>> (e.g. sand, gravel, cobble), and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>> and <<river mesohabitat>> can be entered in the term:dwc[dynamicProperties] field, although the ultimate goal is to create a freshwater DwC extension in GBIF (see <<Freshwater DwC extension,§3.1>>). The use of dynamicProperties is necessary for these habitat descriptions because biome, ecosystem functional group, lake zone, and river mesohabitat are not currently accepted terms in DwC.
 
-Further details about the event time and date are also recommended for inclusion (<<table-07,Table 7>>). For example, it is recommended that data providers include year, month and day as separate columns in their data. This avoids ambiguities that might occur due to regional differences in how year, month, and day are combined into a single field (e.g. confusion of month and day). Furthermore, it is important that all years be entered as four-digit numbers, as historical data (e.g. early 1900s) might be present in GBIF because of digitizing of old records, and full four-digit years ensure that dates are not mishandled. 
+Further details about the event time and date are also recommended for inclusion (<<table-07,Table 7>>). For example, it is recommended that data providers include year, month and day as separate columns in their dataset. This avoids ambiguities that might occur due to regional differences in how year, month, and day are combined into a single field (e.g. confusion of month and day). Furthermore, it is important that all years be entered as four-digit numbers, as historical data (e.g. early 1900s) might be present in GBIF because of digitizing of old records, and full four-digit years ensure that dates are not mishandled. 
 
-Additional fields for observation data include the sex and life stage, both of which are conditional based on the organism group (for example, sex can be determined and is relevant for fish, mammals, birds, and decapods; life stage can be determined and is relevant for copepods, <<benthic>> macroinvertebrates, fish and birds). Furthermore, additional fields provide detail on the identification of the observed taxon, such as references and verification status.
+Additional fields for observation data include the sex and life stage, both of which are conditional based on the organism group (for example, sex can be determined and is relevant for fish, mammals, birds, and decapods; life stage can be determined and is relevant for copepods, <<benthic>> macroinvertebrates, fish and birds). The DwC term lifeStage has a controlled vocabulary (see https://registry.gbif.org/vocabulary/LifeStage/concepts[GBIF vocabulary - LifeStage^] for full list), and this vocabulary does not include all terms that are relevant for freshwater. For example, young of year is not part of the controlled vocabulary, and it is recommended that juvenile be used instead. Similarly, juvenile can be used instead of copepodite, and immature can be used instead of early instar. Additional fields provide detail on the identification of the observed taxon, such as references and verification status.
 
 Sampling method details recommended to be included as part of the freshwater DwC extension are fields for sampling equipment (e.g. type of net or sampler), mesh size of nets, and sample processing protocols. Each of these details has been shown to be vital to selecting data for meta-analysis (https://caff.is/freshwater[Lento et al. 2019^]; https://doi.org/10.1111/fwb.13873[Goedkoop et al. 2022^]), and including separate fields for them instead of grouping them all within the protocol field increases the chances that complete information will be provided without ambiguities.
 
 [[table-07]]
-.Terms, definitions, examples, and comments recommended for inclusion with freshwater data. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
+.Terms, definitions, examples, and comments recommended for inclusion with freshwater datasets. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
 [cols="10,28,28,9,15,10"]
 |===
 |Term	|Definition |Example(s) |Status |Comment |Inclusion
@@ -372,7 +376,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 
 |term:dwc[lifeStage]
 |The age class or life stage of the Organism(s) at the time the occurrence was recorded
-|One of `egg`, `larva`, `adult`, `subimago`, `juvenile`, `nymph`, `early instar`, `young of year`, `nauplii`, `copepodite`
+|One of `egg`, `larva`, `pupa`, `adult`, `subadult`, `juvenile`, `nymph`, `immature`, `nauplius`
 |Share, if available (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
 | 
 |Occurrence
