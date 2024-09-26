@@ -10,6 +10,8 @@ The proposed DwC extension includes the classification of the type of observatio
 
 To allow data to be selected more efficiently for freshwater meta-analyses, the freshwater DwC extension also includes fields for the <<organism group>> and the season of sampling, as well as specifications for the sampling methods.
 
+If there is a need for other fields beyond these recommendations, i.e. to capture additional information about the sampling event, there are DwC extensions that may provide guidance on publishing these additional data. For example, https://www.tdwg.org/community/osr/humboldt-extension/[Humboldt extension^] and https://rs.gbif.org/extension/measurements_or_facts_2024-02-19.xml[Darwin Core Measurement or Facts extension^].
+
 [[freshwater-dwc-extension-terms]]
 [glossary]
 ==== 3.1.1 Recommended terms for a DwC freshwater extension
