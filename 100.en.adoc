@@ -273,7 +273,7 @@ It is useful to know that when datasets are downloaded individually from GBIF, t
 |first name: `Max` +
 last name: `Fisher` +
 position: `professor` +
-organization: `Amazon Research Center
+organization: `Amazon Research Center`
 |Required
 |Please provide first name, last name, position and organization in seperate fields
 
