@@ -368,7 +368,7 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Occurrence
 
 |term:dwc[recordedByID]
-|A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for recording the original dwc:Occurrence. 
+|A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for recording the original term:dwc[Occurrence]. 
 |`https://orcid.org/0000-0002-8098-4825 \| https://orcid.org/0000-0001-8839-5913`
 |Strongly recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).  
@@ -383,9 +383,9 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Occurrence
 
 |term:dwc[lifeStage]
-|The age class or life stage of the Organism(s) at the time the occurrence was recorded
+|The age class or life stage of the organism(s) at the time the occurrence was recorded
 |One of `egg`, `larva`, `pupa`, `adult`, `subadult`, `juvenile`, `nymph`, `immature`, `nauplius`
-|Share, if relevant (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
+|Share, if relevant (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds)). Controlled vocabulary does not include all terms that are relevant for freshwater. For example, use juvenile instead of young of year or copepodite, and use immature instead of early instar
 | 
 |Occurrence
 
@@ -415,13 +415,13 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Four-digit year in which the event occurred
 |`2008`
 |Share, if available	
-|Please fill this column additionally to the eventDate.
+|Please fill this column additionally to the term:dwc[eventDate].
 |Occurrence +
 Event
 
 |term:dwc[month] 
 |Month in which the event occurred
-|`1` (January), `10` (October)	
+|`01` (January), `10` (October)	
 |Share, if available
 |Please fill this column additionally to the term:dwc[eventDate].	
 |Occurrence +
@@ -429,9 +429,9 @@ Event
 
 |term:dwc[day]
 |Day of the month on which the event occurred
-|`9`, `28`
+|`09`, `28`
 |Share, if available
-|Please fill this column additionally to the eventDate.
+|Please fill this column additionally to the term:dwc[eventDate].
 |Occurrence +
 Event
 
@@ -475,14 +475,14 @@ Event
 |The lower limit of the range of elevation (altitude, usually above sea level), in metres
 |`100`
 |Strongly recommended
-|If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in both this field and in maximumElevationInMeters.
+|If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in both this field and in term:dwc[maximumElevationInMeters].
 |Occurrence
 
 |term:dwc[maximumElevationInMeters]
 |The upper limit of the range of elevation (altitude, usually above sea level), in metres
 |`200`
 |Share, if available	
-|If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in this field and in minimumElevationInMeters.	
+|If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in this field and in term:dwc[minimumElevationInMeters].	
 |Occurrence
 
 |term:dwc[verbatimElevation]
@@ -528,7 +528,7 @@ Event
 |Occurrence
 
 |term:dwc[identifiedByID]
-|	A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for assigning the dwc:Taxon to the subject.
+|	A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for assigning the term:dwc[Taxon] to the subject.
 |`https://orcid.org/0000-0002-8098-4825 \| https://orcid.org/0000-0001-8839-5913`
 |Strongly recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).	
@@ -544,7 +544,7 @@ Event
 
 |link:https://rs.tdwg.org/dwc/terms/identificationVerificationStatus[identification{zwsp}Verification{zwsp}Status,role="term"]
 |A categorical indicator of the extent to which the taxonomic identification has been verified to be correct
-|`verified`, `unverified`, `requires verification`	
+|one of `verified`, `unverified`, `requires verification`	
 |Strongly recommended
 |
 |Occurrence
