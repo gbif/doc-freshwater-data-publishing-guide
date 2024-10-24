@@ -6,6 +6,7 @@
 [[benthic]]benthic:: The ecological region at the bottom of a water body (such as a lake, river, or ocean) or a wetland. Also used to refer to organisms that live on the bottom of a body of water or wetland, whether on or in the substrate.
 [[biome]]biome:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^] there are three biomes in freshwater: 1) rivers and streams; 2) lakes; and 3) artificial wetlands. Groundwater, brackish water, palustrine wetlands, and coastal systems are grouped within transitional realms.
 [[DwC]]DwC:: https://dwc.tdwg.org/[Darwin Core^] data exchange standard
+[[extension]]extension:: extensions provide a way to capture additional information outside of the DwC core fields, including additional fields and the ability to map one to many relationships. GBIF has a number of https://rs.gbif.org/extensions.html[registered extensions^]. 
 [[ecosystem-functional-group]]ecosystem functional group:: According to the https://global-ecosystems.org/page/typology[IUCN Global Ecosystem Typology^], ecosystem functional groups describe ecological conditions within the realms e.g. permanent, seasonal or episodic/ephemeral; freeze-thaw; upland or lowland; large or small; etc.
 [[FIP]]FIP:: http://www.freshwaterplatform.eu/[Freshwater Information Platform^]
 [[IPT]]IPT:: https://www.gbif.org/ipt[Integrated Publishing Toolkit^], localized repository software developed and maintained by GBIF for managing and publishing open biodiversity data

@@ -12,6 +12,8 @@ To allow data to be selected more efficiently for freshwater meta-analyses, the 
 
 If there is a need for other fields beyond these recommendations, i.e. to capture additional information about the sampling event, there are DwC extensions that may provide guidance on publishing these additional data. For example, https://www.tdwg.org/community/osr/humboldt-extension/[Humboldt extension^] and https://rs.gbif.org/extension/measurements_or_facts_2024-02-19.xml[Darwin Core Measurement or Facts extension^].
 
+Sampling method details recommended to be included as part of the freshwater DwC extension are fields for sampling equipment (e.g. type of net or sampler), mesh size of nets, and sample processing protocols. Each of these details has been shown to be vital to selecting data for meta-analysis (https://caff.is/freshwater[Lento et al. 2019^]; https://doi.org/10.1111/fwb.13873[Goedkoop et al. 2022^]), and including separate fields for them instead of grouping them all within the protocol field increases the chances that complete information will be provided without ambiguities.
+
 [[freshwater-dwc-extension-terms]]
 [glossary]
 ==== 3.1.1 Recommended terms for a DwC freshwater extension

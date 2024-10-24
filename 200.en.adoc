@@ -301,24 +301,30 @@ sampleCode:method)
 [[freshwater-amendments]]
 === Specific requirements for publishing freshwater datasets (freshwater amendments)
 
-<<table-07,Table 7>> lists the <<DwC>> fields useful to include in freshwater datasets for large-scale data compilation and analysis. Freshwater amendment fields are tagged as:
+<<table-07,Table 7>> lists the <<DwC>> fields useful to include in freshwater datasets for large-scale data compilation and analysis. In some cases, fields should be included in an <<extension>>. Extensions offer a way to include additional information and to provide multiple measurements (e.g., different habitat variables) to link to a single event. Freshwater amendment fields are tagged as:
 
-* *Freshwater mandatory*: as an addition to the GBIF mandatory fields, we recommend mandatory fields for freshwater samples
-* *Freshwater recommended*: data that are useful to be reported
-* *Freshwater conditional*: data that should be reported, but that are only relevant to particular <<organism group,organism groups>> or habitats (as indicated)
+* *Freshwater required*: as an addition to the GBIF required fields, we recommend required fields for freshwater samples
+* *Freshwater strongly recommended*: data that are useful to be reported
+* *Freshwater share if relevant*: data that should be reported, but that are only relevant to particular <<organism group,organism groups>> or habitats (as indicated)
 
 We provide examples for the content of the fields and, in some cases, the full range of controlled values to choose from.
 
-The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). The organism group should be included for all GBIF dataset classes (<<Freshwater DwC extension,§1.2.1>>). This information is not currently captured in existing DwC terms. It is recommended that the term freshwaterOrganismGroup be defined in a freshwater extension of DwC so that it can be a searchable term in GBIF (<<Freshwater DwC extension,§3.1.1>>), but until the creation of that extension, this information should be included in the dynamicProperties term (e.g., as organism group:fish). In addition, there are fields that describe the sampled habitat, such as the depth of sampling, the <<microhabitat>> (e.g. sand, gravel, cobble), and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>> and <<river mesohabitat>> can be entered in the term:dwc[dynamicProperties] field, although the ultimate goal is to create a freshwater DwC extension in GBIF (see <<Freshwater DwC extension,§3.1>>). The use of dynamicProperties is necessary for these habitat descriptions because biome, ecosystem functional group, lake zone, and river mesohabitat are not currently accepted terms in DwC.
+The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). The organism group should be included for all GBIF dataset classes, and this information can be captured in the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventory^] extension in the field targetTaxonomicScope, which is designed to indicate the taxonomic group that was targeted during sampling. Organism groups should be listed in this field following the groupings in <<table-01,Table 1>>. 
+
+Current extensions do not have fields that correspond to the freshwater data categories (<<Freshwater data categores,§1.2.2>>), either the type of observation or type of contribution. This information can be captured in the dynamic properties field until specific fields are created. 
+
+There are fields recommended for freshwater data that describe the sampled environment, such as the depth of sampling and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Physical and chemical measurements from the habitat should be included in the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended Measurement or Facts^] extension to allow multiple measurements to be linked to a single Event dataset. 
+
+Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>>, <<river mesohabitat>>, and <<microhabitat>> (e.g. sand, gravel, cobble), can be entered in the term:dwc[habitat] field. This is a multivalue, free-text field, and a proposed structure for this information is provided in <<table-07,Table 7>>. Although the ultimate goal is to create specific fields for these terms, this field represents the currently available option for recording the information. 
 
 Further details about the event time and date are also recommended for inclusion (<<table-07,Table 7>>). For example, it is recommended that data providers include year, month and day as separate columns in their dataset. This avoids ambiguities that might occur due to regional differences in how year, month, and day are combined into a single field (e.g. confusion of month and day). Furthermore, it is important that all years be entered as four-digit numbers, as historical data (e.g. early 1900s) might be present in GBIF because of digitizing of old records, and full four-digit years ensure that dates are not mishandled. 
 
 Additional fields for observation data include the sex and life stage, both of which are conditional based on the organism group (for example, sex can be determined and is relevant for fish, mammals, birds, and decapods; life stage can be determined and is relevant for copepods, <<benthic>> macroinvertebrates, fish and birds). The DwC term lifeStage has a controlled vocabulary (see https://registry.gbif.org/vocabulary/LifeStage/concepts[GBIF vocabulary - LifeStage^] for full list), and this vocabulary does not include all terms that are relevant for freshwater. For example, young of year is not part of the controlled vocabulary, and it is recommended that juvenile be used instead. Similarly, juvenile can be used instead of copepodite, and immature can be used instead of early instar. Additional fields provide detail on the identification of the observed taxon, such as references and verification status.
 
-Sampling method details recommended to be included as part of the freshwater DwC extension are fields for sampling equipment (e.g. type of net or sampler), mesh size of nets, and sample processing protocols. Each of these details has been shown to be vital to selecting data for meta-analysis (https://caff.is/freshwater[Lento et al. 2019^]; https://doi.org/10.1111/fwb.13873[Goedkoop et al. 2022^]), and including separate fields for them instead of grouping them all within the protocol field increases the chances that complete information will be provided without ambiguities.
+Sampling method and sample processing (field or lab) details should be included in the protocolNames, protocolDescriptions, and protocolReferences fields as part of the Humboldt Ecological Inventory extension. It is recommended that separate fields be developed for sample collection and sample processing (see <<§3.1.1>>), but until such fields are developed, all details should be grouped together in a single field. 
 
 [[table-07]]
-.Terms, definitions, examples, and comments recommended for inclusion with freshwater datasets. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are mandatory, recommended, or conditional on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
+.Terms, definitions, examples, and comments recommended for inclusion with freshwater datasets. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are required, strongly recommended, or share if relevant on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
 [cols="10,28,28,9,15,10"]
 |===
 |Term	|Definition |Example(s) |Status |Comment |Inclusion
@@ -354,11 +360,25 @@ Sampling method details recommended to be included as part of the freshwater DwC
 |Occurrence
 
 |term:dwc[dynamicProperties]
-|List of additional measurements, facts, characteristics, or assertions about the record; meant to provide a mechanism for structured content
-|`biome:river`, `ecosystem functional group:lowland river`, `microhabitat:sand`, `data category:opportunistic observation`, `type of contribution:community-based research data`, `organism group:fish`
-|Strongly recommended
-|Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group or microhabitat until the freshwater extension is created and available for use. Note that this field is not searchable on GBIF.
+|List of additional measurements, facts, characteristics, or assertions about the record, meant to provide a mechanism for structure content
+|`type of observation:opportunistic observation`, `type of contribution:community-based research data`
+|Required
+|Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for indicating the type of observation (opportunistic observation, targeted sampling, or assemblage sampling data) and type of contribution (professional, community-based research, or citizen science data). 
 |Occurrence
+
+|term:dwc[habitat]
+|A description of the habitat in which the event occurred
+|`biome:river`, `ecosystem functional group:lowland river`, `lake zone:littoral`, `river mesohabitat:riffle`, `microhabitat:sand`
+|Strongly recommended
+|Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group, lake zone, river mesohabitat, or microhabitat until specific fields have been created for these categories.
+|Occurrence
+
+|link:https://eco.tdwg.org/terms/#eco:targetTaxonomicScope[target{zwsp}Taxonomic{zwsp}Scope,role="term"]
+|The taxonomic group(s) targeted for sampling during the dwc:Event.  
+|`fungi`,`microbes`,`benthic algae`,`phytoplankton`,`macrophytes`,`zooplankton`,`benthic macroinvertebrates`,`decapods`,`fish`,`amphibians`,`reptiles`,`birds`,`mammals`
+|Required
+|For freshwater, the targeted taxonomic group should be at the level of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage.
+|Occurrence (map to Humboldt Ecological Inventory extension)
 
 |term:dwc[recordedBy]
 |A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original occurrence; the primary collector or observer should be listed first
@@ -442,13 +462,6 @@ Event
 |Please keep your original date/time stamp here (if applicable).
 |Occurrence +
 Event
-
-|term:dwc[habitat]
-|A category or description of the habitat in which the event occurred
-|`sand`, `silt`, `clay`, `gravel`, `pebble`, `cobble`, `boulder`, `rocky substrate`, `vegetation`, `wood`, `bedrock`, `air`, `water column`, `shoreline`, `water surface`
-|Share, if available
-|Enter the freshwater microhabitat here.	
-|Occurrence
 
 |term:dwc[eventRemarks]
 |Comments or notes about the event
@@ -575,34 +588,34 @@ Event
 |`temperature`, `pH`
 |Share, if available
 |This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding term:dwc[measurementValue] and term:dwc[measurementUnit]. 	
-|Event
+|Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementValue]
 |The value of the measurement, fact, characteristic, or assertion
 |`-1`, `7.1`
 |Share, if available
 |This field is for additional measurements in the field, e.g. abiotic data. A term:dwc[measurementType] must have a corresponding measurementValue and term:dwc[measurementUnit]. 	
-|Event
+|Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementUnit]
 |The unit associated with the term:dwc[measurementValue]
 |`°C`, `g`, `%`
 |Share, if available
 |This field is for additional measurements in the field, e.g. abiotic data. A term:dwc[measurementType] must have a corresponding term:dwc[measurementValue] and measurementUnit. 	
-|Event
+|Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementMethod]
 |A description of or reference to (publication, URI) the method or protocol used to determine the measurement, fact, characteristic, or assertion
 |`water thermometer`, `pH meter`
 |Share, if available
 | 
-|Event
+|Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementRemarks]
 |Comments or notes accompanying the term:dwc[measurementType]
 |`water partly frozen`
 |Share, if available
 | 
-|Event
+|Event (map to Extended Measurement or Facts extension)
 
 |===
