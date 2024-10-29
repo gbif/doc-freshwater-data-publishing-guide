@@ -17,6 +17,8 @@ GBIF provides a https://www.gbif.org/tools/species-lookup[species matching tool^
 
 Checklist datasets are not necessarily specific to a location and do not always represent individual observations. However, they can be location specific (like the country-specific https://www.gbif.org/dataset/search?publishing_org=cdef28b1-db4e-4c58-aa71-3c5238c2d0b5[Global Register of Introduced and Invasive Species (GRIIS) checklists^]) and may contain occurrences (https://www.gbif.org/dataset/6baf6a53-c106-40fb-bbde-f6d4e4051513[example^]). Checklist datasets may provide detailed information about https://rs.gbif.org/extension/gbif/1.0/distribution_2022-02-02.xml[species geographic distributions^] or https://rs.gbif.org/extension/gbif/1.0/speciesprofile_2019-01-29.xml[species profiles] that describe species characteristics. 
 
+Checklist datasets can be used to make it easier to select all freshwater assemblage data from a particular region, if a checklist of the freshwater species in the region is available. For more information on the possible types of checklists and application of checklists, see https://data-blog.gbif.org/post/gbif-checklist-datasets-and-data-gaps/[GBIF Checklist Datasets and Data Gaps^].
+
 There are fewer required fields for checklist datasets compared to other dataset classes (<<table-04,Table 4>>). As noted, higher classifications (e.g. kingdom) are helpful to include in the data to ensure taxa are not misassigned to the wrong name in the taxonomic backbone.
 
 [[table-04]]
@@ -301,27 +303,26 @@ sampleCode:method)
 [[freshwater-amendments]]
 === Specific requirements for publishing freshwater datasets (freshwater amendments)
 
-<<table-07,Table 7>> lists the <<DwC>> fields useful to include in freshwater datasets for large-scale data compilation and analysis. In some cases, fields should be included in an <<extension>>. Extensions offer a way to include additional information and to provide multiple measurements (e.g., different habitat variables) to link to a single event. Freshwater amendment fields are tagged as:
+<<table-07,Table 7>> lists the <<DwC>> fields that are useful to include in freshwater datasets to support large-scale data compilation and analysis. In some cases, fields should be included in an <<extension>>. Extensions offer a way to include additional information and to provide multiple measurements (e.g., different habitat variables) to link to a single event. Freshwater amendment fields are tagged as:
 
 * *Freshwater required*: as an addition to the GBIF required fields, we recommend required fields for freshwater samples
 * *Freshwater strongly recommended*: data that are useful to be reported
 * *Freshwater share if relevant*: data that should be reported, but that are only relevant to particular <<organism group,organism groups>> or habitats (as indicated)
 
-We provide examples for the content of the fields and, in some cases, the full range of controlled values to choose from.
+We provide examples for the content of the fields, and in some cases, the full range of controlled values to choose from.
 
-The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location and the elevation (<<table-07,Table 7>>). The organism group should be included for all GBIF dataset classes, and this information can be captured in the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventory^] extension in the field targetTaxonomicScope, which is designed to indicate the taxonomic group that was targeted during sampling. Organism groups should be listed in this field following the groupings in <<table-01,Table 1>>. 
+The freshwater amendments include general fields describing the site where the observation was made, such as the water body name, a description of the location, and the elevation (<<table-07,Table 7>>). The organism group should be included for all GBIF dataset classes, and this information can be captured in the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventory^] extension in the field targetTaxonomicScope, which is designed to indicate the taxonomic group that was targeted during sampling. Organism groups should be listed in this field using the assemblage categories described in <<table-01,Table 1>>. 
 
-Current extensions do not have fields that correspond to the freshwater data categories (<<Freshwater data categores,§1.2.2>>), either the type of observation or type of contribution. This information can be captured in the dynamic properties field until specific fields are created. 
+Current extensions do not have fields that correspond to the freshwater data categories (<<Freshwater data categories,§1.2.2>>), neither the type of observation nor type of contribution. This information can be captured in the dynamic properties field until specific fields are created. 
 
-There are fields recommended for freshwater data that describe the sampled environment, such as the depth of sampling and any abiotic measurements taken in the field, including temperature, pH and dissolved oxygen (<<table-07,Table 7>>). Physical and chemical measurements from the habitat should be included in the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended Measurement or Facts^] extension to allow multiple measurements to be linked to a single Event dataset. 
+There are fields recommended for freshwater data that describe the sampled environment, such as the depth of sampling and any abiotic measurements taken in the field, including temperature, pH, and dissolved oxygen (<<table-07,Table 7>>). Physical and chemical measurements from the habitat should be included in the https://rs.gbif.org/extension/obis/extended_measurement_or_fact_2023-08-28.xml[Extended Measurement or Facts^] extension to allow multiple measurements to be linked to a single Event dataset. 
 
 Other freshwater-specific habitat descriptions, including the <<biome>>, <<ecosystem functional group>>, <<lake zone>>, <<river mesohabitat>>, and <<microhabitat>> (e.g. sand, gravel, cobble), can be entered in the term:dwc[habitat] field. This is a multivalue, free-text field, and a proposed structure for this information is provided in <<table-07,Table 7>>. Although the ultimate goal is to create specific fields for these terms, this field represents the currently available option for recording the information. 
 
 Further details about the event time and date are also recommended for inclusion (<<table-07,Table 7>>). For example, it is recommended that data providers include year, month and day as separate columns in their dataset. This avoids ambiguities that might occur due to regional differences in how year, month, and day are combined into a single field (e.g. confusion of month and day). Furthermore, it is important that all years be entered as four-digit numbers, as historical data (e.g. early 1900s) might be present in GBIF because of digitizing of old records, and full four-digit years ensure that dates are not mishandled. 
 
-Additional fields for observation data include the sex and life stage, both of which are conditional based on the organism group (for example, sex can be determined and is relevant for fish, mammals, birds, and decapods; life stage can be determined and is relevant for copepods, <<benthic>> macroinvertebrates, fish and birds). The DwC term lifeStage has a controlled vocabulary (see https://registry.gbif.org/vocabulary/LifeStage/concepts[GBIF vocabulary - LifeStage^] for full list), and this vocabulary does not include all terms that are relevant for freshwater. For example, young of year is not part of the controlled vocabulary, and it is recommended that juvenile be used instead. Similarly, juvenile can be used instead of copepodite, and immature can be used instead of early instar. Additional fields provide detail on the identification of the observed taxon, such as references and verification status.
+Additional fields for observation data include the sex and life stage, both of which are conditional based on the organism group (for example, sex can be determined and is relevant for fish, mammals, birds, and decapods; life stage can be determined and is relevant for copepods, <<benthic>> macroinvertebrates, fish and birds). The DwC term lifeStage has a controlled vocabulary (see https://registry.gbif.org/vocabulary/LifeStage/concepts[GBIF vocabulary - LifeStage^] for full list), and this vocabulary does not include all terms that are relevant for freshwater. For example, young of year is not part of the controlled vocabulary, and it is recommended that juvenile be used instead. Similarly, juvenile can be used instead of copepodite, and immature can be used instead of early instar. Additional fields provide details on the identification of the observed taxon, such as references and verification status.
 
-Sampling method and sample processing (field or lab) details should be included in the protocolNames, protocolDescriptions, and protocolReferences fields as part of the Humboldt Ecological Inventory extension. It is recommended that separate fields be developed for sample collection and sample processing (see <<§3.1.1>>), but until such fields are developed, all details should be grouped together in a single field. 
 
 [[table-07]]
 .Terms, definitions, examples, and comments recommended for inclusion with freshwater datasets. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are required, strongly recommended, or share if relevant on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
@@ -368,17 +369,17 @@ Sampling method and sample processing (field or lab) details should be included 
 
 |term:dwc[habitat]
 |A description of the habitat in which the event occurred
-|`biome:river`, `ecosystem functional group:lowland river`, `lake zone:littoral`, `river mesohabitat:riffle`, `microhabitat:sand`
-|Strongly recommended
+|`biome:river`, `ecosystem functional group:lowland river`, `lake zone:littoral`, `river mesohabitat:riffle`, `microhabitat:sand`; for biome and ecosystem functional group, use classifications in the IUCN Global Ecosystem Typology (https://global-ecosystems.org/page/typology); for lake zone use one of: "littoral", "sub-littoral", "pelagic", "profundal"; for river mesohabitat use one of: "riffle", "run", "pool"
+|Required
 |Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for adding information on e.g. biome, ecosystem functional group, lake zone, river mesohabitat, or microhabitat until specific fields have been created for these categories.
-|Occurrence
+|Occurrence, Event
 
 |link:https://eco.tdwg.org/terms/#eco:targetTaxonomicScope[target{zwsp}Taxonomic{zwsp}Scope,role="term"]
 |The taxonomic group(s) targeted for sampling during the dwc:Event.  
 |`fungi`,`microbes`,`benthic algae`,`phytoplankton`,`macrophytes`,`zooplankton`,`benthic macroinvertebrates`,`decapods`,`fish`,`amphibians`,`reptiles`,`birds`,`mammals`
 |Required
 |For freshwater, the targeted taxonomic group should be at the level of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage.
-|Occurrence (map to Humboldt Ecological Inventory extension)
+|Checklist, Occurrence (map to Humboldt Ecological Inventory extension)
 
 |term:dwc[recordedBy]
 |A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original occurrence; the primary collector or observer should be listed first
@@ -391,7 +392,7 @@ Sampling method and sample processing (field or lab) details should be included 
 |A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for recording the original term:dwc[Occurrence]. 
 |`https://orcid.org/0000-0002-8098-4825 \| https://orcid.org/0000-0001-8839-5913`
 |Strongly recommended
-|Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).  
+|Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`). The primary collector or observer should be listed first. 
 |Occurrence
 
 
@@ -405,8 +406,8 @@ Sampling method and sample processing (field or lab) details should be included 
 |term:dwc[lifeStage]
 |The age class or life stage of the organism(s) at the time the occurrence was recorded
 |One of `egg`, `larva`, `pupa`, `adult`, `subadult`, `juvenile`, `nymph`, `immature`, `nauplius`
-|Share, if relevant (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds)). Controlled vocabulary does not include all terms that are relevant for freshwater. For example, use juvenile instead of young of year or copepodite, and use immature instead of early instar
-| 
+|Share, if relevant (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
+|Controlled vocabulary does not include all terms that are relevant for freshwater. For example, use juvenile instead of young of year or copepodite, and use immature instead of early instar. 
 |Occurrence
 
 |term:dwc[occurrenceRemarks]
