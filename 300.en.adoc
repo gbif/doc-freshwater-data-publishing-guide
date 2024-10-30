@@ -1,22 +1,25 @@
 [[future-prospects]]
 == Future prospects 
 
-[[freshwater-dwc-extension]]
-=== Freshwater DwC extension
+[[improving-freshwater-data-publishing]]
+=== Improving freshwater data publishing
 
-While we have recommended that occurrence and sampling-event datasets be amended with other specific <<DwC>> fields when publishing freshwater datasets (see <<freshwater-amendments,§2.2>> and <<table-07,Table 7>>), several of the fields that should be included in the (meta)data as best practices do not currently have appropriate equivalents in DwC. We recommend the creation of a freshwater DwC extension to allow entry and grouping of <<freshwater-dwc-extension-terms,these fields>> with freshwater data. Prior to the creation of such an extension, we recommend entering all details in the term:dwc[dynamicProperties] field, recognizing that this field is not searchable, and the greatest functionality will result from an extension.
+The goal of this guide was to provide information on how to set up freshwater data for publishing on GBIF and to offer guidance on fields that have particular importance for freshwater data. While we have recommended that occurrence and sampling-event datasets be amended with other specific <<DwC>> fields when publishing freshwater datasets (see <<freshwater-amendments,§2.2>> and <<table-07,Table 7>>), several of the fields that should be included in the (meta)data as best practices do not currently have appropriate equivalents in DwC. This is a shortcoming that makes it difficult to ensure the required information for freshwater is provided in a consistent manner and is provided in relevant, searchable fields. While we have provided options for publishing this information in currently existing fields in <<freshwater-amendments,§2.2>> and <<table-07,Table 7>>, this section lists improvements that could be made in the future. 
 
-The proposed DwC extension includes the classification of the type of observation (opportunistic, targeted, or assemblage sampling; see <<freshwater-categories,§1.2.2>>) and type of contribution (professional, community-based research, or citizen science data; <<table-08,Table 8>>). In addition, the location of the observation is further described by the <<biome>>, <<ecosystem functional group>>, and freshwater <<lake zone>> or <<river mesohabitat>> (conditional on the biome). 
+The type of observation (opportunistic, targeted, or assemblage sampling; see <<freshwater-categories,§1.2.2>>) and type of contribution (professional, community-based research, or citizen science data; <<table-08,Table 8>>) are currently recommended to be included in term:dwc[dynamicProperties], which is not a searchable field. Specific fields for these data categories would support improved usage of the data in meta-analyses, as they would provide context for the data. While a similar field currently exists in the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventory^] extension as inventoryTypes, it is only relevant for data that represent an inventory. A broader term that captures the categories described for freshwater would be beneficial. 
 
-To allow data to be selected more efficiently for freshwater meta-analyses, the freshwater DwC extension also includes fields for the <<organism group>> and the season of sampling, as well as specifications for the sampling methods.
+Habitat descriptors such as the <<biome>>, <<ecosystem functional group>>, <<microhabitat>>, and freshwater <<lake zone>> or <<river mesohabitat>> (conditional on the biome) are currently recommended to be included in the field term:dwc[habitat], but the creation of specific fields for each of these descriptors would support improved data classification. In the case of <<biome>>, <<ecosystem functional group>>, and <<microhabitat>>, these fields would more broadly apply to data from all realms. 
+
+The selection of freshwater assemblage data for analysis remains a barrier to the use of GBIF data, as many freshwater researchers work at the assemblage level and would benefit from a more effective and efficient way to find relevant data on GBIF. We have recommended the use of the https://rs.gbif.org/extension/eco/Humboldt_2024-04-16.xml[Humboldt Ecological Inventory^] extension field targetTaxonomicScope, but it is important to consider whether a field more specifically designed to indicate assemblage group would improve data findability. 
+
+Sampling method details are currently captured in a single field in the sampling-event data (term:dwc[samplingProtocol]). However, we recommend the creation of fields specifically for sampling equipment (e.g. type of net or sampler), mesh size of nets, and sample processing protocols. Each of these details has been shown to be vital to selecting data for meta-analysis (https://caff.is/freshwater[Lento et al. 2019^]; https://doi.org/10.1111/fwb.13873[Goedkoop et al. 2022^]), and including separate fields for them instead of grouping them all within the protocol field increases the chances that complete information will be provided without ambiguities.
 
 If there is a need for other fields beyond these recommendations, i.e. to capture additional information about the sampling event, there are DwC extensions that may provide guidance on publishing these additional data. For example, https://www.tdwg.org/community/osr/humboldt-extension/[Humboldt extension^] and https://rs.gbif.org/extension/measurements_or_facts_2024-02-19.xml[Darwin Core Measurement or Facts extension^].
 
-Sampling method details recommended to be included as part of the freshwater DwC extension are fields for sampling equipment (e.g. type of net or sampler), mesh size of nets, and sample processing protocols. Each of these details has been shown to be vital to selecting data for meta-analysis (https://caff.is/freshwater[Lento et al. 2019^]; https://doi.org/10.1111/fwb.13873[Goedkoop et al. 2022^]), and including separate fields for them instead of grouping them all within the protocol field increases the chances that complete information will be provided without ambiguities.
 
-[[freshwater-dwc-extension-terms]]
+[[freshwater-dwc-recommended-improvement-terms]]
 [glossary]
-==== 3.1.1 Recommended terms for a DwC freshwater extension
+==== 3.1.1 Recommended terms for improving freshwater data publishing
 
 Most terms that we suggest are urgently needed for other realms as well, which is why most terms do not have a "freshwater" precursor. Those terms that are specific to freshwater or specifically needed to support assessment of freshwater data include "freshwater" as a precursor. For all recommended terms, we have provided freshwater examples.
 
