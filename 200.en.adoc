@@ -376,9 +376,9 @@ Additional fields for observation data include the sex and life stage, both of w
 
 |link:https://eco.tdwg.org/terms/#eco:targetTaxonomicScope[target{zwsp}Taxonomic{zwsp}Scope,role="term"]
 |The taxonomic group(s) targeted for sampling during the dwc:Event.  
-|`fungi`,`microbes`,`benthic algae`,`phytoplankton`,`macrophytes`,`zooplankton`,`benthic macroinvertebrates`,`decapods`,`fish`,`amphibians`,`reptiles`,`birds`,`mammals`
+|One of `fungi`,`microbes`,`benthic algae`,`phytoplankton`,`macrophytes`,`zooplankton`,`benthic macroinvertebrates`,`decapods`,`fish`,`amphibians`,`reptiles`,`birds`,`mammals`
 |Required
-|For freshwater, the targeted taxonomic group should be at the level of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage.
+|For freshwater, the targeted taxonomic group should be at the level of biologically- and ecologically-similar organisms that are generally grouped together and described as an assemblage. Use broader groups as listed here even if a subset of the group was the focus. For example, use zooplankton even if only cladocerans were sampled. Benthic algae refers to benthic samples of diatoms and other algae, which may include planktonic individuals that have settled.
 |Checklist, Occurrence (map to Humboldt Ecological Inventory extension)
 
 |term:dwc[recordedBy]
