@@ -37,12 +37,12 @@ _inclusion_: Occurrence
 
 freshwaterLakeZone:: _definition_: typology within the lake biome that classifies this ecosystem into habitat zones +
 _examples_: One of "littoral", "sub-littoral", "pelagic", "profundal" +
-_status_: Share, if available (based on biome) +
+_status_: Share if available (based on biome) +
 _inclusion_: Occurrence
 
 freshwaterRiverMesohabitat:: _definition_: typology within the river biome that classifies this ecosystem into habitat zones +
 _examples_: One of "riffle", "run", "pool" +
-_status_: Share, if available (based on biome) +
+_status_: Share if available (based on biome) +
 _inclusion_: Occurrence
 
 typeOfContribution:: _definition_: category based on the type of data contribution +
@@ -62,7 +62,7 @@ _inclusion_: Occurrence, Checklist
 
 season:: _definition_: indicates the season in which a sample was collected +
 _examples_: one of "winter"; "spring"; "summer"; "autumn"; "wet"; "dry" +
-_status_: Strongly recommended +
+_status_: Recommended +
 _inclusion_: Occurrence
 
 samplingEquipment:: _definition_: name or description of the sampling instrument that was used for collecting the organisms, including mesh sizes where applicable +

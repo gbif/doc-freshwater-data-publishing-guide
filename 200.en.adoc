@@ -48,19 +48,19 @@ There are fewer required fields for checklist datasets compared to other dataset
 |term:dwc[kingdom]
 | Full scientific name of the kingdom in which the taxon is classified.
 |One of `Animalia`, `Plantae`, `Fungi`, `Protista`, `Monera`
-|Strongly recommended
+|Recommended
 |Inclusion of kingdom helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
 
 |term:dwc[parentNameUsageID]
 |The taxonID of the next available higher-ranked (parent) entry within the checklist dataset, if higher taxon names are supplied as separate entries in the list
 |`2704173` (GBIF), `tsn:41074` (ITIS) etc.
-|Strongly recommended
+|Recommended
 |This supports the representation of the dataset as a hierarchy, e.g. for the publication of a taxonomy. For Darwin Core Archives, the related record should be present locally in the same archive. 
 
 |term:dwc[acceptedNameUsageID]
 |Within the record of a synonym, the taxonID of the accepted taxon name entry within the checklist dataset, if both synonyms and accepted names are supplied.
 |`2704179` (GBIF), `tsn:41107` (ITIS), etc.
-|Strongly recommended
+|Recommended
 |This supports the representation of synonymy for a taxonomic dataset. For Darwin Core Archives the related record should be present locally in the same archive.
 
 |===
@@ -116,51 +116,51 @@ sampleCode:method)
 |term:dwc[taxonRank]
 |Taxonomic rank of the most most precise taxonomic level provided in term:dwc[scientificName].
 |One of `kingdom`, `phylum`, `class`, `order`, `family`, `subfamily`, `genus`, `species`, `subspecies`, `varietas`, `forma`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to use a controlled vocabulary.
 
 |term:dwc[kingdom]
 |Full scientific name of the kingdom in which the taxon is classified.
 |One of `Animalia`, `Plantae`, `Fungi`, `Protista`, `Monera`
-|Strongly recommended
+|Recommended
 |Inclusion of kingdom helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
 
 |term:dwc[decimalLatitude]
 |Geographic latitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.	
 |`-41.0983423`
-|Strongly recommended
+|Recommended
 |Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. For freshwater datasets, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
 
 |term:dwc[decimalLongitude]
 |Geographic longitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location.
 |`-121.1761111`
-|Strongly recommended
+|Recommended
 |Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. For freshwater datasets, best practice is that coordinates are mandatory, although the GBIF data description indicates that this can be coarse (e.g. country).
 
 |term:dwc[geodeticDatum]
 |The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based.
 |`EPSG:4326`, `WGS84`, `unknown`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to use the EPSG code of the spatial reference system, if known. If no geodetic datum is specified, GBIF's indexing process assumes "WGS84".
 
 |link:https://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters[coordinate{zwsp}Uncertainty{zwsp}InMeters,role="term"]
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location.
 |`30` (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
 `100` (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
-|Strongly recommended
+|Recommended
 |Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term. Uncertainty can be used to specify the radius of a sampling area around a central point provided in decimalLatitude and decimalLongitude.
 
 |term:dwc[countryCode]
 |Standard code for the country in which the location occurs.
 |`AR` (Argentina) +
 `SV` (El Salvador)
-|Strongly recommended
+|Recommended
 |Recommended best practice is to use ISO 3166-1-alpha-2 country codes. Recommended best practice is to leave this field blank if the location spans multiple entities at this administrative level.
 
 |term:dwc[individualCount]
 |Number of individuals at the time of the occurrence, indicated as presence or as a count.
 |`1`
-|Strongly recommended
+|Recommended
 |If you have presence data, please indicate "1" here. If a dataset derives from observed counts (e.g. point counts or opportunistic observations of individuals as encountered), enter the counts here. As these are only counts (not density or biomass), there are no units. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance under organismQuantity with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantity]
@@ -169,7 +169,7 @@ sampleCode:method)
 `12.5` (organismQuantity) with "% biomass" (organismQuantityType) +
 `150` (organismQuantitiy) with "mg dry mass" (organismQuantityType) +
 `800` (organismQuantity) with "individuals" (organismQuantityType)
-|Strongly recommended
+|Recommended
 |An entry for organismQuantity must have a corresponding term:dwc[organismQuantityType]. If you have abundance data, fill in the number individuals and add unit for it in term:dwc[organismQuantityType]. If the dataset derives from efforts to estimate abundance of particular taxa (targeted sampling) or composition/abundance of different taxa in the assemblage (assemblage sampling), please enter abundance here with "individuals" entered under organismQuantityType. If the dataset derives from standard protocols for measuring and monitoring biodiversity or abundance, please consider to use the sampling-event dataset.
 
 |term:dwc[organismQuantityType]
@@ -178,7 +178,7 @@ sampleCode:method)
 "12.5" (organismQuantity) with `% biomass` (organismQuantityType) +
 "150" (organismQuantitiy) with `mg dry mass` (organismQuantityType) +
 "800" (organismQuantity) with `individuals` (organismQuantityType)
-|Strongly recommended
+|Recommended
 |A organismQuantityType must have a corresponding organismQuantity. If you have abundance data, fill in the number individuals in organismQuantity and add unit for it here.
 
 |term:dwc[occurrenceStatus ]
@@ -238,64 +238,64 @@ sampleCode:method)
 |term:dwc[parentEventID]
 |Identifier for the broader event that groups this and potentially other events; may be a global unique identifier or an identifier specific to the dataset
 |`A1` (parentEventID to identify a transect of samples with its own eventIDs: "A1:1", "A1:2"), `AT:BOKU:DAN` (country:institutionCode:projectCode)
-|Strongly recommended
+|Recommended
 |Used in situations where the event is part of an event series. In order to be able to reference a parent event, this event needs to be specified as a separate entry, typically within the same dataset, carrying its own term:dwc[eventID]. Refer to the eventID of the parent event in the sample event record to specify the relationship between the two entries.
 
 |term:dwc[samplingEffort]
 |Measure for the amount of effort expended during an event
 |`40 trap-nights`, `10 observer-hours`
-|Strongly recommended
+|Recommended
 |Used to provide evidence of the rigour of the sampling event, e.g. the number of people involved, total area sampled (summed across different sampled microhabitats), or the total number of hours spent on the event (e.g. net set time summed across multiple nets). There is no controlled vocabulary, but the recommendation is to keep this information brief and factual, giving users enough information to compare between sampling events.
 
 |term:dwc[locationID]
 |Identifier that links to a set of data describing the sample event location, if available; may be a global unique identifier or an identifier specific to the dataset
 |`http://www.geonames.org/10793757/dnb-6.html`
-|Strongly recommended
+|Recommended
 |If such a reference cannot be meaningfully supplied, consider supplying more location details, e.g. through use of the data elements term:dwc[locality], term:dwc[minimumElevationInMeters], term:dwc[minimumDepthInMeters], term:dwc[stateProvince], term:dwc[locationRemarks] etc.
 
 |term:dwc[decimalLatitude]
 |Geographic latitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location
 |`-41.0983423`
-|Strongly recommended
+|Recommended
 |Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive. Note that a sample event that spans an area rather than a point location should additionally supply the term:dwc[coordinateUncertaintyInMeters] to specify the approximate extension of the area. 
 
 |term:dwc[decimalLongitude]
 |Geographic longitude (in decimal degrees, using the spatial reference system given in term:dwc[geodeticDatum]) of the geographic center of a location
 |`-121.1761111`
-|Strongly recommended
+|Recommended
 |Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive. Note that a sample event that spans an area rather than a point location should additionally supply the term:dwc[coordinateUncertaintyInMeters] to specify the approximate extension of the area. 
 
 |term:dwc[geodeticDatum]
 |The coordinate system and set of reference points upon which the geographic coordinates given in term:dwc[decimalLatitude] and term:dwc[decimalLongitude] are based
 |`EPSG:4326`, `WGS84`, `unknown`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to use the EPSG code of the spatial reference system, if known. If no geodetic datum is specified, GBIF's indexing process assumes "WGS84".
 
 |link:https://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters[coordinate{zwsp}Uncertainty{zwsp}InMeters,role="term"]
 |The horizontal distance (in meters) from the given term:dwc[decimalLatitude] and term:dwc[decimalLongitude] describing the smallest circle containing the whole of the location
 |`30` (reasonable lower limit on or after 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time) +
 `100` (reasonable lower limit before 2000-05-01 of a GPS reading under good conditions if the actual precision was not recorded at the time)
-|Share, if available	
+|Share if available	
 |Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term. Uncertainty can be used to specify the radius of a sampling area around a central point provided in term:dwc[decimalLatitude] and term:dwc[decimalLongitude].
 
 |term:dwc[footprintWKT]
 |An area description, specifying the location of the sample event in well-known text (WKT) markup language
 |`++POLYGON ((10 20, 11 20, 11 21, 10 21, 10 20))++` +
 (a one-degree bounding box with opposite corners at longitude=10, latitude=20 and longitude=11, latitude=21)
-|Strongly recommended
+|Recommended
 |A WKT representation of the shape (footprint, geometry) that defines the location. This differs from the point-radius representation that is combined from the elements term:dwc[decimalLatitude], term:dwc[decimalLongitude] and term:dwc[coordinateUncertaintyInMeters] in that it can define shapes that are not circles. Note that it is possible to supply both a point-radius and a footprintWKT location for the same sample event.
 
 |term:dwc[footprintSRS]
 |The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geometry given in term:dwc[footprintWKT] is based
 |`EPSG:4326`, `unknown`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to use the EPSG code of the SRS, if known. If none of these is known, use the value "unknown". It is also permitted to provide the SRS in Well-Known-Text, especially if no EPSG code provides the necessary values for the attributes of the SRS. Do not use this term to describe the SRS of the term:dwc[decimalLatitude] and term:dwc[decimalLongitude], nor of any verbatim coordinates - use the term:dwc[geodeticDatum] and term:dwc[verbatimSRS] instead.
 
 |term:dwc[countryCode]
 |Standard code for the country in which the location occurs
 |`AR` (Argentina) +
 `SV` (El Salvador)	
-|Strongly recommended
+|Recommended
 |Recommended best practice is to use ISO 3166-1-alpha-2 country codes. Recommended best practice is to leave this field blank if the location spans multiple entities at this administrative level.
 
 |===
@@ -306,7 +306,7 @@ sampleCode:method)
 <<table-07,Table 7>> lists the <<DwC>> fields that are useful to include in freshwater datasets to support large-scale data compilation and analysis. In some cases, fields should be included in an <<extension>>. Extensions offer a way to include additional information and to provide multiple measurements (e.g., different habitat variables) to link to a single event. Freshwater amendment fields are tagged as:
 
 * *Freshwater required*: as an addition to the GBIF required fields, we recommend required fields for freshwater samples
-* *Freshwater strongly recommended*: data that are useful to be reported
+* *Freshwater recommended*: data that are useful to be reported
 * *Freshwater share if relevant*: data that should be reported, but that are only relevant to particular <<organism group,organism groups>> or habitats (as indicated)
 
 We provide examples for the content of the fields, and in some cases, the full range of controlled values to choose from.
@@ -325,7 +325,7 @@ Additional fields for observation data include the sex and life stage, both of w
 
 
 [[table-07]]
-.Terms, definitions, examples, and comments recommended for inclusion with freshwater datasets. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are required, strongly recommended, or share if relevant on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
+.Terms, definitions, examples, and comments recommended for inclusion with freshwater datasets. The dataset in which each field should be included (metadata, occurrence or event) is indicated, as is whether fields are required, recommended, or share if relevant on particular organism groups (https://dwc.tdwg.org/list/[more information^] on the specific fields).
 [cols="10,28,28,9,15,10"]
 |===
 |Term	|Definition |Example(s) |Status |Comment |Inclusion
@@ -333,7 +333,7 @@ Additional fields for observation data include the sex and life stage, both of w
 |term:dwc[rightsHolder]
 |A person or organisation owning or managing the rights over the resource
 |`BOKU University` (University of Natural Resources and Life Sciences, BOKU Vienna)
-|Strongly recommended
+|Recommended
 | 
 |Metadata
 
@@ -341,7 +341,7 @@ Additional fields for observation data include the sex and life stage, both of w
 |Name or acronym of the institution having custody of the dataset or record
 |`BOKU` (University of Natural Resources and Life Sciences, BOKU Vienna) +
 `UNB` (University New Brunswick)
-|Required		
+|Recommended		
 | 
 |Metadata
 
@@ -349,21 +349,21 @@ Additional fields for observation data include the sex and life stage, both of w
 |Identifier for the collection or dataset from which the record was derived
 |`urn:lsid:biocol.org:` +
 `col:34818`, `https://www.gbif.org/grscicoll/collection/fbd3ed74-5a21-4e01-b86a-33d36f032d9c`
-|Strongly recommended
+|Recommended
 |For physical specimens, the recommended best practice is to use a globally unique and resolvable identifier from a collections registry such as the https://scientific-collections.gbif.org/[Global Registry of Scientific Collections^].
 |Occurrence
 
 |term:dwc[informationWithheld]
 |Additional information that exists, but that has not been shared in the given record
 |`location information not given for endangered species`
-|Strongly recommended
+|Recommended
 |A note on possible information that was intentionally not included into the dataset.
 |Occurrence
 
 |term:dwc[dynamicProperties]
 |List of additional measurements, facts, characteristics, or assertions about the record, meant to provide a mechanism for structure content
 |`type of observation:opportunistic observation`, `type of contribution:community-based research data`
-|Required
+|Recommended
 |Recommended best practice is to use a "key:value" encoding schema for a data interchange format (such as JSON). Please use this field for indicating the type of observation (opportunistic observation, targeted sampling, or assemblage sampling data) and type of contribution (professional, community-based research, or citizen science data). 
 |Occurrence
 
@@ -384,14 +384,14 @@ Additional fields for observation data include the sex and life stage, both of w
 |term:dwc[recordedBy]
 |A list (concatenated and separated) of names of people, groups or organizations responsible for recording the original occurrence; the primary collector or observer should be listed first
 |`Jen Lento \| Astrid Schmidt-Kloiber`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).  
 |Occurrence
 
 |term:dwc[recordedByID]
 |A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for recording the original term:dwc[Occurrence]. 
 |`https://orcid.org/0000-0002-8098-4825 \| https://orcid.org/0000-0001-8839-5913`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`). The primary collector or observer should be listed first. 
 |Occurrence
 
@@ -399,28 +399,28 @@ Additional fields for observation data include the sex and life stage, both of w
 |term:dwc[sex]
 |The sex of the individual(s) represented in the occurrence.
 |One of `female` or `male` or `indeterminate`
-|Share, if relevant (based on the organism group (Decapoda, fish, mammals, birds))
+|Share if relevant (based on the organism group (Decapoda, fish, mammals, birds))
 | 
 |Occurrence
 
 |term:dwc[lifeStage]
 |The age class or life stage of the organism(s) at the time the occurrence was recorded
 |One of `egg`, `larva`, `pupa`, `adult`, `subadult`, `juvenile`, `nymph`, `immature`, `nauplius`
-|Share, if relevant (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
+|Share if relevant (based on the organism group (benthic invertebrates, zooplankton - Copepoda, fish, birds))
 |Controlled vocabulary does not include all terms that are relevant for freshwater. For example, use juvenile instead of young of year or copepodite, and use immature instead of early instar. 
 |Occurrence
 
 |term:dwc[occurrenceRemarks]
 |Comments or notes about the occurrence
 |`found dead outside of the water`
-|Strongly recommended
+|Recommended
 | 
 |Occurrence
 
 |term:dwc[eventType]
 |The nature of the event
 |`sample`, `observation`, `bioblitz`, `expedition`, `survey`, "project`, `site visit`, `biotic interaction`
-|Strongly recommended
+|Recommended
 | 
 |Event
 
@@ -428,14 +428,14 @@ Additional fields for observation data include the sex and life stage, both of w
 |The time or interval during which an event occurred
 |`14:07-0600` (2:07pm in the time zone six hours earlier than UTC) +
 `13:00:00Z/15:30:00Z` (the interval between 1pm UTC and 3:30pm UTC)
-|Share, if available
+|Share if available
 |Recommended best practice is to use a time of day that conforms to ISO 8601-1:2019. Please also add the time zone in relation to UTC.
 |Event
 
 |term:dwc[year]
 |Four-digit year in which the event occurred
 |`2008`
-|Share, if available	
+|Share if available	
 |Please fill this column additionally to the term:dwc[eventDate].
 |Occurrence +
 Event
@@ -443,7 +443,7 @@ Event
 |term:dwc[month] 
 |Month in which the event occurred
 |`01` (January), `10` (October)	
-|Share, if available
+|Share if available
 |Please fill this column additionally to the term:dwc[eventDate].	
 |Occurrence +
 Event
@@ -451,7 +451,7 @@ Event
 |term:dwc[day]
 |Day of the month on which the event occurred
 |`09`, `28`
-|Share, if available
+|Share if available
 |Please fill this column additionally to the term:dwc[eventDate].
 |Occurrence +
 Event
@@ -459,7 +459,7 @@ Event
 |term:dwc[verbatimEventDate]
 |The verbatim original representation of the date and time information for an event
 |`spring 1900`, `Marzo 2002`
-|Share, if available
+|Share if available
 |Please keep your original date/time stamp here (if applicable).
 |Occurrence +
 Event
@@ -467,7 +467,7 @@ Event
 |term:dwc[eventRemarks]
 |Comments or notes about the event
 |`After the recent rains the river is nearly at flood stage.`
-|Share, if available
+|Share if available
 | 
 |Event
 
@@ -481,70 +481,70 @@ Event
 |term:dwc[locality]
 |The specific description of the place, providing regional context to the observation
 |`25 km downstream Vienna`
-|Strongly recommended
+|Recommended
 |Less specific geographic information can be provided in other geographic terms (term:dwc[higherGeography], term:dwc[continent], term:dwc[country], term:dwc[stateProvince], term:dwc[county], term:dwc[municipality], term:dwc[waterBody], term:dwc[island], term:dwc[islandGroup].
 |Occurrence
 
 |term:dwc[minimumElevationInMeters]
 |The lower limit of the range of elevation (altitude, usually above sea level), in metres
 |`100`
-|Strongly recommended
+|Recommended
 |If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in both this field and in term:dwc[maximumElevationInMeters].
 |Occurrence
 
 |term:dwc[maximumElevationInMeters]
 |The upper limit of the range of elevation (altitude, usually above sea level), in metres
 |`200`
-|Share, if available	
+|Share if available	
 |If sampling was done at one altitude only (e.g. no range), enter the actual altitude at which your sample was taken in this field and in term:dwc[minimumElevationInMeters].	
 |Occurrence
 
 |term:dwc[verbatimElevation]
 |The original description of the elevation (altitude, usually above sea level) of the location
 |`100-200 m`
-|Share, if available
+|Share if available
 | 
 |Occurrence 
 
 |link:https://rs.tdwg.org/dwc/terms/minimumDepthInMeters[minimumDepth{zwsp}InMeters,role="term"]
 |The lesser depth of a range of depth below the local surface, in metres
 |`0.5`
-|Strongly recommended
+|Recommended
 |If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken in this field and in term:dwc[maximumDepthInMeters].
 |Occurrence
 
 |link:https://rs.tdwg.org/dwc/terms/maximumDepthInMeters[maximumDepth{zwsp}InMeters,role="term"]
 |The greater depth of a range of depth below the local surface, in metres
 |`1`
-|Share, if available
+|Share if available
 |If sampling took place over a range of depths (e.g. depth-integrated sample or composite sample from water column), enter the minimum depth here and the maximum depth of the range in term:dwc[maxiumDepthInMeters]. If sampling was depth-specific (e.g. at one single depth), enter the actual depth in which your sample was taken in this field and in term:dwc[minimumDepthInMeters].	
 |Occurrence
 
 |term:dwc[verbatimDepth]
 |The original description of the depth below the local surface
 |`0.5 - 1 m`
-|Share, if available
+|Share if available
 | 
 |Occurrence
 
 |link:https://rs.tdwg.org/dwc/terms/identificationQualifier[identification{zwsp}Qualifier,role="term"]
 |A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the identification
 |`cf.`
-|Strongly recommended
+|Recommended
 |Can be used to add doubts, but it is recommend to only report "safe" records
 |Occurrence
 
 |term:dwc[identifiedBy]
 |	A name or a list (concatenated and separated) of names of people, groups, or organizations who assigned the taxon to the subject
 |`Hans Malicky`, `Jen Lento \| Astrid Schmidt-Kloiber`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).	
 |Occurrence
 
 |term:dwc[identifiedByID]
 |	A list (concatenated and separated) of the globally unique identifier for the person, people, groups, or organizations responsible for assigning the term:dwc[Taxon] to the subject.
 |`https://orcid.org/0000-0002-8098-4825 \| https://orcid.org/0000-0001-8839-5913`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`).	
 |Occurrence
 
@@ -552,70 +552,70 @@ Event
 |link:https://rs.tdwg.org/dwc/terms/identificationReferences[identification{zwsp}References,role="term"]
 |A reference or a list (concatenated and separated) of references (publication, global unique identifier, URI) used in the identification	
 |`Malicky, H. 2004 (2nd edtion): Atlas of European Trichoptera. Springer. 1-341.`
-|Strongly recommended
+|Recommended
 |Recommended best practice is to separate the values in a list with space vertical bar space, or post (`\|`). Add a DOI if available.
 |Occurrence
 
 |link:https://rs.tdwg.org/dwc/terms/identificationVerificationStatus[identification{zwsp}Verification{zwsp}Status,role="term"]
 |A categorical indicator of the extent to which the taxonomic identification has been verified to be correct
 |one of `verified`, `unverified`, `requires verification`	
-|Strongly recommended
+|Recommended
 |
 |Occurrence
 
 |term:dwc[identificationRemarks]
 |Comments or notes about the identification
 |`Verified by H. Malicky`
-|Share, if available (based on term:dwc[identificationVerificationStatus])
+|Share if available (based on term:dwc[identificationVerificationStatus])
 |Use this field to indicate the person who has verified the identification. You can also use it for describing difficulties with the identification.
 |Occurrence
 
 |term:dwc[class]
 |The full scientific name of the class in which the taxon is classified
 |`Mammalia`, `Insecta`
-|Share, if available
+|Share if available
 |Inclusion of class helps to ensure taxa are not misassigned to the wrong taxonomic name in GBIF.
 |Occurrence
 
 |term:dwc[vernacularName]
 |Common or vernacular name
 |`Wassergeistchen`, `yellow-bellied toad`
-|Strongly recommended		
+|Recommended		
 | 
 |Occurrence
 
 |term:dwc[measurementType]
 |The nature of the measurement, fact, characteristic, or assertion
 |`temperature`, `pH`
-|Share, if available
+|Share if available
 |This field is for additional measurements in the field, e.g. abiotic data. A measurementType must have a corresponding term:dwc[measurementValue] and term:dwc[measurementUnit]. 	
 |Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementValue]
 |The value of the measurement, fact, characteristic, or assertion
 |`-1`, `7.1`
-|Share, if available
+|Share if available
 |This field is for additional measurements in the field, e.g. abiotic data. A term:dwc[measurementType] must have a corresponding measurementValue and term:dwc[measurementUnit]. 	
 |Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementUnit]
 |The unit associated with the term:dwc[measurementValue]
 |`°C`, `g`, `%`
-|Share, if available
+|Share if available
 |This field is for additional measurements in the field, e.g. abiotic data. A term:dwc[measurementType] must have a corresponding term:dwc[measurementValue] and measurementUnit. 	
 |Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementMethod]
 |A description of or reference to (publication, URI) the method or protocol used to determine the measurement, fact, characteristic, or assertion
 |`water thermometer`, `pH meter`
-|Share, if available
+|Share if available
 | 
 |Event (map to Extended Measurement or Facts extension)
 
 |term:dwc[measurementRemarks]
 |Comments or notes accompanying the term:dwc[measurementType]
 |`water partly frozen`
-|Share, if available
+|Share if available
 | 
 |Event (map to Extended Measurement or Facts extension)
 

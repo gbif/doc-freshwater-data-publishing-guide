@@ -233,13 +233,13 @@ It is useful to know that when datasets are downloaded individually from GBIF, t
 |`metadataLanguage`
 |Language in which the metadata is provided
 |`English`, `German`, etc.
-|Strongly recommended
+|Recommended
 |Not required for EML, but provides useful information.
 
 |`dataLanguage`
 |Language in which the data is provided
 |`English`, `German`, etc.
-|Strongly recommended
+|Recommended
 |Not required for EML, but provides useful information.
 
 |`organizationName`
@@ -252,11 +252,12 @@ It is useful to know that when datasets are downloaded individually from GBIF, t
 |Type of dataset, using one of GBIF's dataset classes
 |One of `resources metadata`, `checklist`, `occurrence`, `sampling event`
 |Not required for EML, but provides useful information.
+|
 
 |`maintenanceUpdateFrequency`
 |The frequency with which changes are made to the dataset after its first publication
 |One of `daily`, `weekly`, `monthly`, `biannually`, `annually`, `as needed`, `continually`, `irregular`, `not planned`, `unknown`, `other maintenance period`
-|Strongly recommended
+|Recommended
 |Corresponds to "updateFrequency" in the IPT.
 
 |`licensed`
@@ -291,7 +292,7 @@ organization: `Amazon Research Center`
 last name `Fisher` +
 position: `professor` +
 organization: `Amazon Research Center`
-|Strongly recommended
+|Recommended
 |Please provide first name, last name, position and organization in separate fields.
 
 |`coverage`
@@ -315,7 +316,7 @@ organization: `Amazon Research Center`
 |`citation`
 |Suggestion for how your dataset should be cited
 |`Fisher, M. & King, M., 2023: Amazon Fish Project 2020-2022. Project Deliverable.`
-|Strongly recommended
+|Recommended
 |Not required for EMP, but provides useful information. When data from a single project are downloaded from GBIF, reference will be provided in a file with the data download. When data from multiple projects are selected via polygon, a DOI will be generated for the full data selection and provided to the user (dataset-specific references available at the DOI). 
 
 |===
