@@ -7,7 +7,7 @@ endif::backend-html5[]
 
 === Suggested citation
 
-Lento J & Schmidt-Kloiber A (2025) Freshwater Data Publishing Guide. GBIF Secretariat: Copenhagen. https://doi.org/10.35035/doc-sw3k-w725
+Lento J & Schmidt-Kloiber A (2025) Freshwater Data Publishing Guide. Copenhagen: GBIF Secretariat. https://doi.org/10.35035/doc-sw3k-w725
 
 === Authors
 
