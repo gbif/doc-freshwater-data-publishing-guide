@@ -102,7 +102,7 @@ sampleCode:speciesID)
 |term:dwc[eventDate]
 |The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context (e.g. 5000 BP)
 |`1809-02-12` (12 February 1809)
-|Required
+|Required, though year, month, day, or https://techdocs.gbif.org/en/data-processing/temporal-interpretation#occurrence-recorded-date[other terms could be used instead^] 
 |Use the following format: `yyyy-mm-dd` four-digit year-month-day. Please make sure to provide separate columns for year, month and day as well. Note that the time should not be included as part of this element, please use term:dwc[eventTime] instead where required.
 
 |term:dwc[eventID] +
@@ -213,7 +213,7 @@ sampleCode:method)
 |term:dwc[eventDate]
 |The date or interval during which an event occurred/the occurrence record was collected; not suitable for a time in a geological context
 |`1809-02-12` (12 February 1809)
-|Required
+|Required, though year, month, day, or https://techdocs.gbif.org/en/data-processing/temporal-interpretation#occurrence-recorded-date[other terms could be used instead^]
 |Use the following format:  `yyyy-mm-dd` four-digit year-month-day. Please make sure to provide separate columns for year, month and day as well. Note that the time should not be included as part of this element, please use term:dwc[eventTime] instead where required.
 
 |term:dwc[samplingProtocol]
