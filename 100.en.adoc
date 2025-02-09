@@ -251,8 +251,8 @@ It is useful to know that when datasets are downloaded individually from GBIF, t
 |`type`
 |Type of dataset, using one of GBIF's dataset classes
 |One of `resources metadata`, `checklist`, `occurrence`, `sampling event`
+|Recommended
 |Not required for EML, but provides useful information.
-|
 
 |`maintenanceUpdateFrequency`
 |The frequency with which changes are made to the dataset after its first publication
